@@ -7,12 +7,17 @@ import PostDrink from "../components/post-drink.vue";
 export default defineComponent({
   data() {
     return {
-        tuttiCocktail
+        tuttiCocktail,
+        selectedCategory: '',
+        categories: [] as String[]
     }
   },
   components: {
     PostDrink
-  }
+  },
+  created() {
+      this.categories = [...new Set(this.tuttiCocktail.map(drink => drink.categoria))];
+  },
 })
 </script>
 
@@ -31,6 +36,16 @@ export default defineComponent({
         <div id="info" class="collapse">
             <p>* : in occasione di eventi speciali, i prezzi vengono calcolati differentemente. <br> Grazie per la comprensione.</p>
         </div>
+        <div class="radio-container">
+          <div class="filter selectdiv">
+            <form id="radio" action="#">
+              <select name="Categoria" v-model="selectedCategory">
+                <option id="tutti" value="">Tutti</option>
+                <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
+              </select>
+            </form>
+          </div>
+        </div>
         <div class="drink-list page animate slide delay-1">
             <PostDrink v-for="drink in tuttiCocktail" :drink="drink" :key="drink.iddrink" />
         </div>
@@ -42,6 +57,18 @@ p.attention {
     margin: 0;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.radio-container {
+  display: flex; 
+  justify-content: flex-end
+}
+
+.filter {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 8px;
 }
 
 img {

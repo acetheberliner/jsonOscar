@@ -3,3 +3,10 @@
 html { 
     -webkit-text-size-adjust: none; 
 }
+
+@media only screen and (max-device-width: 480px) {
+    html {
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on devices */
+        -webkit-text-size-adjust: none; /* Prevent iOS from automatically adjusting font size*/
+    }
+}
