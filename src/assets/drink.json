@@ -1,0 +1,21 @@
+[
+    {
+        "iddrink": 1,
+        "nome": "Negroni",
+        "ingredienti": "prova, prova, prova",
+        "garnish": "arancia",
+        "categoria": "Aperitivo",
+        "sapore": "Speziato",
+        "prezzo": 9
+    },
+    {
+        "iddrink": 2,
+        "nome": "Spritz",
+        "ingredienti": "prova, prova, prova",
+        "garnish": "arancia",
+        "categoria": "Aperitivo",
+        "sapore": "Leggero",
+        "prezzo": 8
+    }
+
+]

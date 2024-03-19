@@ -1,0 +1,14 @@
+[
+    {
+        "idbar": 1,
+        "nome": "Caffe corto",
+        "categoria": "Caffetteria",
+        "prezzo": 1.3 
+    },
+    {
+        "idbar": 2,
+        "nome": "Caffe lungo",
+        "categoria": "Caffetteria",
+        "prezzo": 1.5 
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "idwine": 1,
+        "nome": "Prova",
+        "colore": "Rosso",
+        "grad": 20,
+        "prezzo": 15
+    },
+    {
+        "idwine": 2,
+        "nome": "Test",
+        "colore": "Bianco",
+        "grad": 30,
+        "prezzo": 20
+    }
+]
