@@ -18,6 +18,17 @@ export default defineComponent({
   created() {
       this.categories = [...new Set(this.tuttiRistorante.map(food => food.categoria))];
   },
+  methods: {
+    filteredRist() {
+      if (!this.selectedCategory) {
+        return this.tuttiRistorante;
+      } else {
+        return this.tuttiRistorante.filter(
+          (rist) => rist.categoria === this.selectedCategory
+        );
+      }
+    },
+  },
 })
 </script>
 
@@ -42,7 +53,7 @@ export default defineComponent({
           </div>
         </div>
         <div class="meal-list page animate slide delay-1">
-            <PostFood v-for="food in tuttiRistorante" :key="food.idfood" :food="food" />
+            <PostFood v-for="food in filteredRist()" :key="food.idfood" :food="food" />
         </div>
     </div>
 </template>

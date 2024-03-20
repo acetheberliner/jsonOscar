@@ -8,7 +8,7 @@ export default defineComponent({
   data() {
     return {
       tuttiCantina,
-      selectedCategory: '',
+      selectedCategory: "",
       categories: [] as String[]
     }
   },
@@ -17,6 +17,17 @@ export default defineComponent({
   },
   created() {
       this.categories = [...new Set(this.tuttiCantina.map(wine => wine.colore))];
+  },
+  methods: {
+    filteredCantina() {
+      if (!this.selectedCategory) {
+        return this.tuttiCantina;
+      } else {
+        return this.tuttiCantina.filter(
+          (wine) => wine.colore === this.selectedCategory
+        );
+      }
+    },
   },
 })
 </script>
@@ -41,7 +52,7 @@ export default defineComponent({
           </div>
         </div>
         <div class="drink-list page animate slide delay-1">
-            <PostWine v-for="wine in tuttiCantina" :key="wine.idwine" :wine="wine" />
+            <PostWine v-for="wine in filteredCantina()" :key="wine.idwine" :wine="wine" />
         </div>
     </div>
 </template>

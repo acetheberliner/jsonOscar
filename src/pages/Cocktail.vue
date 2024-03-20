@@ -18,6 +18,17 @@ export default defineComponent({
   created() {
       this.categories = [...new Set(this.tuttiCocktail.map(drink => drink.categoria))];
   },
+  methods: {
+    filteredCocktail() {
+      if (!this.selectedCategory) {
+        return this.tuttiCocktail;
+      } else {
+        return this.tuttiCocktail.filter(
+          (drink) => drink.categoria === this.selectedCategory
+        );
+      }
+    },
+  },
 })
 </script>
 
@@ -47,7 +58,7 @@ export default defineComponent({
           </div>
         </div>
         <div class="drink-list page animate slide delay-1">
-            <PostDrink v-for="drink in tuttiCocktail" :drink="drink" :key="drink.iddrink" />
+            <PostDrink v-for="drink in filteredCocktail()" :drink="drink" :key="drink.iddrink" />
         </div>
     </div>
 </template>

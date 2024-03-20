@@ -1,50 +1,62 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import tuttiBar from "../assets/bar.json"
+import tuttiBar from "../assets/bar.json";
 
-import PostBar from "../components/post-bar.vue"
+import PostBar from "../components/post-bar.vue";
 
 export default defineComponent({
   data() {
     return {
       tuttiBar,
-      selectedCategory: '',
-      categories: [] as String[]
-    }
+      selectedCategory: "",
+      categories: [] as String[],
+    };
   },
   components: {
-    PostBar
+    PostBar,
   },
   created() {
-      this.categories = [...new Set(this.tuttiBar.map(bar => bar.categoria))];
+    this.categories = [...new Set(this.tuttiBar.map((bar) => bar.categoria))];
   },
-})
+  methods: {
+    filteredBar() {
+      if (!this.selectedCategory) {
+        return this.tuttiBar;
+      } else {
+        return this.tuttiBar.filter(
+          (bar) => bar.categoria === this.selectedCategory
+        );
+      }
+    },
+  },
+});
 </script>
 
 <template>
-    <div class="page animate slide">
-        <div class="title">
-            <h2>Caffetteria</h2>
-        </div>
-        <div class="image">
-            <img src="/torta.jpg" alt="">
-            <img class="tumb" src="/yogurt.jpg" alt="">
-        </div>
-        <div class="radio-container">
-          <div class="filter selectdiv">
-            <form id="radio" action="#">
-              <select name="Categoria" v-model="selectedCategory">
-                <option id="tutti" value="">Tutti</option>
-                <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
-              </select>
-            </form>
-          </div>
-        </div>
-        <div class="drink-list page animate slide delay-1">
-            <PostBar v-for="bar in tuttiBar" :key="bar.idbar" :bar="bar" />
-        </div>
+  <div class="page animate slide">
+    <div class="title">
+      <h2>Caffetteria</h2>
     </div>
+    <div class="image">
+      <img src="/torta.jpg" alt="">
+      <img class="tumb" src="/yogurt.jpg" alt="">
+    </div>
+    <div class="radio-container">
+      <div class="filter selectdiv">
+        <form id="radio" action="#">
+          <select name="Categoria" v-model="selectedCategory">
+            <option id="tutti" value="">Tutti</option>
+            <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <div class="drink-list page animate slide delay-1">
+      <PostBar v-for="bar in filteredBar()" :key="bar.idbar" :bar="bar" />
+    </div>
+  </div>
 </template>
+
 
 <style scoped>
 p.attention {
