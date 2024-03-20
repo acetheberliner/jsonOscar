@@ -30,6 +30,16 @@ export default defineComponent({
             <img src="/torta.jpg" alt="">
             <img class="tumb" src="/yogurt.jpg" alt="">
         </div>
+        <div class="radio-container">
+          <div class="filter selectdiv">
+            <form id="radio" action="#">
+              <select name="Categoria" v-model="selectedCategory">
+                <option id="tutti" value="">Tutti</option>
+                <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
+              </select>
+            </form>
+          </div>
+        </div>
         <div class="drink-list page animate slide delay-1">
             <PostWine v-for="wine in tuttiCantina" :key="wine.idwine" :wine="wine" />
         </div>
