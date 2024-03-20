@@ -7,12 +7,17 @@ import PostFood from "../components/post-food.vue";
 export default defineComponent({
   data() {
     return {
-      tuttiRistorante
+      tuttiRistorante,
+      selectedCategory: '',
+      categories: [] as String[]
     }
   },
   components: {
     PostFood
-  }
+  },
+  created() {
+      this.categories = [...new Set(this.tuttiRistorante.map(food => food.categoria))];
+  },
 })
 </script>
 

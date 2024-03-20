@@ -7,12 +7,17 @@ import PostBar from "../components/post-bar.vue"
 export default defineComponent({
   data() {
     return {
-      tuttiBar
+      tuttiBar,
+      selectedCategory: '',
+      categories: [] as String[]
     }
   },
   components: {
     PostBar
-  }
+  },
+  created() {
+      this.categories = [...new Set(this.tuttiBar.map(bar => bar.categoria))];
+  },
 })
 </script>
 

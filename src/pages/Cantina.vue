@@ -7,12 +7,17 @@ import PostWine from "../components/post-wine.vue";
 export default defineComponent({
   data() {
     return {
-      tuttiCantina
+      tuttiCantina,
+      selectedCategory: '',
+      categories: [] as String[]
     }
   },
   components: {
     PostWine
-  }
+  },
+  created() {
+      this.categories = [...new Set(this.tuttiCantina.map(wine => wine.colore))];
+  },
 })
 </script>
 
