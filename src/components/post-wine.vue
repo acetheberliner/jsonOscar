@@ -4,9 +4,11 @@ import { PropType, defineComponent } from "vue";
 interface Wine {
     idwine: number
     nome: string
+    produttore: string
     colore: string
     grad: number
-    prezzo: number
+    prezzoCalice: number
+    prezzoBott: number
 }
 
 export default defineComponent({
@@ -32,8 +34,11 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
-            <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ wine.nome }}</h4>
-            <h6 class="prezzo">{{ wine.prezzo }} €</h6>
+            <div>
+                <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ wine.nome }}</h4>
+                <p class="produttore text-dark">{{ wine.produttore }}</p>
+            </div>
+            <h6 class="prezzo">{{ wine.prezzoCalice }} €</h6>
         </div>
         <div class="" :id="'toggle-' + wine.idwine" :class="{ 'collapse': !isOpen, 'show': isOpen }">
             <hr>
