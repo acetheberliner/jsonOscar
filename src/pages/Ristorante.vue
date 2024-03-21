@@ -42,18 +42,18 @@ export default defineComponent({
             <img class="tumb" src="/pasta.jpg" alt="">
             <img class="fing" src="/insalata.jpg" alt="">
         </div>
-        <div class="radio-container">
-          <div class="filter selectdiv">
-            <form id="radio" action="#">
-              <select name="Categoria" v-model="selectedCategory">
-                <option id="tutti" value="">Tutti</option>
-                <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
-              </select>
-            </form>
-          </div>
-        </div>
         <div class="meal-list page animate slide delay-1">
-            <PostFood v-for="food in filteredRist()" :key="food.idfood" :food="food" />
+          <div class="radio-container">
+            <div class="filter selectdiv">
+              <form class="form-group" id="radio" action="#">
+                <select class="form-control form" name="Categoria" v-model="selectedCategory">
+                  <option selected id="tutti" value="">Filtra</option>
+                  <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
+                </select>
+              </form>
+            </div>
+          </div>
+          <PostFood v-for="food in filteredRist()" :key="food.idfood" :food="food" />
         </div>
     </div>
 </template>
@@ -88,6 +88,24 @@ img.fing {
     z-index: 101;
     transform: translateX(-75px) translateY(-40px);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: row;
+  width: 88%;
+}
+
+.form {
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.719); /* Sfondo semi-trasparente */
+  border: 1px solid #4fa1ca;
+  color: #2c57a3;
+  text-shadow: 1px 1px #4fa1ca;
+  box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
+  width: 100%;    
 }
 
 .image {

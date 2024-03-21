@@ -17,18 +17,25 @@ export default defineComponent({
         },
     },
     data(){
-        return {}
+        return {
+            isOpen: false
+        }
     },
+    methods: {
+        toggleCollapse() {
+            this.isOpen = !this.isOpen;
+        }
+    }
 });
 </script>
 
 <template>
-    <button class="navbar-toggler text-white"  type="button" data-toggle="collapse" :data-target="'#toggle-' + food.idfood" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
             <h4 class="nome"><span class="drink-icon"><img class="icon" src="/fork.png" alt="" /></span> {{ food.nome }}</h4>
-            <h6 class="prezzo">{{ food.prezzo }}.00€</h6>
+            <h6 class="prezzo">{{ food.prezzo }} €</h6>
         </div>
-        <div class="" :id="'toggle-' + food.idfood">
+        <div class="" :id="'toggle-' + food.idfood" :class="{ 'collapse': !isOpen, 'show': isOpen }">
             <hr>
             <p class="categoria">{{ food.categoria }}</p>
             <p class="ingredienti">{{ food.ingredienti }}</p>
@@ -56,7 +63,7 @@ button.navbar-toggler {
     background-color: rgba(255, 255, 255, 0.712); /* Sfondo semi-trasparente */
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     width: 90%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     padding: 18px;
     text-align: start;
     vertical-align: middle;
@@ -79,6 +86,15 @@ button.navbar-toggler:visited {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.collapse {
+    display: none;
+    transition: height 0.3s ease-out;
+}
+
+.show {
+    display: block;
 }
 
 .categoria {

@@ -16,13 +16,20 @@ export default defineComponent({
         },
     },
     data(){
-        return {}
+        return {
+            isOpen: false
+        }
     },
+    methods: {
+        toggleCollapse() {
+            this.isOpen = !this.isOpen;
+        }
+    }
 });
 </script>
 
 <template>
-    <button class="navbar-toggler text-white"  type="button" data-toggle="collapse" :data-target="'#toggle-' + bar.idbar" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" data-toggle="collapse" @click="toggleCollapse()" :data-target="'#toggle-' + bar.idbar" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
             <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ bar.nome }}</h4>
             <h6 class="prezzo">{{ bar.prezzo }}.00€</h6>
