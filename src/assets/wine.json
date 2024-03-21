@@ -3,297 +3,306 @@
         "idwine": 1,
         "nome": "Pagadebit",
         "produttore": "Podere Nespoli",
-        "colore": "",
+        "colore": "Bianco",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "4.50",
+        "prezzoBott": "20.00"
     },
     {
         "idwine": 2,
         "nome": "Lugana",
         "produttore": "Ca' dei Frati",
-        "colore": "",
+        "colore": "Bianco",
         "grad": 13,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "6.00",
+        "prezzoBott": "35.00"
+    },
+    {
+        "idwine": 2,
+        "nome": "Rosè",
+        "produttore": "Ca' dei Frati",
+        "colore": "Rosè",
+        "grad": 13,
+        "prezzoCalice": "7.00",
+        "prezzoBott": "40.00"
     },
     {
         "idwine": 3,
         "nome": "Sharis",
         "produttore": "Livio Felluga",
-        "colore": "",
+        "colore": "Bianco",
         "grad": 14,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "6.00",
+        "prezzoBott": "35.00"
     },
     {
         "idwine": 4,
         "nome": "Traminer",
         "produttore": "Cantina Tiefenbrunner",
-        "colore": "",
+        "colore": "Bianco",
         "grad": 12.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "6.00",
+        "prezzoBott": "35.00"
     },
     {
         "idwine": 5,
         "nome": "Blangè",
         "produttore": "Cantine di Ceretto in Alba",
-        "colore": "",
+        "colore": "Bianco",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "40.00"
     },
     {
         "idwine": 6,
         "nome": "Blangè Magnum",
         "produttore": "Cantine di Ceretto in Alba",
-        "colore": "",
+        "colore": "Bianco",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "80.00"
     },
     {
         "idwine": 7,
         "nome": "Chardonnay",
-        "produttore": "Jermans",
-        "colore": "",
+        "produttore": "Cantine Jermans",
+        "colore": "Bianco",
         "grad": 13.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "40.00"
     },
     {
         "idwine": 8,
         "nome": "Vino alla spina",
-        "produttore": "",
-        "colore": "",
+        "produttore": "Fermo o Frizzante",
+        "colore": "Bianco",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "3.50",
+        "prezzoBott": "12.00"
     },
     {
         "idwine": 9,
         "nome": "Sangiovese",
         "produttore": "Podere Nespoli",
-        "colore": "",
+        "colore": "Rosso",
         "grad": 13,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "5.00",
+        "prezzoBott": "20.00"
     },
     {
         "idwine": 10,
         "nome": "Pinot Nero",
         "produttore": "",
-        "colore": "",
+        "colore": "Rosso",
         "grad": 13.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "7.00",
+        "prezzoBott": "35.00"
     },
     {
         "idwine": 11,
         "nome": "Ronchedone",
         "produttore": "Ca' dei Frati",
-        "colore": "",
+        "colore": "Rosso",
         "grad": 14.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "7.00",
+        "prezzoBott": "40.00"
     },
     {
         "idwine": 12,
         "nome": "Albana",
         "produttore": "Le Querce",
-        "colore": "",
+        "colore": "Dolce",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "4.00",
+        "prezzoBott": "18.00"
     },
     {
         "idwine": 13,
         "nome": "Moscato d'Asti",
         "produttore": "",
-        "colore": "",
+        "colore": "Dolce",
         "grad": 5.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "4.00",
+        "prezzoBott": "18.00"
     },
     {
         "idwine": 14,
         "nome": "Prosecco Brut",
         "produttore": "Cantine Foss Marai",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 11,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "6.00",
+        "prezzoBott": "30.00"
     },
     {
         "idwine": 15,
         "nome": "Prosecco Extra Dry",
         "produttore": "Cantine Foss Marai",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 11,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "7.00",
+        "prezzoBott": "35.00"
     },
     {
         "idwine": 16,
         "nome": "Prosecco Rosè",
         "produttore": "Cantine Foss Marai",
-        "colore": "",
+        "colore": "Rosè",
         "grad": 11,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "7.00",
+        "prezzoBott": "35.00"
     },
     {
         "idwine": 17,
         "nome": "Altemasi Brut",
-        "produttore": "",
-        "colore": "",
+        "produttore": "Cantine Altemasi",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "30.00"
     },
     {
         "idwine": 18,
         "nome": "Monterossa Brut Cuvee",
-        "produttore": "",
-        "colore": "",
+        "produttore": "Cantine Monterossa",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "40.00"
     },
     {
         "idwine": 19,
         "nome": "Franciacorta Saten",
         "produttore": "Berlucchi",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "6.00",
+        "prezzoBott": "30.00"
     },
     {
         "idwine": 20,
         "nome": "Franciacorta Brut",
         "produttore": "Berlucchi",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "7.00",
+        "prezzoBott": "35.00"
     },
     {
         "idwine": 21,
         "nome": "Bellavista Alma Brut",
         "produttore": "Cantine Bellavista",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "55.00"
     },
     {
         "idwine": 22,
         "nome": "Bellavista Alma Magnum",
         "produttore": "Cantine Bellavista",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "100.00"
     },
     {
         "idwine": 23,
         "nome": "Bellavista La Scala",
         "produttore": "Cantine Bellavista",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "80.00"
     },
     {
         "idwine": 24,
         "nome": "Bellavista La Scala Magnum",
         "produttore": "Cantine Bellavista",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "150.00"
     },
     {
         "idwine": 25,
         "nome": "Franciacorta Cuvee Prestige",
         "produttore": "Ca' del bosco",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "55.00"
     },
     {
         "idwine": 26,
         "nome": "Franciacorta Rosè",
         "produttore": "Ca' del bosco",
-        "colore": "",
+        "colore": "Rosè",
         "grad": 12.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "90.00"
     },
     {
         "idwine": 27,
         "nome": "Franciacorta Magnum",
         "produttore": "Ca' del bosco",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12.5,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "100.00"
     },
     {
         "idwine": 28,
         "nome": "Bollinger",
-        "produttore": "",
-        "colore": "",
+        "produttore": "Maison Bollinger",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "90.00"
     },
     {
         "idwine": 29,
         "nome": "Bollinger Magnum",
-        "produttore": "",
-        "colore": "",
+        "produttore": "Maison Bollinger",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "200.00"
     },
     {
         "idwine": 30,
         "nome": "Ruinart",
-        "produttore": "",
-        "colore": "",
+        "produttore": "Cantine Ruinart",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "130.00"
     },
     {
         "idwine": 31,
         "nome": "Laurent Perrier Brut",
         "produttore": "Cantine Laurent Perrier",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "70.00"
     },
     {
         "idwine": 32,
         "nome": "Laurent Perrier Rosè",
         "produttore": "Cantine Laurent Perrier",
-        "colore": "",
+        "colore": "Rosè",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "110.00"
     },
     {
         "idwine": 33,
         "nome": "Laurent Perrier Magnum",
         "produttore": "Cantine Laurent Perrier",
-        "colore": "",
+        "colore": "Bollicine",
         "grad": 12,
-        "prezzoCalice": "",
-        "prezzoBott": ""
+        "prezzoCalice": "/ ",
+        "prezzoBott": "130.00"
     }
 ]

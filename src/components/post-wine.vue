@@ -5,6 +5,8 @@ interface Wine {
     idwine: number
     nome: string
     produttore: string
+    variante1: string
+    variante2: string
     colore: string
     grad: number
     prezzoCalice: number
@@ -34,15 +36,27 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
+            <img v-if="wine.colore == 'Dolce'" class="wine-icon" src="/wine.svg" alt="">
+            <img v-if="wine.colore == 'Bollicine'" class="wine-icon" src="/wine.svg" alt="">
+            <img v-if="wine.colore == 'Bianco'" class="wine-icon" src="/wine.svg" alt="">
+            <img v-if="wine.colore == 'Rosso'" class="wine-icon" src="/wine-red.svg" alt="">
+            <img v-if="wine.colore == 'Rosè'" class="wine-icon" src="/wine-rose.svg" alt="">
             <div>
-                <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ wine.nome }}</h4>
+                <!-- <span class="drink-icon"></span> -->
+                <h4 class="nome"> {{ wine.nome }}</h4>
                 <p class="produttore">{{ wine.produttore }}</p>
             </div>
-            <h6 class="prezzo">{{ wine.prezzoCalice }} €</h6>
+            <div class="horizontal">
+                <div class="vertical">
+                    <h6 class="prezzo">cal. {{ wine.prezzoCalice }} €</h6>
+                    <h6 class="prezzo">bott. {{ wine.prezzoBott }} €</h6>
+                </div>
+            </div>
         </div>
         <div class="" :id="'toggle-' + wine.idwine" :class="{ 'collapse': !isOpen, 'show': isOpen }">
             <hr>
-            <p class="categoria">{{ wine.colore }}, {{ wine.grad }}°</p>
+            <p class="categoria">Categoria: {{ wine.colore }}</p>
+            <p class="categoria">Gradazione: {{ wine.grad }}°</p>
         </div>
     </button>
 </template>
@@ -51,6 +65,7 @@ export default defineComponent({
 hr{
     border: 1px solid #4fa1ca;
     border-radius: 20px;
+    margin: 10px;
 }
 
 img {
@@ -61,10 +76,26 @@ h4 {
     margin: 0;
 }
 
+.wine-icon{
+    width: 45px;
+}
+
+.horizontal {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.vertical {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
 .produttore{
-    margin-left: 30px;
+    /* margin-left: 30px; */
     color: #2c57a3;
     font-size: 16px;
+    margin-top: 4px
 }
 
 button.navbar-toggler {
@@ -74,7 +105,7 @@ button.navbar-toggler {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     width: 90%;
     margin-bottom: 20px;
-    padding: 18px;
+    padding: 12px;
     text-align: start;
     vertical-align: middle;
 }
@@ -82,6 +113,8 @@ button.navbar-toggler {
 h6.prezzo {
     margin: 0;
     margin-top: 4px;
+    white-space: nowrap;
+    text-align: end;
 }
 
 button.navbar-toggler:focus,
@@ -96,14 +129,17 @@ button.navbar-toggler:visited {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .categoria {
-    text-align: end;
-    font-size: 17px;
-    margin-bottom: 20px;
+    text-align: start;
+    font-size: 15px;
+    margin-bottom: 5px;
     color: #2c57a3;
     font-style: italic;
+    margin-top: 2px;
+    margin-left: 10px;
 }
 
 .ingredienti{
@@ -116,6 +152,7 @@ button.navbar-toggler:visited {
 .prezzo {
     color: #4fa1ca;
     font-style: italic;
+    font-size: 15px;
 }
 
 .nome {
@@ -123,7 +160,8 @@ button.navbar-toggler:visited {
     color: #2c57a3;
     text-shadow: 1.5px 1.5px #4fa1ca;
     font-weight: bolder;
-    font-size: 22px;
+    font-size: 18px;
+    /* white-space: nowrap; */
 }
 
 .drink-icon{
