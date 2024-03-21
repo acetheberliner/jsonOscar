@@ -11,7 +11,7 @@
     {
         "idwine": 2,
         "nome": "Lugana",
-        "produttore": "Ca' dei Frati",
+        "produttore": "Cantine Ca' dei Frati",
         "colore": "Bianco",
         "grad": 13,
         "prezzoCalice": "6.00",
@@ -20,7 +20,7 @@
     {
         "idwine": 2,
         "nome": "Rosè",
-        "produttore": "Ca' dei Frati",
+        "produttore": "Cantine Ca' dei Frati",
         "colore": "Rosè",
         "grad": 13,
         "prezzoCalice": "7.00",
@@ -29,7 +29,7 @@
     {
         "idwine": 3,
         "nome": "Sharis",
-        "produttore": "Livio Felluga",
+        "produttore": "Cantine Livio Felluga",
         "colore": "Bianco",
         "grad": 14,
         "prezzoCalice": "6.00",
@@ -101,7 +101,7 @@
     {
         "idwine": 11,
         "nome": "Ronchedone",
-        "produttore": "Ca' dei Frati",
+        "produttore": "Cantine Ca' dei Frati",
         "colore": "Rosso",
         "grad": 14.5,
         "prezzoCalice": "7.00",
@@ -109,8 +109,8 @@
     },
     {
         "idwine": 12,
-        "nome": "Albana",
-        "produttore": "Le Querce",
+        "nome": "Albana Le Querce",
+        "produttore": "Cantina Celli",
         "colore": "Dolce",
         "grad": 12,
         "prezzoCalice": "4.00",
