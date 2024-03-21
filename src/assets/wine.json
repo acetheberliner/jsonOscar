@@ -28,7 +28,7 @@
     },
     {
         "idwine": 4,
-        "nome": "Traminer Sauvignon",
+        "nome": "Traminer",
         "produttore": "Cantina Tiefenbrunner",
         "colore": "",
         "grad": 12.5,
@@ -100,7 +100,7 @@
     },
     {
         "idwine": 12,
-        "nome": "Albana di Romagna",
+        "nome": "Albana",
         "produttore": "Le Querce",
         "colore": "",
         "grad": 12,

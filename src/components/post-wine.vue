@@ -36,7 +36,7 @@ export default defineComponent({
         <div class="present">
             <div>
                 <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ wine.nome }}</h4>
-                <p class="produttore text-dark">{{ wine.produttore }}</p>
+                <p class="produttore">{{ wine.produttore }}</p>
             </div>
             <h6 class="prezzo">{{ wine.prezzoCalice }} €</h6>
         </div>
@@ -59,6 +59,12 @@ img {
 
 h4 {
     margin: 0;
+}
+
+.produttore{
+    margin-left: 30px;
+    color: #2c57a3;
+    font-size: 16px;
 }
 
 button.navbar-toggler {
@@ -117,6 +123,7 @@ button.navbar-toggler:visited {
     color: #2c57a3;
     text-shadow: 1.5px 1.5px #4fa1ca;
     font-weight: bolder;
+    font-size: 22px;
 }
 
 .drink-icon{
