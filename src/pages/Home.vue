@@ -5,7 +5,7 @@ export default defineComponent({});
 
 <template>
   <div class="intro">
-    <h2>Scopri</h2>
+    <h2 class="mb-3">Scopri</h2>
   </div>
   <div class="page animate slide">
     <div class="bubble">
@@ -17,7 +17,7 @@ export default defineComponent({});
   </div>
   <hr class="sep">
   <div class="title">
-    <h2 class="informazioni">Info & Prenotazioni</h2>
+    <h2 class="informazioni mb-3">Info & Prenotazioni</h2>
   </div>
   <div class="page animate slide">
     <div class="bubble">
@@ -115,7 +115,7 @@ hr.sep {
   border: 1px solid rgba(68, 67, 67, 0.075);
   background-color: rgba(255, 255, 255, 0.76);
   /* Sfondo semi-trasparente */
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-shadow: rgba(0, 0, 0, 0.425) 0px 12px 20px 4px;
   text-align: center;
   margin-top: 10px;
 }

@@ -1,30 +1,155 @@
 [
     {
         "iddrink": 1,
-        "nome": "Negroni",
-        "ingredienti": "prova, prova, prova",
-        "garnish": "arancia",
+        "nome": "Spritz Aperol",
+        "ingredienti": "",
+        "garnish": "",
         "categoria": "Aperitivo",
-        "sapore": "Speziato",
-        "prezzo": 9
+        "sapore": "",
+        "prezzo": 0
     },
     {
         "iddrink": 2,
-        "nome": "Spritz",
-        "ingredienti": "prova, prova, prova",
-        "garnish": "arancia",
-        "categoria": "Test",
-        "sapore": "Leggero",
-        "prezzo": 8
+        "nome": "Spritz Campari",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Aperitivo",
+        "sapore": "",
+        "prezzo": 0
     },
     {
         "iddrink": 3,
-        "nome": "Sour",
-        "ingredienti": "prova, prova, prova",
-        "garnish": "arancia",
-        "categoria": "Test",
-        "sapore": "Leggero",
-        "prezzo": 8
+        "nome": "Spritz Hugo",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Aperitivo",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 4,
+        "nome": "Americano",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Aperitivo",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 5,
+        "nome": "Americano Sbagliato",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Aperitivo",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 6,
+        "nome": "Negroni",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Aperitivo",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 7,
+        "nome": "Cuba Libre",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Energizzante",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 8,
+        "nome": "Moscow Mule",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Speziato",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 9,
+        "nome": "Long Island",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Forte",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 10,
+        "nome": "Pina Colada",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Fruttato",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 11,
+        "nome": "Sex on the Beach",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Fruttato",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 12,
+        "nome": "Cacciavite",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Aspro",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 13,
+        "nome": "Caipirinha",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Aspro",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 14,
+        "nome": "Caipiroska",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Aspro",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 15,
+        "nome": "Mojito",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Fresco",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 16,
+        "nome": "Virgin Mojito",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Fresco",
+        "sapore": "",
+        "prezzo": 0
+    },
+    {
+        "iddrink": 17,
+        "nome": "Margarita",
+        "ingredienti": "",
+        "garnish": "",
+        "categoria": "Salato",
+        "sapore": "",
+        "prezzo": 0
     }
-
 ]

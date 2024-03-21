@@ -54,7 +54,7 @@ export default defineComponent({
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle"
       aria-expanded="false" aria-label="Toggle navigation">
       <!-- <p class="attention">!!! <i class="bi bi-info-circle"></i> !!!</p> -->
-      <p class="attention">ATTENZIONE</p>
+      <p class="attention">ATTENZIONE<i class="bi bi-hand-index"></i></p>
     </button>
     <div id="info" class="collapse">
       <p>Si informa la gentile clientela che in occasione di eventi speciali, i prezzi dei cocktail vengono calcolati differentemente. <br><br>Si ringrazia per la comprensione </p>
@@ -164,6 +164,7 @@ img.tumb {
   position: relative;
   z-index: 100;
   transform: translateX(-80px);
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
 .image {
@@ -222,7 +223,9 @@ button:after {
 i {
   color: white;
   font-size: 30px;
-  text-shadow: 2px 2px #ff0202;
+  text-shadow: #ffffff 1px 0 0.5px;
+  vertical-align: middle;
+  margin-left: 8px;
 }
 
 p {
