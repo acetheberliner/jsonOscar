@@ -27,7 +27,7 @@
             <div class="col-12">
               <hr>
               <div class="collapse text-center m-2" id="navbarToggleExternalContent">
-                <h4 class="text-white">Menù bar</h4>
+                <h4 class="text-white">Menù</h4>
                 <div class="collapsed-navbar text-white p-2">
                   <div class="mario">
                     <div class="links">

@@ -64,7 +64,7 @@ export default defineComponent({
       </div>
       <div class="searchbar-container">
         <form class="form-inline mb-2">
-          <input class="form-control search" type="search" placeholder="Cerca cocktail..." aria-label="Search"
+          <input class="form-control search" type="search" placeholder="Cerca..." aria-label="Search"
             v-model="searchTerm">
         </form>
       </div>
