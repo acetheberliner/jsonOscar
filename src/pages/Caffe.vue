@@ -10,6 +10,7 @@ export default defineComponent({
       tuttiBar,
       selectedCategory: "",
       categories: [] as String[],
+      searchTerm: '', // Add a new property for search term
     };
   },
   components: {
@@ -20,13 +21,22 @@ export default defineComponent({
   },
   methods: {
     filteredBar() {
-      if (!this.selectedCategory) {
-        return this.tuttiBar;
-      } else {
-        return this.tuttiBar.filter(
-          (bar) => bar.categoria === this.selectedCategory
+      let filtered = this.tuttiBar;
+
+      // Applica il filtro per categoria, se selezionata
+      if (this.selectedCategory) {
+        filtered = filtered.filter((bar) => bar.categoria === this.selectedCategory);
+      }
+
+      // Applica il filtro per il termine di ricerca, se presente
+      if (this.searchTerm) {
+        const searchTermLower = this.searchTerm.toLowerCase();
+        filtered = filtered.filter((bar) =>
+          bar.nome.toLowerCase().includes(searchTermLower)
         );
       }
+
+      return filtered;
     },
   },
 });
@@ -52,6 +62,12 @@ export default defineComponent({
           </form>
         </div>
       </div>
+      <div class="searchbar-container">
+        <form class="form-inline mb-2">
+          <input class="form-control search" type="search" placeholder="Cerca cocktail..." aria-label="Search"
+            v-model="searchTerm">
+        </form>
+      </div>
       <PostBar v-for="bar in filteredBar()" :key="bar.idbar" :bar="bar" />
     </div>
   </div>
@@ -59,6 +75,25 @@ export default defineComponent({
 
 
 <style scoped>
+.searchbar-container {
+  display: flex;
+  flex-direction: row;
+  place-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+form {
+  width: 88%;
+}
+
+input {
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 22px;
+  box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
+}
+
 .radio-container {
   display: flex;
   flex-direction: row;
@@ -69,126 +104,129 @@ export default defineComponent({
   border-radius: 10px;
   padding: 10px;
   font-weight: bold;
-  background-color: rgba(255, 255, 255, 0.719); /* Sfondo semi-trasparente */
+  background-color: rgba(255, 255, 255, 0.719);
+  /* Sfondo semi-trasparente */
   border: 1px solid #4fa1ca;
   color: #2c57a3;
   text-shadow: 1px 1px #4fa1ca;
   box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
-  width: 100%;    
+  width: 100%;
 }
 
 p.attention {
-    margin: 0;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  margin: 0;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
 }
 
 img {
-    width: 200px;
-    border: 1px solid transparent;
-    border-radius: 20px;
-    position: absolute;
-    z-index: 100;
-    transform: translateX(75px) translateY(80px);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 200px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 100;
+  transform: translateX(75px) translateY(80px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 img.tumb {
-    width: 180px;
-    position: relative;
-    z-index: 99;
-    transform: translateX(-90px);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  width: 180px;
+  position: relative;
+  z-index: 99;
+  transform: translateX(-90px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .image {
-    margin-bottom: 30px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    margin-bottom: 140px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 140px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .drink-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(255, 255, 255, 0.548);
-    width: 95%;
-    border: 1px solid rgba(255, 255, 255, 0.452);
-    border-radius: 20px;
-    padding: 6px;
-    padding-top: 20px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.548);
+  width: 95%;
+  border: 1px solid rgba(255, 255, 255, 0.452);
+  border-radius: 20px;
+  padding: 6px;
+  padding-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  margin-bottom: 20px;
 }
 
 .page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 h2 {
-    font-weight: bold;
-    text-shadow: #ffffff 1px 0 10px;
-    margin: 0;
+  font-weight: bold;
+  text-shadow: #ffffff 1px 0 10px;
+  margin: 0;
 }
 
 button {
-    border: 1px solid transparent;
-    background-color: transparent;
-    margin-bottom: 24px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  margin-bottom: 24px;
 }
 
-button:focus, button:after {
-    outline: none;
+button:focus,
+button:after {
+  outline: none;
 }
 
-i{
-    color: white;
-    font-size: 30px;
-    text-shadow: 2px 2px #ff0202;
+i {
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px #ff0202;
 }
 
 p {
-    border: 1px solid rgba(255, 0, 0, 0.384);
-    background-color: rgba(255, 0, 0, 0.301);
-    border-radius: 20px;
-    padding: 8px;
-    text-align: center;
-    margin-bottom: 30px;
+  border: 1px solid rgba(255, 0, 0, 0.384);
+  background-color: rgba(255, 0, 0, 0.301);
+  border-radius: 20px;
+  padding: 8px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 #info {
-    width: 90%;
+  width: 90%;
 }
 
 footer {
-    bottom: 0;
-    position: sticky;
+  bottom: 0;
+  position: sticky;
 }
 
 div.collapse>p {
-    text-shadow: #ffffff 1px 0 10px;
+  text-shadow: #ffffff 1px 0 10px;
 }
 
 /*-.-----------------------------------------------------------------------------------------------------*/
 .animate {
   animation-duration: 0.45s;
-  animation-duration: 0.7s; /*running slower to show effect*/
+  animation-duration: 0.7s;
+  /*running slower to show effect*/
   animation-delay: 0.1s;
   animation-name: animate-fade;
-  animation-timing-function: cubic-bezier(.26,.53,.74,1.48);
+  animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
   animation-fill-mode: backwards;
 }
 
@@ -197,20 +235,28 @@ div.collapse>p {
   animation-name: animate-fade;
   animation-timing-function: ease;
 }
+
 @keyframes animate-fade {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Pop In */
 .animate.pop {
   animation-name: animate-pop;
 }
+
 @keyframes animate-pop {
   0% {
     opacity: 0;
     transform: scale(0.5, 0.5);
   }
+
   100% {
     opacity: 1;
     transform: scale(1, 1);
@@ -222,11 +268,13 @@ div.collapse>p {
   animation-name: animate-blur;
   animation-timing-function: ease;
 }
+
 @keyframes animate-blur {
   0% {
     opacity: 0;
     filter: blur(15px);
   }
+
   100% {
     opacity: 1;
     filter: blur(0px);
@@ -238,12 +286,14 @@ div.collapse>p {
   animation-name: animate-glow;
   animation-timing-function: ease;
 }
+
 @keyframes animate-glow {
   0% {
     opacity: 0;
     filter: brightness(3) saturate(3);
     transform: scale(0.8, 0.8);
   }
+
   100% {
     opacity: 1;
     filter: brightness(1) saturate(1);
@@ -255,12 +305,14 @@ div.collapse>p {
 .animate.grow {
   animation-name: animate-grow;
 }
+
 @keyframes animate-grow {
   0% {
     opacity: 0;
     transform: scale(1, 0);
     visibility: hidden;
   }
+
   100% {
     opacity: 1;
     transform: scale(1, 1);
@@ -269,172 +321,205 @@ div.collapse>p {
 
 /* Splat In */
 .animate.splat {
-animation-name: animate-splat;
+  animation-name: animate-splat;
 }
+
 @keyframes animate-splat {
-0% {
-opacity: 0;
-transform: scale(0, 0) rotate(20deg) translate(0, -30px);
-}
-70% {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0) rotate(20deg) translate(0, -30px);
+  }
+
+  70% {
     opacity: 1;
     transform: scale(1.1, 1.1) rotate(15deg);
-}
+  }
 
-85% {
+  85% {
     opacity: 1;
     transform: scale(1.1, 1.1) rotate(15deg) translate(0, -10px);
-}
+  }
 
-100% {
+  100% {
     opacity: 1;
     transform: scale(1, 1) rotate(0) translate(0, 0);
-}
+  }
 }
 
 /* Roll In */
 .animate.roll {
-animation-name: animate-roll;
+  animation-name: animate-roll;
 }
+
 @keyframes animate-roll {
-0% {
-opacity: 0;
-transform: scale(0, 0) rotate(360deg);
-}
-100% {
+  0% {
+    opacity: 0;
+    transform: scale(0, 0) rotate(360deg);
+  }
+
+  100% {
     opacity: 1;
     transform: scale(1, 1) rotate(0deg);
-}
+  }
 }
 
 /* Flip In */
 .animate.flip {
-animation-name: animate-flip;
-transform-style: preserve-3d;
-perspective: 1000px;
+  animation-name: animate-flip;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
+
 @keyframes animate-flip {
-0% {
-opacity: 0;
-transform: rotateX(-120deg) scale(0.9,0.9);
-}
-100% {
+  0% {
+    opacity: 0;
+    transform: rotateX(-120deg) scale(0.9, 0.9);
+  }
+
+  100% {
     opacity: 1;
-    transform: rotateX(0deg) scale(1,1);
-}
+    transform: rotateX(0deg) scale(1, 1);
+  }
 }
 
 /* Spin In */
 .animate.spin {
-animation-name: animate-spin;
-transform-style: preserve-3d;
-perspective: 1000px;
+  animation-name: animate-spin;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
+
 @keyframes animate-spin {
-0% {
-opacity: 0;
-transform: rotateY(-120deg) scale(0.9,0.9);
-}
-100% {
+  0% {
+    opacity: 0;
+    transform: rotateY(-120deg) scale(0.9, 0.9);
+  }
+
+  100% {
     opacity: 1;
-    transform: rotateY(0deg) scale(1,1);
-}
+    transform: rotateY(0deg) scale(1, 1);
+  }
 }
 
 /* Slide In */
-.animate.slide { animation-name: animate-slide; }
+.animate.slide {
+  animation-name: animate-slide;
+}
+
 @keyframes animate-slide {
-0% {
-opacity: 0;
-transform: translate(0,20px);
-}
-100% {
+  0% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+
+  100% {
     opacity: 1;
-    transform: translate(0,0);
-}
+    transform: translate(0, 0);
+  }
 }
 
 /* Drop In */
-.animate.drop { 
-animation-name: animate-drop; 
-animation-timing-function: cubic-bezier(.77,.14,.91,1.25);
+.animate.drop {
+  animation-name: animate-drop;
+  animation-timing-function: cubic-bezier(.77, .14, .91, 1.25);
 }
+
 @keyframes animate-drop {
-0% {
-opacity: 0;
-transform: translate(0,-300px) scale(0.9, 1.1);
-}
-95% {
+  0% {
+    opacity: 0;
+    transform: translate(0, -300px) scale(0.9, 1.1);
+  }
+
+  95% {
     opacity: 1;
-    transform: translate(0,0) scale(0.9, 1.1);
-}
-96% {
+    transform: translate(0, 0) scale(0.9, 1.1);
+  }
+
+  96% {
     opacity: 1;
-    transform: translate(10px,0) scale(1.2, 0.9);
-}
-97% {
+    transform: translate(10px, 0) scale(1.2, 0.9);
+  }
+
+  97% {
     opacity: 1;
-    transform: translate(-10px,0) scale(1.2, 0.9);
-}
-98% {
+    transform: translate(-10px, 0) scale(1.2, 0.9);
+  }
+
+  98% {
     opacity: 1;
-    transform: translate(5px,0) scale(1.1, 0.9);
-}
-99% {
+    transform: translate(5px, 0) scale(1.1, 0.9);
+  }
+
+  99% {
     opacity: 1;
-    transform: translate(-5px,0) scale(1.1, 0.9);
-}
-100% {
+    transform: translate(-5px, 0) scale(1.1, 0.9);
+  }
+
+  100% {
     opacity: 1;
-    transform: translate(0,0) scale(1, 1);
-}
+    transform: translate(0, 0) scale(1, 1);
+  }
 }
 
 /* Animation Delays */
 .delay-1 {
-animation-delay: 0.6s;
+  animation-delay: 0.6s;
 }
+
 .delay-2 {
-animation-delay: 0.7s;
+  animation-delay: 0.7s;
 }
+
 .delay-3 {
-animation-delay: 0.8s;
+  animation-delay: 0.8s;
 }
+
 .delay-4 {
-animation-delay: 0.9s;
+  animation-delay: 0.9s;
 }
+
 .delay-5 {
-animation-delay: 1s;
+  animation-delay: 1s;
 }
+
 .delay-6 {
-animation-delay: 1.1s;
+  animation-delay: 1.1s;
 }
+
 .delay-7 {
-animation-delay: 1.2s;
+  animation-delay: 1.2s;
 }
+
 .delay-8 {
-animation-delay: 1.3s;
+  animation-delay: 1.3s;
 }
+
 .delay-9 {
-animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
+
 .delay-10 {
-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
+
 .delay-11 {
-animation-delay: 1.6s;
+  animation-delay: 1.6s;
 }
+
 .delay-12 {
-animation-delay: 1.7s;
+  animation-delay: 1.7s;
 }
+
 .delay-13 {
-animation-delay: 1.8s;
+  animation-delay: 1.8s;
 }
+
 .delay-14 {
-animation-delay: 1.9s;
+  animation-delay: 1.9s;
 }
+
 .delay-15 {
-animation-delay: 2s;
+  animation-delay: 2s;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
