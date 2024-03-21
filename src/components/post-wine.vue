@@ -5,12 +5,10 @@ interface Wine {
     idwine: number
     nome: string
     produttore: string
-    variante1: string
-    variante2: string
     colore: string
     grad: number
-    prezzoCalice: number
-    prezzoBott: number
+    prezzoCalice: string
+    prezzoBott: string
 }
 
 export default defineComponent({
