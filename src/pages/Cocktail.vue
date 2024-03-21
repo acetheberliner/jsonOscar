@@ -51,7 +51,7 @@ export default defineComponent({
       <img src="/red.jpg" alt="">
       <img class="tumb" src="/tumblr.jpg" alt="">
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle"
+    <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle"
       aria-expanded="false" aria-label="Toggle navigation">
       <!-- <p class="attention">!!! <i class="bi bi-info-circle"></i> !!!</p> -->
       <p class="attention">ATTENZIONE<i class="bi bi-hand-index"></i></p>
@@ -59,7 +59,7 @@ export default defineComponent({
     <div id="info" class="collapse">
       <p>Si informa la gentile clientela che in occasione di eventi speciali, i prezzi dei cocktail vengono calcolati differentemente. <br><br>Si ringrazia per la comprensione </p>
     </div>
-    <div class="drink-list page animate slide delay-1">
+    <div class="drink-list page animate slide delay-2">
       <div class="radio-container">
         <div class="filter selectdiv">
           <form class="form-group filter-tab" id="radio" action="#">
@@ -76,12 +76,20 @@ export default defineComponent({
             v-model="searchTerm">
         </form>
       </div>
+      <hr class="splitter">
       <PostDrink v-for="drink in filteredCocktail()" :key="drink.iddrink" :drink="drink" />
     </div>
   </div>
 </template>
 
 <style scoped>
+.splitter{
+  border: 2px solid #2c57a3;
+  border-radius: 20px;
+  width: 90%;
+  margin-top: 0px;
+}
+
 .searchbar-container {
   display: flex;
   flex-direction: row;

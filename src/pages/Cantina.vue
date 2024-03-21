@@ -54,7 +54,7 @@ export default defineComponent({
     <div class="drink-list page animate slide delay-1">
       <div class="radio-container">
         <div class="filter selectdiv">
-          <form class="form-group" id="radio" action="#">
+          <form class="form-group filter-tab" id="radio" action="#">
             <select class="form-control form" name="Categoria" v-model="selectedCategory">
               <option selected id="tutti" value="">Filtra</option>
               <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
@@ -68,12 +68,20 @@ export default defineComponent({
             v-model="searchTerm">
         </form>
       </div>
+      <hr class="splitter">
       <PostWine v-for="wine in filteredCantina()" :key="wine.idwine" :wine="wine" />
     </div>
   </div>
 </template>
 
 <style scoped>
+.splitter{
+  border: 2px solid #2c57a3;
+  border-radius: 20px;
+  width: 90%;
+  margin-top: 0px;
+}
+
 .searchbar-container {
   display: flex;
   flex-direction: row;
@@ -84,6 +92,10 @@ export default defineComponent({
 
 form {
   width: 88%;
+}
+
+.filter-tab {
+  width: 100%;
 }
 
 input {

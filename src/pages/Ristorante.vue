@@ -55,7 +55,7 @@ export default defineComponent({
     <div class="meal-list page animate slide delay-1">
       <div class="radio-container">
         <div class="filter selectdiv">
-          <form class="form-group" id="radio" action="#">
+          <form class="form-group filter-tab" id="radio" action="#">
             <select class="form-control form" name="Categoria" v-model="selectedCategory">
               <option selected id="tutti" value="">Filtra</option>
               <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
@@ -69,12 +69,20 @@ export default defineComponent({
             v-model="searchTerm">
         </form>
       </div>
+      <hr class="splitter">
       <PostFood v-for="food in filteredRist()" :key="food.idfood" :food="food" />
     </div>
   </div>
 </template>
 
 <style scoped>
+.splitter{
+  border: 2px solid #2c57a3;
+  border-radius: 20px;
+  width: 90%;
+  margin-top: 0px;
+}
+
 p.attention {
   margin: 0;
   color: white;
@@ -116,6 +124,10 @@ img.fing {
 
 form {
   width: 88%;
+}
+
+.filter-tab {
+  width: 100%;
 }
 
 input {
