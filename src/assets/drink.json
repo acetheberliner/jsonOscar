@@ -2,154 +2,137 @@
     {
         "iddrink": 1,
         "nome": "Spritz Aperol",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Aperol, prosecco, soda",
+        "garnish": "arancia",
         "categoria": "Aperitivo",
-        "sapore": "",
-        "prezzo": 0
+        "prezzo": 10
     },
     {
         "iddrink": 2,
         "nome": "Spritz Campari",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Campari, prosecco, soda",
+        "garnish": "arancia",
         "categoria": "Aperitivo",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 3,
         "nome": "Spritz Hugo",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Sambuco/St. Germain, prosecco, soda",
+        "garnish": "lime, menta",
         "categoria": "Aperitivo",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 4,
         "nome": "Americano",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Campari, Martini rosso, soda",
+        "garnish": "limone, arancia",
         "categoria": "Aperitivo",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 5,
         "nome": "Americano Sbagliato",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Campari, Martini Rosso, prosecco",
+        "garnish": "limone, arancia",
         "categoria": "Aperitivo",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 6,
         "nome": "Negroni",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Campari, Martini rosso, gin",
+        "garnish": "limone, arancia",
         "categoria": "Aperitivo",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 7,
         "nome": "Cuba Libre",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Rum bianco, succo di lime, zucchero, Coca-Cola",
+        "garnish": "lime",
         "categoria": "Energizzante",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 8,
         "nome": "Moscow Mule",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Vodka, ginger beer, succo di lime",
+        "garnish": "menta, lime, cetriolo",
         "categoria": "Speziato",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 9,
         "nome": "Long Island",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Vodka, rum bianco, triple sec, gin, succo di lime, Coca-Cola",
+        "garnish": "limone",
         "categoria": "Forte",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 10,
         "nome": "Pina Colada",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Rum bianco, succo di ananas, cocco",
+        "garnish": "ananas, ciliegia",
         "categoria": "Fruttato",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 11,
         "nome": "Sex on the Beach",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Vodka, vodka pesca, succo di arancia, succo di mirtillo",
+        "garnish": "arancia, ananas",
         "categoria": "Fruttato",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 12,
         "nome": "Cacciavite",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Vodka, succo di arancia",
+        "garnish": "arancia",
         "categoria": "Aspro",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 13,
         "nome": "Caipirinha",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Succo di lime, zucchero, Cachaça",
+        "garnish": "lime",
         "categoria": "Aspro",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 14,
         "nome": "Caipiroska",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Succo di lime, zucchero, vodka",
+        "garnish": "lime",
         "categoria": "Aspro",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 15,
         "nome": "Mojito",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Succo di lime, zucchero, menta, rum bianco, soda",
+        "garnish": "menta",
         "categoria": "Fresco",
-        "sapore": "",
         "prezzo": 0
     },
     {
         "iddrink": 16,
         "nome": "Virgin Mojito",
-        "ingredienti": "",
-        "garnish": "",
-        "categoria": "Fresco",
-        "sapore": "",
+        "ingredienti": "Succo di lime, zucchero, menta, succo di limone, ginger ale",
+        "garnish": "lime",
+        "categoria": "Analcolico",
         "prezzo": 0
     },
     {
         "iddrink": 17,
         "nome": "Margarita",
-        "ingredienti": "",
-        "garnish": "",
+        "ingredienti": "Tequila, cointreau, succo di lime",
+        "garnish": "lime, sale",
         "categoria": "Salato",
-        "sapore": "",
         "prezzo": 0
     }
 ]

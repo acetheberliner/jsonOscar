@@ -7,7 +7,7 @@ interface Drink {
     ingredienti: string
     garnish: string
     categoria: string
-    sapore: string
+    // sapore: string
     prezzo: number
 }
 
@@ -35,11 +35,11 @@ export default defineComponent({
     <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
             <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ drink.nome }}</h4>
-            <h6 class="prezzo"><span class="precise">*</span> {{ drink.prezzo }} €</h6>
+            <h6 class="prezzo"><span class="precise"> * </span> {{ drink.prezzo }} € </h6>
         </div>
         <div class="" :id="'toggle-' + drink.iddrink" :class="{ 'collapse': !isOpen, 'show': isOpen }">
             <hr>
-            <p class="categoria">{{ drink.categoria }}, {{ drink.sapore }}</p>
+            <p class="categoria">{{ drink.categoria }}</p>
             <p class="ingredienti">{{ drink.ingredienti }} + {{ drink.garnish }}</p>
         </div>
     </button>
@@ -59,6 +59,11 @@ h4 {
     margin: 0;
 }
 
+i.asterisk {
+    margin-left: 3px;
+    font-size: 14px;
+}
+
 button.navbar-toggler {
     border-radius: 20px;
     border: 1px solid rgba(68, 67, 67, 0.075);
@@ -74,6 +79,9 @@ button.navbar-toggler {
 h6.prezzo {
     margin: 0;
     margin-top: 4px;
+    width: 20%;
+    display: flex;
+    flex-direction: row-reverse;
 }
 
 button.navbar-toggler:focus,
