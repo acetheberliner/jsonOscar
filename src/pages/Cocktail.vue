@@ -58,12 +58,23 @@ export default defineComponent({
               </form>
             </div>
           </div>
+          <div class="searchbar-container">
+            <form class="form-inline my-2">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
           <PostDrink v-for="drink in filteredCocktail()" :key="drink.iddrink" :drink="drink" />
         </div>
     </div>
 </template>
 
 <style scoped>
+.searchbar-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .radio-container {
   display: flex;
   flex-direction: row;
