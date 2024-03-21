@@ -35,7 +35,7 @@ export default defineComponent({
     <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
             <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ drink.nome }}</h4>
-            <h6 class="prezzo"><span class="precise">*</span> {{ drink.prezzo }}.00€</h6>
+            <h6 class="prezzo"><span class="precise">*</span> {{ drink.prezzo }} €</h6>
         </div>
         <div class="" :id="'toggle-' + drink.iddrink" :class="{ 'collapse': !isOpen, 'show': isOpen }">
             <hr>
