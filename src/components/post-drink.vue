@@ -37,7 +37,7 @@ export default defineComponent({
             <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ drink.nome }}</h4>
             <h6 class="prezzo"><span class="precise">*</span> {{ drink.prezzo }}.00€</h6>
         </div>
-        <div class="" :id="'toggle-' + drink.iddrink">
+        <div class="" :id="'toggle-' + drink.iddrink" :class="{ 'collapse': !isOpen, 'show': isOpen }">
             <hr>
             <p class="categoria">{{ drink.categoria }}, {{ drink.sapore }}</p>
             <p class="ingredienti">{{ drink.ingredienti }} + {{ drink.garnish }}</p>

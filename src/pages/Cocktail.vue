@@ -89,14 +89,15 @@ p.attention {
 }
 
 .radio-container {
-  display: flex; 
-  justify-content: flex-end
+  display: flex;
+  flex-direction: row;
+  width: 88%;
 }
 
 .filter {
   border-radius: 10px;
-  padding: 8px;
-  margin: 8px;
+  /* padding: 8px;
+  margin: 8px; */
 }
 
 img {

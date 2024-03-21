@@ -1,7 +1,7 @@
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
 
-export interface Food {
+interface Food {
     idfood: number
     nome: string
     ingredienti: string

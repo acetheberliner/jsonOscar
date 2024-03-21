@@ -4,31 +4,31 @@ export default defineComponent({});
 </script>
 
 <template>
-    <div class="page animate slide">
-        <div class="bubble">
-            <div class="intro">
-                <h2>Scopri</h2>
-                <img src="/oscar-bac.jpg" alt="panoramica" class="discover">
-            </div>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet diam eget arcu molestie vulputate.</p>
-            </div>
-        </div>
-        <hr class="sep">
-        <div class="bubble">
-            <div class="title">
-                <h2>Info & Prenotazioni</h2>
-            </div>
-            <div class="info">
-                <p><i class="bi bi-geo-alt"></i> Via VIII Traversa<br><span class="location">(Milano Marittima)</span></p>
-                <p><i class="bi bi-telephone"></i> 0544 992598</p>
-                <!-- <p><i class="bi bi-envelope"></i> info@oscarspiaggia.com</p> -->
-                <hr>
-                <p><i class="bi bi-star"></i> Valutazione · <span class="val">4,7</span></p>
-                <p><i class="bi bi-wallet2"></i> Fascia di prezzo · <span class="eur">€€</span></p>
-            </div>
-        </div>
+  <div class="page animate slide">
+    <div class="bubble">
+      <div class="intro">
+          <h2>Scopri</h2>
+          <img src="/oscar-bac.jpg" alt="panoramica" class="discover">
+      </div>
+      <div class="content">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet diam eget arcu molestie vulputate.</p>
+      </div>
     </div>
+    <hr class="sep">
+    <div class="bubble">
+      <div class="title">
+          <h2>Info & Prenotazioni</h2>
+      </div>
+      <div class="info">
+          <p><i class="bi bi-geo-alt"></i> Via VIII Traversa<br><span class="location">(Milano Marittima)</span></p>
+          <p><i class="bi bi-telephone"></i> 0544 992598</p>
+          <!-- <p><i class="bi bi-envelope"></i> info@oscarspiaggia.com</p> -->
+          <hr>
+          <p><i class="bi bi-star"></i> Valutazione · <span class="val">4,7</span></p>
+          <p><i class="bi bi-wallet2"></i> Fascia di prezzo · <span class="eur">€€</span></p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>

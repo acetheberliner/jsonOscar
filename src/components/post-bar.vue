@@ -29,12 +29,12 @@ export default defineComponent({
 </script>
 
 <template>
-    <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" data-toggle="collapse" @click="toggleCollapse()" :data-target="'#toggle-' + bar.idbar" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
             <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ bar.nome }}</h4>
-            <h6 class="prezzo">{{ bar.prezzo }}.00€</h6>
+            <h6 class="prezzo">{{ bar.prezzo }} €</h6>
         </div>
-        <div class="" :id="'toggle-' + bar.idbar">
+        <div class="" :id="'toggle-' + bar.idbar" :class="{ 'collapse': !isOpen, 'show': isOpen }">
             <hr>
             <p class="categoria">{{ bar.categoria }}</p>
         </div>

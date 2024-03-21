@@ -34,30 +34,48 @@ export default defineComponent({
 
 <template>
     <div class="page animate slide">
-        <div class="title">
-            <h2>Cantina</h2>
-        </div>
-        <div class="image">
-            <img src="/torta.jpg" alt="">
-            <img class="tumb" src="/yogurt.jpg" alt="">
-        </div>
+      <div class="title">
+          <h2>Cantina</h2>
+      </div>
+      <div class="image">
+          <img src="/torta.jpg" alt="">
+          <img class="tumb" src="/yogurt.jpg" alt="">
+      </div>
+      <div class="drink-list page animate slide delay-1">
         <div class="radio-container">
           <div class="filter selectdiv">
-            <form id="radio" action="#">
-              <select name="Categoria" v-model="selectedCategory">
-                <option id="tutti" value="">Tutti</option>
+            <form class="form-group" id="radio" action="#">
+              <select class="form-control form" name="Categoria" v-model="selectedCategory">
+                <option selected id="tutti" value="">Filtra</option>
                 <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
               </select>
             </form>
           </div>
         </div>
-        <div class="drink-list page animate slide delay-1">
-            <PostWine v-for="wine in filteredCantina()" :key="wine.idwine" :wine="wine" />
-        </div>
+        <PostWine v-for="wine in filteredCantina()" :key="wine.idwine" :wine="wine" />
+      </div>
     </div>
 </template>
 
 <style scoped>
+.radio-container {
+  display: flex;
+  flex-direction: row;
+  width: 88%;
+}
+
+.form {
+  border-radius: 10px;
+  padding: 10px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.719); /* Sfondo semi-trasparente */
+  border: 1px solid #4fa1ca;
+  color: #2c57a3;
+  text-shadow: 1px 1px #4fa1ca;
+  box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
+  width: 100%;    
+}
+
 p.attention {
     margin: 0;
     color: white;
