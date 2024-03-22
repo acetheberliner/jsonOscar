@@ -36,6 +36,12 @@ export default defineComponent({});
 </template>
 
 <style scoped>
+@media only screen and (min-width: 768px) {
+  img.discover {
+    width: 500px; 
+  }
+}
+
 * {
   color: white;
 }
