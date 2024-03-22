@@ -3,7 +3,7 @@
   <div class="full-page">
     <main>
       <div class="container-fluid">
-        <div class="row nav">
+        <div class="row nav d-flex align-items-center">
           <nav class="navbar">
             <div class="logo col-12 col-md-12">
               <div class="col-2 col-md-1">
@@ -24,7 +24,7 @@
             </div>
           </nav>
           <hr>
-          <div class="container">
+          <div class="container d-flex justify-content-center text-center">
             <div class="col-12 col-md-12">
               <div class="collapse text-center m-2" id="navbarToggleExternalContent">
                 <h4 class="text-white">Menù</h4>
@@ -175,6 +175,13 @@ export default defineComponent({
   .container {
     z-index: 3;
     margin-bottom: 25px;
+    max-width: 100%; /* O imposta una larghezza massima appropriata */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nav {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -182,18 +189,14 @@ export default defineComponent({
   .links {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    justify-content: space-evenly;
+    max-width: 100%;
   }
   
   .links>.routerlink {
-    border: 1px solid #ffffff;
     border-radius: 20px;
     padding: 18px;
-    box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
-    background-color: rgba(255, 255, 255, 0.253); /* Sfondo semi-trasparente */
     font-size: bolder;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
     font-size: 35px;
     color: #fdfeff;
     text-shadow: #ffffff 1px 0 6px;
@@ -215,10 +218,17 @@ export default defineComponent({
   }
 
   h4{
-    text-shadow: 2px 2px #2f59a6;
+    text-shadow: #ffffff 1px 0 6px;
     font-size: 45px;
+    font-family: "Comfortaa", sans-serif;
   }
 
+  .collapsed-navbar {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 6px;
+    width: 100%; 
+  }
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------- */
@@ -282,7 +292,9 @@ export default defineComponent({
   }
   
   h4{
-    text-shadow: 2px 2px #2f59a6;
+    text-shadow: #ffffff 1px 0 6px;
+    font-size: 30px;
+    font-family: "Comfortaa", sans-serif;
   }
   
   .logo {
