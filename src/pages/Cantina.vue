@@ -31,9 +31,7 @@ export default defineComponent({
       // Applica il filtro per il termine di ricerca, se presente
       if (this.searchTerm) {
         const searchTermLower = this.searchTerm.toLowerCase();
-        filtered = filtered.filter((wine) =>
-          wine.nome.toLowerCase().includes(searchTermLower)
-        );
+        filtered = filtered.filter((wine) => wine.nome.toLowerCase().includes(searchTermLower) || wine.produttore.toLowerCase().includes(searchTermLower));
       }
 
       return filtered;

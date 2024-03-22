@@ -39,7 +39,7 @@ export default defineComponent({
             <img v-if="wine.colore == 'Bianco'" class="wine-icon" src="/wine.svg" alt="">
             <img v-if="wine.colore == 'Rosso'" class="wine-icon" src="/wine-red.svg" alt="">
             <img v-if="wine.colore == 'Rosè'" class="wine-icon" src="/wine-rose.svg" alt="">
-            <div>
+            <div class="nome-prod">
                 <!-- <span class="drink-icon"></span> -->
                 <h4 class="nome"> {{ wine.nome }}</h4>
                 <p class="produttore">{{ wine.produttore }}</p>
@@ -53,13 +53,30 @@ export default defineComponent({
         </div>
         <div class="" :id="'toggle-' + wine.idwine" :class="{ 'collapse': !isOpen, 'show': isOpen }">
             <hr>
-            <p class="categoria">Categoria: {{ wine.colore }}</p>
+            <p class="categoria" v-if="wine.colore != 'Bollicine'">Colore: {{ wine.colore }}</p>
+            <p class="categoria" v-if="wine.colore.toLowerCase() == 'bianco'">Categoria: Fermo</p>
+            <p class="categoria boll" v-if="wine.colore.toLowerCase() == 'bollicine'">Colore: Bianco<span class="boll">Categoria: Bollicine</span></p>
             <p class="categoria">Gradazione: {{ wine.grad }}°</p>
         </div>
     </button>
 </template>
 
 <style scoped>  
+.nome-prod {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boll {
+    display: flex;
+    flex-direction: column;
+}
+
+.boll>span {
+    margin-top: 4px;
+}
+
 hr{
     border: 1px solid #4fa1ca;
     border-radius: 20px;

@@ -34,7 +34,8 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
-            <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ drink.nome }}</h4>
+            <img src="/cocktail-svg.svg" class="drink-icon" alt="cocktail">
+            <h4 class="nome"> {{ drink.nome }}</h4>
             <h6 class="prezzo"><span class="precise"> * </span> {{ drink.prezzo }} € </h6>
         </div>
         <div class="" :id="'toggle-' + drink.iddrink" :class="{ 'collapse': !isOpen, 'show': isOpen }">
@@ -72,7 +73,7 @@ button.navbar-toggler {
     width: 90%;
     margin-bottom: 10px;
     padding: 18px;
-    text-align: start;
+    text-align: center;
     vertical-align: middle;
 }
 
@@ -96,6 +97,7 @@ button.navbar-toggler:visited {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .categoria {
@@ -126,8 +128,7 @@ button.navbar-toggler:visited {
 }
 
 .drink-icon{
-    color: #d6a103;
-    text-shadow: 1.5px 1.5px transparent;
+    width: 25px;
 }
 
 .precise {

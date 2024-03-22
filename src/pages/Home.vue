@@ -33,6 +33,21 @@ export default defineComponent({});
       </div>
     </div>
   </div>
+  <hr class="sep">
+  <div class="title">
+    <h2 class="informazioni mb-3">Social</h2>
+  </div>
+  <div class="page animate slide">
+    <div class="bubble">
+      <div class="info">
+        <p>Rimani sempre aggiornato riguardo occasioni ed eventi!</p>
+        <div class="social-links">
+          <a class="social" href="https://www.instagram.com/oscar_spiaggia298?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img class="social-img" src="/instagram.svg" alt="Instagram"> oscar_spiaggia298</a>
+          <a class="social" href="https://www.facebook.com/OscarSpiaggia298/?locale=it_IT"><img class="social-img" src="/facebook.svg" alt="Facebook"> OscarSpiaggia298</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -40,6 +55,24 @@ export default defineComponent({});
   img.discover {
     width: 500px; 
   }
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.social {
+  background-color: transparent;
+  color: #2f59a6;
+  font-size: 16px;
+}
+
+.social-img {
+  width: 25px;
+  box-shadow: 0;
 }
 
 * {
@@ -149,7 +182,7 @@ hr {
   border: 1px solid rgba(68, 67, 67, 0.075);
   background-color: rgba(255, 255, 255, 0.76);
   /* Sfondo semi-trasparente */
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 70px 4px;
   margin-bottom: 5px;
 }
 
