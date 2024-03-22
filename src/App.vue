@@ -179,10 +179,6 @@ export default defineComponent({
     margin-right: auto;
   }
 
-  .collapse{
-
-  }
-
   .links {
     display: flex;
     flex-direction: row;
