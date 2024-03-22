@@ -99,7 +99,7 @@ export default defineComponent({});
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Imposta le colonne della griglia in modo che si adattino automaticamente alla larghezza dello schermo */
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
   }
 
@@ -148,6 +148,11 @@ export default defineComponent({});
     /* Sfondo semi-trasparente */
     box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 70px 4px;
     margin-bottom: 5px;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: column;
   }
 }
 

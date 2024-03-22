@@ -70,7 +70,14 @@ export default defineComponent({
         </form>
       </div>
       <hr class="splitter">
-      <PostFood v-for="food in filteredRist()" :key="food.idfood" :food="food" />
+      <div class="cass-antipasti">
+        
+      </div>
+      <div class="cass-primi"></div>
+      <div class="cass-secondi"></div>
+      <div class="cass-insalate"></div>
+      <div class="cass-dessert"></div>
+      <PostFood v-for="food in filteredRist()" :key="food.idfood" :food="food"/>
     </div>
   </div>
 </template>
