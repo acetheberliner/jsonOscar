@@ -46,7 +46,7 @@ export default defineComponent({
       <h2>Cantina</h2>
     </div>
     <div class="image">
-      <img src="/torta.jpg" alt="">
+      <img src="/calice.jpg" alt="">
       <img class="tumb" src="/yogurt.jpg" alt="">
     </div>
     <div class="drink-list page animate slide delay-1">
@@ -152,6 +152,8 @@ img.tumb {
   align-items: center;
   position: relative;
   margin-bottom: 140px;
+  margin-left: auto;
+  margin-right: auto;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 

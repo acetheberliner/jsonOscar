@@ -40,5 +40,13 @@
         "ingredienti": "...",
         "categoria": "Dessert",
         "prezzo": 7.5
+    },
+    {
+        "idfood": 7,
+        "nome": "TestAntipasto#2",
+        "ingredienti": "...",
+        "categoria": "Antipasto",
+        "prezzo": 6
     }
+    
 ]

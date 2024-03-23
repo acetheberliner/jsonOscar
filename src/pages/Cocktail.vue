@@ -48,8 +48,9 @@ export default defineComponent({
       <h2>Cocktail</h2>
     </div>
     <div class="image">
-      <img src="/red.jpg" alt="">
-      <img class="tumb" src="/tumblr.jpg" alt="">
+      <img src="/red.jpg" alt="cocktail">
+      <img class="tumb" src="/tumblr.jpg" alt="cocktail">
+      <img class="gin" src="/gin-tonic.jpg" alt="cocktail">
     </div>
     <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info"
       aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -167,21 +168,29 @@ p.attention {
 }
 
 img {
-  width: 200px;
+  width: 180px;
   border: 1px solid transparent;
   border-radius: 20px;
   position: absolute;
   z-index: 99;
-  transform: translateX(75px) translateY(80px);
+  transform: translateX(135px) translateY(80px);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 img.tumb {
-  width: 200px;
+  width: 150px;
   position: relative;
-  z-index: 100;
-  transform: translateX(-80px);
+  z-index: 101;
+  transform: translateX(-5px) translateY(-20px);
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+img.gin {
+  width: 140px;
+  z-index: 100;
+  position: relative;
+  transform: translateX(-115px) translateY(150px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .image {
@@ -189,7 +198,10 @@ img.tumb {
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 120px;
+  margin-top: 10px;
+  margin-bottom: 180px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .drink-list {

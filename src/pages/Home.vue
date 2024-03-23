@@ -272,6 +272,14 @@ export default defineComponent({});
   img {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   }
+
+  img.info-img {
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.425) 0px 2px 50px 4px;
+    margin-bottom: 15px;
+  }
   
   .bubble {
     display: flex;
