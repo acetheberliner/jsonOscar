@@ -47,6 +47,13 @@
         "ingredienti": "...",
         "categoria": "Antipasto",
         "prezzo": 6
+    },
+    {
+        "idfood": 8,
+        "nome": "TestPrimo#2",
+        "ingredienti": "...",
+        "categoria": "Primo",
+        "prezzo": 7.5
     }
     
 ]

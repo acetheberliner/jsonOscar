@@ -58,7 +58,7 @@ export default defineComponent({
       <img class="fing" src="/insalata.jpg" alt="">
     </div>
     <div class="meal-list page animate slide delay-1">
-      <div class="radio-container">
+      <!-- <div class="radio-container">
         <div class="filter selectdiv">
           <form class="form-group filter-tab" id="radio" action="#">
             <select class="form-control form" name="Categoria" v-model="selectedCategory">
@@ -67,88 +67,99 @@ export default defineComponent({
             </select>
           </form>
         </div>
-      </div>
-      <div class="searchbar-container">
+      </div> -->
+      <!-- <div class="searchbar-container">
         <form class="form-inline mb-2">
           <input class="form-control search" type="search" placeholder="Cerca..." aria-label="Search"
             v-model="searchTerm">
         </form>
+      </div> -->
+      <div class="portata">
+        <h2>Portate</h2>
       </div>
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
       <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#antipasti" @click="toggleCollapse()">
           <h2>Antipasti</h2>
         </button>
-        <div class="col-12 antipasti-container" :class="{ 'collapse': !isOpen, 'show': isOpen }">
-          <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'antipasto')" :key="food.idfood" :food="food"/>
+        <div class="col-12">
+          <div class="col-12 antipasti-container collapse" id="antipasti">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'antipasto')" :key="food.idfood" :food="food"/>
+          </div>
         </div>
       </div>
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
       <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#primi" @click="toggleCollapse()">
           <h2>Primi</h2>
         </button>
         <div class="col-12">
-          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+          <div class="col-12 antipasti-container collapse" id="primi">
             <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'primo')" :key="food.idfood" :food="food"/>
           </div>
         </div>
       </div>
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
-      <!-- <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#secondi" @click="toggleCollapse()">
           <h2>Secondi</h2>
         </button>
         <div class="col-12">
-          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+          <div class="col-12 antipasti-container collapse" id="secondi">
             <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'secondo')" :key="food.idfood" :food="food"/>
           </div>
         </div>
       </div>
-      <hr class="splitter"> -->
+      <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
-      <!-- <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#insalate" @click="toggleCollapse()">
           <h2>Insalate</h2>
         </button>
         <div class="col-12">
-          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+          <div class="col-12 antipasti-container collapse" id="insalate">
             <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'insalata')" :key="food.idfood" :food="food"/>
           </div>
         </div>
       </div>
-      <hr class="splitter"> -->
+      <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
-      <!-- <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#panini" @click="toggleCollapse()">
           <h2>Panini</h2>
         </button>
         <div class="col-12">
-          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+          <div class="col-12 antipasti-container collapse" id="panini">
             <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'panino')" :key="food.idfood" :food="food"/>
           </div>
         </div>
       </div>
-      <hr class="splitter"> -->
+      <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
-      <!-- <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#dessert" @click="toggleCollapse()">
           <h2>Dessert</h2>
         </button>
         <div class="col-12">
-          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+          <div class="col-12 antipasti-container collapse" id="dessert">
             <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'dessert')" :key="food.idfood" :food="food"/>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.portata>h2 {
+  color: #ffffff;
+  text-shadow: #0e3b88 1px 0 10px;
+  font-family: 'Montserrat' sans-serif;
+}
+
 .postfood-container {
   display: flex;
   flex-direction: column;
@@ -181,12 +192,13 @@ export default defineComponent({
 
 .antipasti-button>h2 {
   color: #2c57a3;
-  text-shadow: #4fa1ca 1px 0 10px;
+  text-shadow: #4fa1cae8 1px 0 10px;
 }
 
 .splitter{
-  border: 2px solid #2c57a3;
-  border-radius: 20px;
+  background: linear-gradient(to right, #0e3b88, #4bb9f0);
+  height: 2px;
+  border-radius: 50px;
   width: 90%;
   margin-top: 0px;
 }
