@@ -62,7 +62,7 @@ button.navbar-toggler {
     border: 1px solid rgba(68, 67, 67, 0.075);
     background-color: rgba(255, 255, 255, 0.712); /* Sfondo semi-trasparente */
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    width: 90%;
+    width: 100%;
     margin-bottom: 10px;
     padding: 18px;
     text-align: start;

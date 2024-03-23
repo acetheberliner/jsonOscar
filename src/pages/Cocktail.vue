@@ -51,13 +51,14 @@ export default defineComponent({
       <img src="/red.jpg" alt="">
       <img class="tumb" src="/tumblr.jpg" alt="">
     </div>
-    <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info"
+      aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
       <!-- <p class="attention">!!! <i class="bi bi-info-circle"></i> !!!</p> -->
       <p class="attention">ATTENZIONE<i class="bi bi-hand-index"></i></p>
     </button>
     <div id="info" class="collapse">
-      <p>Si informa la gentile clientela che in occasione di eventi speciali, i prezzi dei cocktail vengono calcolati differentemente. <br><br>Si ringrazia per la comprensione </p>
+      <p>Si informa la gentile clientela che in occasione di eventi speciali, i prezzi dei cocktail vengono calcolati
+        differentemente. <br><br>Si ringrazia per la comprensione </p>
     </div>
     <div class="drink-list page animate slide delay-2">
       <div class="radio-container">
@@ -83,7 +84,11 @@ export default defineComponent({
 </template>
 
 <style scoped>
-.splitter{
+.toast-body {
+  z-index: 200;
+}
+
+.splitter {
   border: 2px solid #2c57a3;
   border-radius: 20px;
   width: 90%;

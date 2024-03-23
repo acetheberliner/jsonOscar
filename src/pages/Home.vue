@@ -11,42 +11,43 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/oscar-bac.jpg" alt="panoramica" class="discover">
+          <img src="/oscar-panoramic.jpg" alt="panoramica" class="discover">
           <div class="content">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet diam eget arcu molestie vulputate.</p>
           </div>
         </div>
       </div>
     </div>
-    <hr class="sep">
+    <!------------------------------------------------------------------------------------------------------->
     <div class="centered-flex">
       <div class="title">
         <h2 class="informazioni mb-3">Info & Prenotazioni</h2>
       </div>
       <div class="page animate slide">
         <div class="bubble">
+          <img src="/asciuga.jpg" alt="panoramica" class="info-img">
           <div class="info">
             <div class="place">
               <p><i class="bi bi-geo-alt"></i> Via VIII Traversa<br><span class="location">(Milano Marittima)</span></p>
             </div>
             <p><i class="bi bi-telephone"></i> 0544 992598</p>
-            <!-- <p><i class="bi bi-envelope"></i> info@oscarspiaggia.com</p> -->
-            <hr>
+            <hr class="sep-info">
             <p><i class="bi bi-star"></i> Valutazione · <span class="val">4,7</span></p>
             <p><i class="bi bi-wallet2"></i> Fascia di prezzo · <span class="eur">€€</span></p>
           </div>
         </div>
       </div>
     </div>
-    <hr class="sep">
+    <!------------------------------------------------------------------------------------------------------->
     <div class="centered-flex">
       <div class="title">
         <h2 class="informazioni mb-3">Social</h2>
       </div>
       <div class="page animate slide">
         <div class="bubble">
+          <img src="/cann.jpg" alt="panoramica" class="info-img">
           <div class="info">
-            <p>Rimani sempre aggiornato riguardo occasioni ed eventi!</p>
+            <p>Rimani aggiornato riguardo occasioni ed eventi!</p>
             <div class="social-links">
               <a class="social" href="https://www.instagram.com/oscar_spiaggia298?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img class="social-img" src="/instagram.svg" alt="Instagram"> oscar_spiaggia298</a>
               <a class="social" href="https://www.facebook.com/OscarSpiaggia298/?locale=it_IT"><img class="social-img" src="/facebook.svg" alt="Facebook"> OscarSpiaggia298</a>
@@ -60,15 +61,33 @@ export default defineComponent({});
 
 <style scoped>
 @media only screen and (min-width: 768px) {
+  hr.sep-info {
+    width: 80%;
+    border: 1px solid #2f59a644;
+    border-radius: 50px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
   img.discover {
-    width: 350px;
+    width: 75%;
     border: 1px solid transparent;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.425) 0px 2px 50px 4px;
   }
 
+  img.info-img {
+    width: 60%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.425) 0px 2px 50px 4px;
+    margin-bottom: 15px;
+  }
+
   .social-img {
-    width: 40px;
+    width: 25px;
+    border: 1px solid transparent;
+    border-radius: 8px;
   }
 
   .intro, .informazioni {
@@ -79,7 +98,7 @@ export default defineComponent({});
   }
 
   .intro>h2, .title>h2 {
-    font-size: 45px;
+    font-size: 35px;
   }
 
   .page {
@@ -90,17 +109,26 @@ export default defineComponent({});
     background-color: rgba(255, 255, 255, 0.521);
     /* Sfondo semi-trasparente */
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    width: 90%;
+    width: 95%;
+    min-height: 85%;
     margin: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .page:hover {
+    transform: scale(1.05);
   }
 
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .centered-flex {
@@ -134,6 +162,7 @@ export default defineComponent({});
     color: #2f59a6;
     font-weight: 800;
     font-family: "Comfortaa", sans-serif;
+    margin-bottom: 5px;
   }
 
   .info {
@@ -153,6 +182,42 @@ export default defineComponent({});
   .social-links {
     display: flex;
     flex-direction: column;
+  }
+
+  i {
+    color: #4fa1ca;
+  }
+  
+  .eur {
+    color: rgb(25, 185, 4);
+    font-style: italic;
+    font-weight: bolder;
+  }
+  
+  .val {
+    color: #ce9d0a;
+    font-weight: bolder;
+    font-style: italic;
+  }
+  
+  span.location {
+    color: #2f59a6;
+    font-size: 13px;
+  }
+
+  a.social {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #2f59a6;
+    font-family: "Comfortaa", sans-serif;
+    font-weight: 700;
+    text-shadow: #4fa1ca 1px 0 10px;
+    transition: all 0.18s ease-in-out;
+  }
+
+  a.social:hover {
+    text-decoration: none;
+    transform: scale(1.08);
   }
 }
 

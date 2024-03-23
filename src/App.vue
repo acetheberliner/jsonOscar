@@ -9,18 +9,18 @@
               <div class="col-2 col-md-1">
                 <router-link to="/" class="rlink"><img src="/vect-white.svg" alt="Logo" class="nav-logo"></router-link>
               </div>
-              <div class="col-4 col-md-6">
+              <div class="col-4 col-md-4">
                 <h1>
-                  <router-link to="/" class="rlink">Oscar Spiaggia</router-link>
+                  <router-link to="/" class="rlink osc">Oscar Spiaggia 298</router-link>
                 </h1>
               </div>
-              <div class="col-3 col-md-4"></div>
+              <div class="col-3 col-md-6"></div>
               <div class="col-2 col-md-1">
                 <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                   <i class="menu bi bi-list"></i>
                 </button>
               </div>
-              <div class="col-2"></div>
+              <div class="col-2 col-md-1"></div>
             </div>
           </nav>
           <hr>
@@ -28,15 +28,11 @@
             <div class="col-12 col-md-12">
               <div class="collapse text-center m-2" id="navbarToggleExternalContent">
                 <h4 class="text-white">Menù</h4>
-                <div class="collapsed-navbar text-white p-2">
-                  <div class="mario">
-                    <div class="links">
-                      <router-link to="/rist" class="routerlink">Ristorante</router-link>
-                      <router-link to="/coffee" class="routerlink">Caffetteria</router-link>
-                      <router-link to="/wine" class="routerlink">Cantina</router-link>
-                      <router-link to="/cocktail" class="routerlink">Cocktail</router-link>
-                    </div>
-                  </div>
+                <div class="links">
+                  <router-link to="/rist" class="routerlink shad">Ristorante</router-link>
+                  <router-link to="/coffee" class="routerlink shad">Caffetteria</router-link>
+                  <router-link to="/wine" class="routerlink shad">Cantina</router-link>
+                  <router-link to="/cocktail" class="routerlink shad">Cocktail</router-link>
                 </div>
               </div>
             </div>
@@ -77,7 +73,7 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*----------------------------------------------------------------------------------------------------------------------------------------- */
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1000px) {
   html {
     scroll-behavior: smooth;
   }
@@ -86,10 +82,16 @@ export default defineComponent({
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    padding: 0;
   }
 
   .col-md-1 {
     text-align: center;
+    padding: 0;
+  }
+
+  .col-2 {
+    padding: 0;
   }
 
   .discover {
@@ -100,16 +102,16 @@ export default defineComponent({
     position: relative; /* Posiziona l'overlay in modo relativo rispetto a questo elemento */
     height: 100vh;
     overflow-y: auto;
-    background: linear-gradient(to bottom, rgba(14, 14, 14, 0.295), rgba(22, 22, 22, 0.311)), url(/oscar.jpg);
-    background-size: cover;
-    background-repeat: repeat;
+    background: linear-gradient(to bottom, rgba(14, 14, 14, 0.295), rgba(22, 22, 22, 0.219)), url(/backumbr.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     z-index: 1;
-    filter: opacity(95%);
+    filter: opacity(100%);
   }
 
   .nav-logo {
-    width: 120px;
+    width: 5em;
     filter: grayscale(0%);
   }
 
@@ -158,18 +160,21 @@ export default defineComponent({
   .navbar {
     padding-left: 20px;
     padding-top: 40px;
-    min-width: 100%;
+    padding-right: 0;
+    min-width: 95%;
     justify-content: center;
     align-items: center;
     z-index: 3;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   hr {
     border: 1px solid white;
     border-radius: 20px;
-    box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
+    box-shadow: #1d2c3b 0px 10px 20px -10px;
     width: 95%;
-    margin-top: 30px;
+    margin-top: 15px;
   }
 
   .container {
@@ -189,13 +194,21 @@ export default defineComponent({
   .links {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 5%;
     max-width: 100%;
+    margin-top: 15px;
   }
   
   .links>.routerlink {
-    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.329);
+    /* background-color: rgba(255, 255, 255, 0.192); */
+    backdrop-filter: blur(20px);
+    box-shadow: #ffffff9f 0px 8px 40px 1px;
+    border-radius: 10px;
     padding: 18px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     font-size: bolder;
     font-size: 35px;
     color: #fdfeff;
@@ -205,16 +218,28 @@ export default defineComponent({
     transition: all 0.1s ease-in-out;
     font-weight: 500;
     font-family: "Comfortaa", sans-serif;
+    transition: all 0.1s ease-in-out;
   }
+  
   
   .rlink {
     text-decoration: none;
     color: white;
   }
   
-  .routerlink:hover, .rlink:focus {
+  .osc {
+    transition: all 0.1s ease-in-out;
+  }
+
+  .osc:hover {
+    transform: scale(1.3);
+  }
+
+  .shad:hover, .shad:focus {
     text-decoration: none;
-    transform: scale(1.06);
+    transform: scale(1.2);
+    text-shadow: #016fff 2px 0 8px;
+    box-shadow: #016fff 0px 8px 40px 1px;
   }
 
   h4{
@@ -229,15 +254,24 @@ export default defineComponent({
     margin-top: 6px;
     width: 100%; 
   }
+
+  div#navbarToggleExternalContent {
+    width: 100%;
+  }
 }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------- */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 999px) {
   
   html {
     scroll-behavior: touch;
   }
-  
+
+  .col-2 {
+    padding: 0;
+    text-align: center;
+  }
+
   * {
     font-family: "Comfortaa", sans-serif;
     font-weight: bold;

@@ -1,16 +1,44 @@
 [
     {
         "idfood": 1,
-        "nome": "Panino",
-        "ingredienti": "Prosciutto cotto, fontina",
-        "categoria": "Panini",
+        "nome": "TestAntipasto",
+        "ingredienti": "...",
+        "categoria": "Antipasto",
         "prezzo": 6
     },
     {
         "idfood": 2,
-        "nome": "Pasta al ragù",
-        "ingredienti": "Pasta, ragù",
-        "categoria": "Primi",
+        "nome": "TestPrimo",
+        "ingredienti": "...",
+        "categoria": "Primo",
+        "prezzo": 7.5
+    },
+    {
+        "idfood": 3,
+        "nome": "TestSecondo",
+        "ingredienti": "...",
+        "categoria": "Secondo",
+        "prezzo": 7.5
+    },
+    {
+        "idfood": 4,
+        "nome": "TestInsalata",
+        "ingredienti": "...",
+        "categoria": "Insalata",
+        "prezzo": 7.5
+    },
+    {
+        "idfood": 5,
+        "nome": "TestPanino",
+        "ingredienti": "...",
+        "categoria": "Panino",
+        "prezzo": 7.5
+    },
+    {
+        "idfood": 6,
+        "nome": "TestDessert",
+        "ingredienti": "...",
+        "categoria": "Dessert",
         "prezzo": 7.5
     }
 ]

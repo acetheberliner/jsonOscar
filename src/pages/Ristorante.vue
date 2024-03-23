@@ -11,6 +11,7 @@ export default defineComponent({
       selectedCategory: '',
       categories: [] as String[],
       searchTerm: '', // Add a new property for search term
+      isOpen: false
     }
   },
   components: {
@@ -38,6 +39,10 @@ export default defineComponent({
 
       return filtered;
     },
+
+    toggleCollapse() {
+      this.isOpen = !this.isOpen;
+    }
   },
 })
 </script>
@@ -70,19 +75,115 @@ export default defineComponent({
         </form>
       </div>
       <hr class="splitter">
-      <div class="cass-antipasti">
-        
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <h2>Antipasti</h2>
+        </button>
+        <div class="col-12 antipasti-container" :class="{ 'collapse': !isOpen, 'show': isOpen }">
+          <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'antipasto')" :key="food.idfood" :food="food"/>
+        </div>
       </div>
-      <div class="cass-primi"></div>
-      <div class="cass-secondi"></div>
-      <div class="cass-insalate"></div>
-      <div class="cass-dessert"></div>
-      <PostFood v-for="food in filteredRist()" :key="food.idfood" :food="food"/>
+      <hr class="splitter">
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <h2>Primi</h2>
+        </button>
+        <div class="col-12">
+          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'primo')" :key="food.idfood" :food="food"/>
+          </div>
+        </div>
+      </div>
+      <hr class="splitter">
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <!-- <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <h2>Secondi</h2>
+        </button>
+        <div class="col-12">
+          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'secondo')" :key="food.idfood" :food="food"/>
+          </div>
+        </div>
+      </div>
+      <hr class="splitter"> -->
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <!-- <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <h2>Insalate</h2>
+        </button>
+        <div class="col-12">
+          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'insalata')" :key="food.idfood" :food="food"/>
+          </div>
+        </div>
+      </div>
+      <hr class="splitter"> -->
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <!-- <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <h2>Panini</h2>
+        </button>
+        <div class="col-12">
+          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'panino')" :key="food.idfood" :food="food"/>
+          </div>
+        </div>
+      </div>
+      <hr class="splitter"> -->
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <!-- <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+          <h2>Dessert</h2>
+        </button>
+        <div class="col-12">
+          <div :class="{ 'collapse': !isOpen, 'show': isOpen }">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'dessert')" :key="food.idfood" :food="food"/>
+          </div>
+        </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <style scoped>
+.postfood-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+}
+
+.cass {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.antipasti-button {
+  border-radius: 20px;
+  border: 1px solid rgba(68, 67, 67, 0.075);
+  background-color: rgba(255, 255, 255, 0.712); /* Sfondo semi-trasparente */
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 18px;
+  text-align: start;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.antipasti-button>h2 {
+  color: #2c57a3;
+  text-shadow: #4fa1ca 1px 0 10px;
+}
+
 .splitter{
   border: 2px solid #2c57a3;
   border-radius: 20px;
