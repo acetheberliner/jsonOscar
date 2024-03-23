@@ -156,6 +156,7 @@ export default defineComponent({
 
 
 <style scoped>
+@media only screen and (min-width: 768px) {}
 .portata>h2 {
   color: #ffffff;
   text-shadow: #0e3b88 1px 0 10px;

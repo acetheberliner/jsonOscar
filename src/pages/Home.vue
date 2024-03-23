@@ -49,8 +49,8 @@ export default defineComponent({});
           <div class="info">
             <p>Rimani aggiornato riguardo occasioni ed eventi!</p>
             <div class="social-links">
-              <a class="social" href="https://www.instagram.com/oscar_spiaggia298?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><img class="social-img" src="/instagram.svg" alt="Instagram"> oscar_spiaggia298</a>
-              <a class="social" href="https://www.facebook.com/OscarSpiaggia298/?locale=it_IT"><img class="social-img" src="/facebook.svg" alt="Facebook"> OscarSpiaggia298</a>
+              <a class="social" href="https://www.instagram.com/oscar_spiaggia298?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img class="social-img" src="/instagram.svg" alt="Instagram"> oscar_spiaggia298</a>
+              <a class="social" href="https://www.facebook.com/OscarSpiaggia298/?locale=it_IT" target="_blank"><img class="social-img" src="/facebook.svg" alt="Facebook"> OscarSpiaggia298</a>
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default defineComponent({});
 </template>
 
 <style scoped>
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
   hr.sep-info {
     width: 80%;
     border: 1px solid #2f59a644;
@@ -152,8 +152,7 @@ export default defineComponent({});
     width: 90%;
     border: 1px solid rgba(68, 67, 67, 0.075);
     background-color: rgba(255, 255, 255, 0.76);
-    /* Sfondo semi-trasparente */
-    box-shadow: rgba(0, 0, 0, 0.425) 0px 12px 20px 4px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 70px 4px;
     text-align: center;
     margin-top: 10px;
   }
@@ -222,7 +221,7 @@ export default defineComponent({});
 }
 /*--------------------------------------------------------------------------------------------------------------------------------------- */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 999px) {
   .social-links {
     display: flex;
     flex-direction: column;

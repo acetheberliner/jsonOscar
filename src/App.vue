@@ -195,7 +195,7 @@ export default defineComponent({
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 5%;
+    gap: 2.5%;
     max-width: 100%;
     margin-top: 15px;
   }
@@ -207,18 +207,17 @@ export default defineComponent({
     box-shadow: #ffffff9f 0px 8px 40px 1px;
     border-radius: 10px;
     padding: 18px;
+    min-width: 20%;
     padding-bottom: 5px;
     padding-top: 5px;
     font-size: bolder;
     font-size: 35px;
-    color: #fdfeff;
+    color: #fdfeff9d;
     text-shadow: #ffffff 1px 0 6px;
     z-index: 3;
-    font-weight: 100;
     transition: all 0.1s ease-in-out;
     font-weight: 500;
     font-family: "Comfortaa", sans-serif;
-    transition: all 0.1s ease-in-out;
   }
   
   
@@ -232,14 +231,15 @@ export default defineComponent({
   }
 
   .osc:hover {
-    transform: scale(1.3);
+    transform: scale(1.02);
   }
 
   .shad:hover, .shad:focus {
     text-decoration: none;
-    transform: scale(1.2);
-    text-shadow: #016fff 2px 0 8px;
-    box-shadow: #016fff 0px 8px 40px 1px;
+    transform: scale(1.06);
+    text-shadow: #fff 2px 0 8px;
+    box-shadow: #fff 0px 8px 40px 1px;
+    color: #fff;
   }
 
   h4{

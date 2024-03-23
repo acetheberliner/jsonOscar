@@ -46,7 +46,17 @@ export default defineComponent({
     </button>
 </template>
 
-<style scoped>  
+<style scoped> 
+@media only screen and (min-width: 1000px) {
+
+}
+/*--------------------------------------------------------------------------------------------------------- */
+
+@media only screen and (max-width: 999px) {
+
+}
+/*------------------------------------------------------------------------------------ */
+
 hr{
     background: linear-gradient(to right, transparent, #4fa1ca, transparent);
     height: 1px;
@@ -59,6 +69,7 @@ img {
 
 h4 {
     margin: 0;
+    font-family: 'Comfortaa', sans-serif;
 }
 
 i.asterisk {
@@ -100,6 +111,10 @@ button.navbar-toggler:visited {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+p {
+    font-family: 'Comfortaa', sans-serif;
 }
 
 .categoria {
