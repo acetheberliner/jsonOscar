@@ -45,11 +45,12 @@ export default defineComponent({
 <template>
   <div class="page animate slide">
     <div class="title">
-      <h2>Caffetteria</h2>
+      <h2>Bar</h2>
     </div>
     <div class="image">
-      <img src="/torta.jpg" alt="">
+      <img src="/brioche.jpg" alt="">
       <img class="tumb" src="/yogurt.jpg" alt="">
+      <img class="beer" src="/beer.png" alt="">
     </div>
     <div class="drink-list page animate slide delay-1">
       <div class="radio-container">
@@ -77,7 +78,8 @@ export default defineComponent({
 
 <style scoped>
 .splitter{
-  border: 2px solid #2c57a3;
+  background: linear-gradient(to right, #0e3b88, #4bb9f0);
+  height: 2px;
   border-radius: 20px;
   width: 90%;
   margin-top: 0px;
@@ -137,7 +139,7 @@ img {
   border-radius: 20px;
   position: absolute;
   z-index: 100;
-  transform: translateX(75px) translateY(80px);
+  transform: translateX(155px) translateY(80px);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -145,7 +147,15 @@ img.tumb {
   width: 180px;
   position: relative;
   z-index: 99;
-  transform: translateX(-90px);
+  transform: translateX(-10px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+img.beer {
+  width: 160px;
+  position: relative;
+  z-index: 101;
+  transform: translateX(-160px) translateY(180px);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -154,8 +164,9 @@ img.tumb {
   display: flex;
   align-items: center;
   position: relative;
-  margin-bottom: 140px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  margin-bottom: 190px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .drink-list {

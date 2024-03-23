@@ -90,7 +90,8 @@ export default defineComponent({
 }
 
 .splitter {
-  border: 2px solid #2c57a3;
+  background: linear-gradient(to right, #0e3b88, #4bb9f0);
+  height: 2px;
   border-radius: 20px;
   width: 90%;
   margin-top: 0px;

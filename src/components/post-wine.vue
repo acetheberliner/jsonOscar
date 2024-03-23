@@ -78,7 +78,8 @@ export default defineComponent({
 }
 
 hr{
-    border: 1px solid #4fa1ca;
+    background: linear-gradient(to right, transparent, #4fa1ca, transparent);
+    height: 1px;
     border-radius: 20px;
     margin: 10px;
 }

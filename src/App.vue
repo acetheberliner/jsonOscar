@@ -30,7 +30,7 @@
                 <h4 class="text-white">Menù</h4>
                 <div class="links">
                   <router-link to="/rist" class="routerlink shad">Ristorante</router-link>
-                  <router-link to="/coffee" class="routerlink shad">Caffetteria</router-link>
+                  <router-link to="/coffee" class="routerlink shad">Bar</router-link>
                   <router-link to="/wine" class="routerlink shad">Cantina</router-link>
                   <router-link to="/cocktail" class="routerlink shad">Cocktail</router-link>
                 </div>
