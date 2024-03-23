@@ -42,13 +42,24 @@ export default defineComponent({
 
     toggleCollapse() {
       this.isOpen = !this.isOpen;
-    }
+    },
   },
 })
 </script>
 
 <template>
   <div class="page animate slide">
+    <div class="toast show align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive"
+      aria-atomic="true">
+      <div class="d-flex">
+        <div class="toast-body">
+          Hello, world! This is a toast message.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+          aria-label="Close"></button>
+      </div>
+    </div>
+    <!------------------------------------------------------------------------------------------------------------>
     <div class="title">
       <h2>Ristorante</h2>
     </div>
@@ -80,72 +91,84 @@ export default defineComponent({
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
       <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#antipasti" @click="toggleCollapse()">
+        <button class="navbar-toggler text-white antipasti-button" type="button" data-toggle="collapse"
+          data-target="#antipasti" @click="toggleCollapse()">
           <h2>Antipasti</h2>
         </button>
         <div class="col-12">
-          <div class="col-12 antipasti-container collapse" id="antipasti">
-            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'antipasto')" :key="food.idfood" :food="food"/>
+          <div class="col-12 collapse" id="antipasti">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'antipasto')"
+              :key="food.idfood" :food="food" />
           </div>
         </div>
       </div>
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
       <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#primi" @click="toggleCollapse()">
+        <button class="navbar-toggler text-white antipasti-button" type="button" data-toggle="collapse"
+          data-target="#primi" @click="toggleCollapse()">
           <h2>Primi</h2>
         </button>
         <div class="col-12">
-          <div class="col-12 antipasti-container collapse" id="primi">
-            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'primo')" :key="food.idfood" :food="food"/>
+          <div class="col-12 collapse" id="primi">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'primo')"
+              :key="food.idfood" :food="food" />
           </div>
         </div>
       </div>
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
       <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#secondi" @click="toggleCollapse()">
+        <button class="navbar-toggler text-white antipasti-button" type="button" data-toggle="collapse"
+          data-target="#secondi" @click="toggleCollapse()">
           <h2>Secondi</h2>
         </button>
         <div class="col-12">
-          <div class="col-12 antipasti-container collapse" id="secondi">
-            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'secondo')" :key="food.idfood" :food="food"/>
+          <div class="col-12 collapse" id="secondi">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'secondo')"
+              :key="food.idfood" :food="food" />
           </div>
         </div>
       </div>
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
       <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#insalate" @click="toggleCollapse()">
+        <button class="navbar-toggler text-white antipasti-button" type="button" data-toggle="collapse"
+          data-target="#insalate" @click="toggleCollapse()">
           <h2>Insalate</h2>
         </button>
         <div class="col-12">
-          <div class="col-12 antipasti-container collapse" id="insalate">
-            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'insalata')" :key="food.idfood" :food="food"/>
+          <div class="col-12 collapse" id="insalate">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'insalata')"
+              :key="food.idfood" :food="food" />
           </div>
         </div>
       </div>
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
       <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#panini" @click="toggleCollapse()">
+        <button class="navbar-toggler text-white antipasti-button" type="button" data-toggle="collapse"
+          data-target="#panini" @click="toggleCollapse()">
           <h2>Panini</h2>
         </button>
         <div class="col-12">
-          <div class="col-12 antipasti-container collapse" id="panini">
-            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'panino')" :key="food.idfood" :food="food"/>
+          <div class="col-12 collapse" id="panini">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'panino')"
+              :key="food.idfood" :food="food" />
           </div>
         </div>
       </div>
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->
       <div class="cass">
-        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#dessert" @click="toggleCollapse()">
+        <button class="navbar-toggler text-white antipasti-button" type="button" data-toggle="collapse"
+          data-target="#dessert" @click="toggleCollapse()">
           <h2>Dessert</h2>
         </button>
         <div class="col-12">
-          <div class="col-12 antipasti-container collapse" id="dessert">
-            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'dessert')" :key="food.idfood" :food="food"/>
+          <div class="col-12 collapse" id="dessert">
+            <PostFood v-for="food in filteredRist().filter(food => food.categoria.toLocaleLowerCase() === 'dessert')"
+              :key="food.idfood" :food="food" />
           </div>
         </div>
       </div>
@@ -154,18 +177,18 @@ export default defineComponent({
 </template>
 
 <style scoped>
+.gui-toast {
+  max-inline-size: min(25ch, 90vw);
+  padding-block: .5ch;
+  padding-inline: 1ch;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
 .portata>h2 {
   color: #ffffff;
   text-shadow: #0e3b88 1px 0 10px;
   font-family: 'Montserrat' sans-serif;
-}
-
-.postfood-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 90%;
 }
 
 .cass {
@@ -178,7 +201,8 @@ export default defineComponent({
 .antipasti-button {
   border-radius: 20px;
   border: 1px solid rgba(68, 67, 67, 0.075);
-  background-color: rgba(255, 255, 255, 0.712); /* Sfondo semi-trasparente */
+  background-color: rgba(255, 255, 255, 0.712);
+  /* Sfondo semi-trasparente */
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
   width: 95%;
   margin-bottom: 10px;
@@ -195,7 +219,7 @@ export default defineComponent({
   text-shadow: #4fa1cae8 1px 0 10px;
 }
 
-.splitter{
+.splitter {
   background: linear-gradient(to right, #0e3b88, #4bb9f0);
   height: 2px;
   border-radius: 50px;

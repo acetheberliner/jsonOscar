@@ -118,7 +118,8 @@ button.navbar-toggler {
     border-radius: 20px;
     border: 1px solid rgba(68, 67, 67, 0.075);
     background-color: rgba(255, 255, 255, 0.712); /* Sfondo semi-trasparente */
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     width: 90%;
     margin-bottom: 20px;
     padding: 12px;

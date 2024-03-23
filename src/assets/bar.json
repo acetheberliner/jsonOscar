@@ -7,8 +7,68 @@
     },
     {
         "idbar": 2,
-        "nome": "Torta",
+        "nome": "Caffe macchiato",
+        "categoria": "Caffetteria",
+        "prezzo": 1.5 
+    },
+    {
+        "idbar": 3,
+        "nome": "Tè frutti di bosco",
+        "categoria": "Tè e Tisane",
+        "prezzo": 1.3 
+    },
+    {
+        "idbar": 4,
+        "nome": "Tè limone",
+        "categoria": "Tè e Tisane",
+        "prezzo": 1.5 
+    },
+    {
+        "idbar": 5,
+        "nome": "Spremuta arancia",
+        "categoria": "Spremuta",
+        "prezzo": 1.3 
+    },
+    {
+        "idbar": 6,
+        "nome": "Bombolone",
+        "categoria": "Brioche",
+        "prezzo": 1.5 
+    },
+    {
+        "idbar": 7,
+        "nome": "Croissant crema",
+        "categoria": "Brioche",
+        "prezzo": 1.3 
+    },
+    {
+        "idbar": 8,
+        "nome": "Torta cioccolato",
         "categoria": "Dolce",
+        "prezzo": 1.5 
+    },
+    {
+        "idbar": 9,
+        "nome": "Torta carota",
+        "categoria": "Dolce",
+        "prezzo": 1.3 
+    },
+    {
+        "idbar": 10,
+        "nome": "Corona",
+        "categoria": "Birra",
+        "prezzo": 1.5 
+    },
+    {
+        "idbar": 11,
+        "nome": "Ichnusa",
+        "categoria": "Birra",
+        "prezzo": 1.3 
+    },
+    {
+        "idbar": 12,
+        "nome": "Succo di limone",
+        "categoria": "Spremuta",
         "prezzo": 1.5 
     }
 ]

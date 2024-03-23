@@ -31,7 +31,15 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
-            <h4 class="nome"><span class="drink-icon"><i class="bi bi-cup-straw"></i></span> {{ bar.nome }}</h4>
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'birra'" class="wine-icon" src="/beer.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'caffetteria'" class="caffe-icon" src="/coffee.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'tè e tisane'" class="wine-icon" src="/tea.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'spremuta'" class="wine-icon" src="/spremuta.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'brioche'" class="wine-icon" src="/croissant.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'dolce'" class="wine-icon" src="/cake.svg" alt="">
+            <div class="nome-prod">
+                <h4 class="nome">{{ bar.nome }}</h4>
+            </div>
             <h6 class="prezzo">{{ bar.prezzo }} €</h6>
         </div>
         <div class="" :id="'toggle-' + bar.idbar" :class="{ 'collapse': !isOpen, 'show': isOpen }">
@@ -42,6 +50,22 @@ export default defineComponent({
 </template>
 
 <style scoped>  
+.nome-prod {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.wine-icon{
+    width: 35px;
+    color: #d6a103;
+}
+
+.caffe-icon{
+    width: 45px;
+    color: #d6a103;
+}
+
 hr{
     background: linear-gradient(to right, transparent, #4fa1ca, transparent);
     height: 1px;
@@ -63,9 +87,10 @@ img.cup-icon {
 button.navbar-toggler {
     border-radius: 20px;
     border: 1px solid rgba(68, 67, 67, 0.075);
-    background-color: rgba(255, 255, 255, 0.712); /* Sfondo semi-trasparente */
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    width: 90%;
+    background-color: rgba(255, 255, 255, 0.712);
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    width: 100%;
     margin-bottom: 20px;
     padding: 18px;
     text-align: start;
@@ -75,6 +100,8 @@ button.navbar-toggler {
 h6.prezzo {
     margin: 0;
     margin-top: 4px;
+    white-space: nowrap;
+    text-align: end;
 }
 
 button.navbar-toggler:focus,
@@ -89,6 +116,7 @@ button.navbar-toggler:visited {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 .categoria {
@@ -116,6 +144,7 @@ button.navbar-toggler:visited {
     color: #2c57a3;
     text-shadow: 1.5px 1.5px #4fa1ca;
     font-weight: bolder;
+    text-align: center;
 }
 
 .drink-icon{

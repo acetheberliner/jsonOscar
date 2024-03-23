@@ -9,12 +9,12 @@
               <div class="col-2 col-md-1">
                 <router-link to="/" class="rlink"><img src="/vect-white.svg" alt="Logo" class="nav-logo"></router-link>
               </div>
-              <div class="col-4 col-md-4">
+              <div class="col-6 col-md-4">
                 <h1>
                   <router-link to="/" class="rlink osc">Oscar Spiaggia 298</router-link>
                 </h1>
               </div>
-              <div class="col-3 col-md-6"></div>
+              <div class="col-1 col-md-6"></div>
               <div class="col-2 col-md-1">
                 <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                   <i class="menu bi bi-list"></i>
@@ -317,6 +317,7 @@ export default defineComponent({
   h1 {
     margin: 0;
     padding: 8px;
+    padding-left: 0;
     font-size: 22px;
     text-shadow: #ffffff 1px 0 10px;
   }

@@ -11,6 +11,7 @@ export default defineComponent({
       selectedCategory: "",
       categories: [] as String[],
       searchTerm: '', // Add a new property for search term
+      isOpen: false
     };
   },
   components: {
@@ -38,6 +39,10 @@ export default defineComponent({
 
       return filtered;
     },
+
+    toggleCollapse() {
+      this.isOpen = !this.isOpen;
+    }
   },
 });
 </script>
@@ -53,7 +58,7 @@ export default defineComponent({
       <img class="beer" src="/beer.png" alt="">
     </div>
     <div class="drink-list page animate slide delay-1">
-      <div class="radio-container">
+      <!-- <div class="radio-container">
         <div class="filter selectdiv">
           <form class="form-group filter-tab" id="radio" action="#">
             <select class="form-control form" name="Categoria" v-model="selectedCategory">
@@ -68,15 +73,122 @@ export default defineComponent({
           <input class="form-control search" type="search" placeholder="Cerca..." aria-label="Search"
             v-model="searchTerm">
         </form>
+      </div> -->
+      <div class="portata">
+        <h2>Servizi</h2>
       </div>
       <hr class="splitter">
-      <PostBar v-for="bar in filteredBar()" :key="bar.idbar" :bar="bar" />
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#caffetteria" @click="toggleCollapse()">
+          <h2>Caffè</h2>
+        </button>
+        <div class="col-12">
+          <div class="col-12 collapse div-collapse" id="caffetteria">
+            <PostBar v-for="bar in filteredBar().filter(bar => bar.categoria.toLocaleLowerCase() === 'caffetteria')" :key="bar.idbar" :bar="bar"/>
+          </div>
+        </div>
+      </div>
+      <hr class="splitter">
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#te" @click="toggleCollapse()">
+          <h2>Tè</h2>
+        </button>
+        <div class="col-12">
+          <div class="col-12 collapse div-collapse" id="te">
+            <PostBar v-for="bar in filteredBar().filter(bar => bar.categoria.toLocaleLowerCase() === 'tè e tisane')" :key="bar.idbar" :bar="bar"/>
+          </div>
+        </div>
+      </div>
+      <hr class="splitter">
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#spremute" @click="toggleCollapse()">
+          <h2>Spremute</h2>
+        </button>
+        <div class="col-12">
+          <div class="col-12 collapse div-collapse" id="spremute">
+            <PostBar v-for="bar in filteredBar().filter(bar => bar.categoria.toLocaleLowerCase() === 'spremuta')" :key="bar.idbar" :bar="bar"/>
+          </div>
+        </div>
+      </div>
+      <hr class="splitter">
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#brioches" @click="toggleCollapse()">
+          <h2>Brioches</h2>
+        </button>
+        <div class="col-12">
+          <div class="col-12 collapse div-collapse" id="brioches">
+            <PostBar v-for="bar in filteredBar().filter(bar => bar.categoria.toLocaleLowerCase() === 'brioche')" :key="bar.idbar" :bar="bar"/>
+          </div>
+        </div>
+      </div>
+      <hr class="splitter">
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#dolci" @click="toggleCollapse()">
+          <h2>Dolci</h2>
+        </button>
+        <div class="col-12">
+          <div class="col-12 collapse div-collapse" id="dolci">
+            <PostBar v-for="bar in filteredBar().filter(bar => bar.categoria.toLocaleLowerCase() === 'dolce')" :key="bar.idbar" :bar="bar"/>
+          </div>
+        </div>
+      </div>
+      <hr class="splitter">
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
+      <div class="cass">
+        <button class="navbar-toggler text-white antipasti-button"  type="button" data-toggle="collapse" data-target="#birre" @click="toggleCollapse()">
+          <h2>Birre</h2>
+        </button>
+        <div class="col-12">
+          <div class="col-12 collapse div-collapse" id="birre">
+            <PostBar v-for="bar in filteredBar().filter(bar => bar.categoria.toLocaleLowerCase() === 'birra')" :key="bar.idbar" :bar="bar"/>
+          </div>
+        </div>
+      </div>
+      <!-------------------------------------------------------------------------------------------------------------------------------------------->
     </div>
   </div>
 </template>
 
 
 <style scoped>
+.portata>h2 {
+  color: #ffffff;
+  text-shadow: #0e3b88 1px 0 10px;
+  font-family: 'Montserrat' sans-serif;
+}
+
+.cass {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.antipasti-button {
+  border-radius: 20px;
+  border: 1px solid rgba(68, 67, 67, 0.075);
+  background-color: rgba(255, 255, 255, 0.712); /* Sfondo semi-trasparente */
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  width: 95%;
+  margin-bottom: 10px;
+  padding: 18px;
+  text-align: start;
+  vertical-align: middle;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.antipasti-button>h2 {
+  color: #2c57a3;
+  text-shadow: #4fa1cae8 1px 0 10px;
+}
+
 .splitter{
   background: linear-gradient(to right, #0e3b88, #4bb9f0);
   height: 2px;
