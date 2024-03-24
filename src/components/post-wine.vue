@@ -34,8 +34,8 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
-            <img v-if="wine.colore == 'Dolce'" class="wine-icon" src="/wine.svg" alt="">
-            <img v-if="wine.colore == 'Bollicine'" class="wine-icon" src="/wine.svg" alt="">
+            <img v-if="wine.colore == 'Dolce'" class="wine-icon" src="/dolce.svg" alt="">
+            <img v-if="wine.colore == 'Bollicine'" class="wine-icon" src="/bollicine.svg" alt="">
             <img v-if="wine.colore == 'Bianco'" class="wine-icon" src="/wine.svg" alt="">
             <img v-if="wine.colore == 'Rosso'" class="wine-icon" src="/wine-red.svg" alt="">
             <img v-if="wine.colore == 'Rosè'" class="wine-icon" src="/wine-rose.svg" alt="">
@@ -94,6 +94,7 @@ h4 {
 
 .wine-icon{
     width: 45px;
+    margin-right: 6px;
 }
 
 .horizontal {
@@ -120,7 +121,7 @@ button.navbar-toggler {
     background-color: rgba(255, 255, 255, 0.712); /* Sfondo semi-trasparente */
     /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-    width: 90%;
+    width: 93%;
     margin-bottom: 20px;
     padding: 12px;
     text-align: start;

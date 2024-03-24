@@ -54,11 +54,10 @@ export default defineComponent({
       <img class="gin even" src="/gin-tonic.jpg" alt="cocktail">
       <img class="gin odd extra" src="/spritz.jpg" alt="cocktail">
     </div>
-    <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
-      <!-- <p class="attention">!!! <i class="bi bi-info-circle"></i> !!!</p> -->
+    <!-- <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
       <p class="attention">importante<br><span class="click-here">clicca qui</span></p>
-    </button>
-    <div id="info" class="collapse">
+    </button> -->
+    <div id="info" class="">
       <p>Si informa la gentile clientela che in occasione di eventi speciali, i prezzi dei cocktail vengono calcolati differentemente. <br><br>Si ringrazia per la comprensione </p>
     </div>
     <div class="drink-list page animate slide delay-2">
@@ -249,7 +248,7 @@ export default defineComponent({
     justify-items: center;
     align-content: center;
   }
-  
+
   .utilities {
     display: flex;
     flex-direction: row;
@@ -288,10 +287,29 @@ export default defineComponent({
     box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
     width: fit-content;
   }
+
+  p {
+    border: 1px solid rgba(255, 0, 0, 0.697);
+    background-color: rgba(255, 0, 0, 0.541);
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: 400;
+    text-shadow: #ffffff 1px 0 1px;
+  }
 }
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 999px) {
+  .utilities {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 90%;
+  }
+  
   .toast-body {
     z-index: 200;
   }
@@ -313,9 +331,8 @@ export default defineComponent({
   .searchbar-container {
     display: flex;
     flex-direction: row;
-    place-content: center;
     text-align: center;
-    width: 100%;
+    width: 112%;
   }
   
   form {
@@ -366,6 +383,7 @@ export default defineComponent({
     border: 1px solid rgba(255, 0, 0, 0.697);
     background-color: rgba(255, 0, 0, 0.547);
     text-shadow: #ffffff 1px 0 5px;
+    text-transform: uppercase;
   }
   
   .radio-container {
@@ -477,7 +495,7 @@ export default defineComponent({
   
   p {
     border: 1px solid rgba(255, 0, 0, 0.697);
-    background-color: rgba(255, 0, 0, 0.547);
+    background-color: rgba(255, 0, 0, 0.37);
     border-radius: 8px;
     padding: 8px;
     text-align: center;
