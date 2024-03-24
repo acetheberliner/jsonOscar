@@ -115,11 +115,11 @@ export default defineComponent({});
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 20px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .page:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
   }
 
   .grid {

@@ -38,7 +38,7 @@ export default defineComponent({
             <h4 class="nome"> {{ drink.nome }}</h4>
             <h6 class="prezzo"><span class="precise"> * </span> {{ drink.prezzo }} € </h6>
         </div>
-        <div class="" :id="'toggle-' + drink.iddrink" :class="{ 'collapse': !isOpen, 'show': isOpen }">
+        <div class="" :id="'toggle-' + drink.iddrink" :class="{ '': !isOpen, 'show': isOpen }">
             <hr>
             <p class="categoria">{{ drink.categoria }}</p>
             <p class="ingredienti">{{ drink.ingredienti }} + {{ drink.garnish }}</p>
@@ -70,6 +70,7 @@ img {
 h4 {
     margin: 0;
     font-family: 'Comfortaa', sans-serif;
+    font-size: 23px;
 }
 
 i.asterisk {
@@ -96,6 +97,10 @@ h6.prezzo {
     width: 20%;
     display: flex;
     flex-direction: row-reverse;
+}
+
+button.navbar-toggler:hover {
+    box-shadow: #ffffff33 0px 0px 0px 1px inset, #2c57a3 0px 0px 0px 2px;
 }
 
 button.navbar-toggler:focus,
@@ -145,7 +150,7 @@ p {
 }
 
 .drink-icon{
-    width: 25px;
+    width: 35px;
 }
 
 .precise {

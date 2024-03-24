@@ -56,7 +56,7 @@ export default defineComponent({
     </div>
     <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
       <!-- <p class="attention">!!! <i class="bi bi-info-circle"></i> !!!</p> -->
-      <p class="attention">ATTENZIONE<i class="bi bi-hand-index"></i></p>
+      <p class="attention">importante<br><span class="click-here">clicca qui</span></p>
     </button>
     <div id="info" class="collapse">
       <p>Si informa la gentile clientela che in occasione di eventi speciali, i prezzi dei cocktail vengono calcolati differentemente. <br><br>Si ringrazia per la comprensione </p>
@@ -88,7 +88,43 @@ export default defineComponent({
 </template>
 
 <style scoped>
+.image img {
+  transition: box-shadow 0.3s ease; /* Aggiunge una transizione fluida all'ombra */
+  box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.7); /* Aumenta l'ombra al passaggio del mouse */
+}
+
+.click-here {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
 @media only screen and (min-width: 1000px) {
+  img.odd {
+    animation: moveUpDownOdd 8.2s ease-in-out infinite alternate; /* Modifica la durata (4s) e l'accelerazione se necessario */
+  }
+
+  img.even {
+    animation: moveUpDownEven 8s ease-in-out infinite alternate; /* Modifica la durata (4s) e l'accelerazione se necessario */
+  }
+  
+  @keyframes moveUpDownEven {
+    0% {
+      transform: translateY(120px);
+    }
+    100% {
+      transform: translateY(0); /* Modifica la quantità di spostamento verticale se necessario */
+    }
+  }
+
+  @keyframes moveUpDownOdd {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(120px); /* Modifica la quantità di spostamento verticale se necessario */
+    }
+  }
+
   * {
     font-family: 'Comfortaa', sans-serif; 
   }
@@ -140,7 +176,7 @@ export default defineComponent({
     justify-content: center;
     gap: 30px;
     position: relative;
-    margin-top: 120px;
+    margin-top: 10px;
     margin-bottom: 140px;
     margin-left: auto;
     margin-right: auto;
@@ -157,6 +193,7 @@ export default defineComponent({
     padding-right: 30px;
     font-weight: bold;
     font-size: 22px;
+    text-transform: uppercase;
     border: 1px solid rgba(255, 0, 0, 0.697);
     background-color: rgba(255, 0, 0, 0.547);
     text-shadow: #ffffff 1px 0 5px;
@@ -193,7 +230,6 @@ export default defineComponent({
 
   .drink-list {
     display: flex;
-    grid-template-columns: repeat(5, 1fr);
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.548);
@@ -203,7 +239,7 @@ export default defineComponent({
     padding: 6px;
     padding-top: 20px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
 
   .postdrink-cass {
@@ -211,8 +247,9 @@ export default defineComponent({
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     justify-items: center;
+    align-content: center;
   }
-
+  
   .utilities {
     display: flex;
     flex-direction: row;
@@ -224,6 +261,7 @@ export default defineComponent({
     width: 99%;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 70px 4px;
     margin-left: 1%;
+    border-radius: 10px;
   }
 
   .searchbar-container {

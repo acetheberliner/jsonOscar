@@ -203,7 +203,7 @@ export default defineComponent({
   .links>.routerlink {
     border: 1px solid rgba(255, 255, 255, 0.329);
     /* background-color: rgba(255, 255, 255, 0.192); */
-    backdrop-filter: blur(20px);
+    /* backdrop-filter: blur(20px); */
     box-shadow: #ffffff9f 0px 8px 40px 1px;
     border-radius: 10px;
     padding: 18px;
@@ -212,7 +212,8 @@ export default defineComponent({
     padding-top: 5px;
     font-size: bolder;
     font-size: 35px;
-    color: #fdfeff9d;
+    background-color: rgba(255, 255, 255, 0.219);
+    color: rgba(255, 255, 255, 0.63);
     text-shadow: #ffffff 1px 0 6px;
     z-index: 3;
     transition: all 0.1s ease-in-out;
