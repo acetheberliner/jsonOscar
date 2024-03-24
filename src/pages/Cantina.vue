@@ -364,7 +364,7 @@ export default defineComponent({
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    width: 112%;
+    width: 100%;
   }
   
   form {

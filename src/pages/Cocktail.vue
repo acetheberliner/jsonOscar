@@ -332,7 +332,7 @@ export default defineComponent({
     display: flex;
     flex-direction: row;
     text-align: center;
-    width: 112%;
+    width: 100%;
   }
   
   form {
