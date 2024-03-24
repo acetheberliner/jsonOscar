@@ -48,7 +48,7 @@ export default defineComponent({
 
 <style scoped> 
 @media only screen and (min-width: 1000px) {
-
+    
 }
 /*--------------------------------------------------------------------------------------------------------- */
 

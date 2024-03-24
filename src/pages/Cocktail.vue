@@ -50,8 +50,8 @@ export default defineComponent({
     <div class="image">
       <img class="odd" src="/red.jpg" alt="cocktail">
       <img class="tumb even" src="/tumblr.jpg" alt="cocktail">
-      <img class="gin odd" src="/gin-tonic.jpg" alt="cocktail">
-      <img class="gin even extra" src="/drink3.jpg" alt="cocktail">
+      <img class="gin odd extra" src="/drink3.jpg" alt="cocktail">
+      <img class="gin even" src="/gin-tonic.jpg" alt="cocktail">
       <img class="gin odd extra" src="/spritz.jpg" alt="cocktail">
     </div>
     <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,6 +89,10 @@ export default defineComponent({
 
 <style scoped>
 @media only screen and (min-width: 1000px) {
+  * {
+    font-family: 'Comfortaa', sans-serif; 
+  }
+
   .page {
     display: flex;
     flex-direction: column;
@@ -213,11 +217,12 @@ export default defineComponent({
     display: flex;
     flex-direction: row;
     justify-content: start;
-    width: 90%;
+    width: 98%;
   }
   
   .search {
     width: 99%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 2px 70px 4px;
     margin-left: 1%;
   }
 
@@ -232,6 +237,18 @@ export default defineComponent({
     width: 90%;
     margin-top: 0px;
     margin-bottom: 50px;
+  }
+
+  .form {
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.719);
+    /* Sfondo semi-trasparente */
+    border: 1px solid #4fa1ca;
+    color: #2c57a3;
+    text-shadow: 1px 1px #4fa1ca;
+    box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
+    width: fit-content;
   }
 }
 /* --------------------------------------------------------------------------------------------------------------------------------- */
