@@ -304,7 +304,7 @@ export default defineComponent({
     position: relative; /* Posiziona l'overlay in modo relativo rispetto a questo elemento */
     height: 100vh;
     overflow-y: auto;
-    background: linear-gradient(to bottom, rgba(14, 14, 14, 0.295), rgba(22, 22, 22, 0.311)), url(/oscar.jpg);
+    background: linear-gradient(to bottom, rgba(14, 14, 14, 0.295), rgba(22, 22, 22, 0.311)), url(/oscar2.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;
