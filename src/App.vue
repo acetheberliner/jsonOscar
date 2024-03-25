@@ -23,7 +23,6 @@
               <div class="col-2 col-md-1"></div>
             </div>
           </nav>
-          <!-- <hr> -->
           <div class="container d-flex justify-content-center text-center">
             <div class="col-12 col-md-12">
               <div class="collapse text-center m-2" id="navbarToggleExternalContent">
@@ -149,6 +148,7 @@ export default defineComponent({
   .navbar-toggler {
     position: relative;
     right: 0;
+    /* transition: transform 0.5s ease; */
   }
 
   .menu {
@@ -156,6 +156,11 @@ export default defineComponent({
     font-size: 60px;
     position: relative;
     float: right;
+  }
+
+  .navbar-toggler:after, .navbar-toggler:focus {
+    /* transform: rotate(90deg); */
+    outline: none;
   }
 
   .navbar {
@@ -176,6 +181,7 @@ export default defineComponent({
     box-shadow: #1d2c3b 0px 10px 20px -10px;
     width: 95%;
     margin-top: 15px;
+    margin-bottom: 40px
   }
 
   .container {
