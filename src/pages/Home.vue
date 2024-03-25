@@ -18,6 +18,7 @@ export default defineComponent({});
         </div>
       </div>
     </div>
+    <hr class="separate extra">
     <!------------------------------------------------------------------------------------------------------->
     <div class="centered-flex">
       <div class="title">
@@ -38,6 +39,7 @@ export default defineComponent({});
         </div>
       </div>
     </div>
+    <hr class="separate extra">
     <!------------------------------------------------------------------------------------------------------->
     <div class="centered-flex">
       <div class="title">
@@ -56,11 +58,20 @@ export default defineComponent({});
         </div>
       </div>
     </div>
+    <hr class="separate extra">
   </div>
 </template>
 
 <style scoped>
 @media only screen and (min-width: 1000px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .extra {
+    display: none;
+  }
+
   hr.sep-info {
     width: 80%;
     border: 1px solid #2f59a644;
@@ -222,6 +233,16 @@ export default defineComponent({});
 /*--------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 999px) {
+  .separate {
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-bottom: 30px;
+  }
+
+  .html {
+    -webkit-overflow-scrolling: touch;
+  }
+
   .social-links {
     display: flex;
     flex-direction: column;

@@ -46,11 +46,11 @@ export default defineComponent({
       <h2>Cantina</h2>
     </div>
     <div class="image">
-      <img class="odd" src="/calice.jpg" alt="cocktail">
-      <img class="tumb even" src="/calice.jpg" alt="cocktail">
+      <img class="odd" src="/sample.png" alt="cocktail">
+      <img class="tumb even" src="/sample.png" alt="cocktail">
       <img class="gin odd extra" src="/calice.jpg" alt="cocktail">
-      <img class="gin even extra" src="/calice.jpg" alt="cocktail">
-      <img class="gin odd extra" src="/calice.jpg" alt="cocktail">
+      <img class="gin even extra" src="/sample.png" alt="cocktail">
+      <img class="gin odd extra" src="/sample.png" alt="cocktail">
     </div>
     <div class="group">
       <div class="drink-list page animate slide delay-1">
@@ -80,23 +80,23 @@ export default defineComponent({
         <h2>Legenda</h2>
         <!-- <hr class="splitter-right"> -->
         <div class="legend-group">
-          <div class="legend-item">
+          <div class="legend-item hovering">
             <img class="img-legend" src="/wine.svg" alt="Vino bianco">
             <h4 class="legend-text">Bianco fermo</h4>
           </div>
-          <div class="legend-item">
+          <div class="legend-item hovering">
             <img class="img-legend" src="/wine-red.svg" alt="Vino bianco">
             <h4 class="legend-text">Rosso</h4>
           </div>
-          <div class="legend-item">
+          <div class="legend-item hovering">
             <img class="img-legend" src="/wine-rose.svg" alt="Vino bianco">
             <h4 class="legend-text">Rosè</h4>
           </div>
-          <div class="legend-item">
+          <div class="legend-item hovering">
             <img class="img-legend" src="/dolce.svg" alt="Vino bianco">
             <h4 class="legend-text">Dolce</h4>
           </div>
-          <div class="legend-item">
+          <div class="legend-item hovering">
             <img class="img-legend" src="/bollicine.svg" alt="Vino bianco">
             <h4 class="legend-text"> Bollicine</h4>
           </div>
@@ -113,6 +113,18 @@ export default defineComponent({
 }
 
 @media only screen and (min-width: 1000px) {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .hovering {
+    transition: all 0.05s ease-in-out;
+  }
+
+  .hovering:hover {
+      transform: scale(1.04);
+  }
+
   .img-legend {
     box-shadow: none;
   }
@@ -161,11 +173,11 @@ export default defineComponent({
   }
 
   img.odd {
-    animation: moveUpDownOdd 8.2s ease-in-out infinite alternate; /* Modifica la durata (4s) e l'accelerazione se necessario */
+    animation: moveUpDownOdd 10.2s ease-in-out infinite alternate; /* Modifica la durata (4s) e l'accelerazione se necessario */
   }
 
   img.even {
-    animation: moveUpDownEven 8s ease-in-out infinite alternate; /* Modifica la durata (4s) e l'accelerazione se necessario */
+    animation: moveUpDownEven 10s ease-in-out infinite alternate; /* Modifica la durata (4s) e l'accelerazione se necessario */
   }
   
   @keyframes moveUpDownEven {
@@ -331,6 +343,10 @@ export default defineComponent({
 /*---------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 999px) {
+  .html {
+    -webkit-overflow-scrolling: touch;
+  }
+
   .utilities {
     display: flex;
     flex-direction: column;

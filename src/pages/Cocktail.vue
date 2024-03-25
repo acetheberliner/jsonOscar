@@ -1,6 +1,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import tuttiCocktail from "../assets/drink.json"
+import { Toast } from 'bootstrap';
 
 import PostDrink from "../components/post-drink.vue";
 
@@ -38,7 +39,13 @@ export default defineComponent({
 
       return filtered;
     },
-  },
+
+    showToast() {
+      const toastLiveExample = document.getElementById('liveToast');
+      const toastBootstrap = new Toast(toastLiveExample as HTMLElement)
+      toastBootstrap.show();
+    }
+  }
 })
 </script>
 
@@ -80,7 +87,7 @@ export default defineComponent({
       </div>
       <hr class="splitter">
       <div class="postdrink-cass">
-        <PostDrink v-for="drink in filteredCocktail()" :key="drink.iddrink" :drink="drink" />
+        <PostDrink v-for="drink in filteredCocktail()" :key="drink.iddrink" :drink="drink" @click="showToast()" />
       </div>
     </div>
   </div>
@@ -97,7 +104,11 @@ export default defineComponent({
   text-transform: uppercase;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1000px) { 
+  html {
+    scroll-behavior: smooth;
+  }
+
   img.odd {
     animation: moveUpDownOdd 8.2s ease-in-out infinite alternate; /* Modifica la durata (4s) e l'accelerazione se necessario */
   }
@@ -303,6 +314,10 @@ export default defineComponent({
 /* --------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 999px) {
+  .html {
+    -webkit-overflow-scrolling: touch;
+  }
+
   .utilities {
     display: flex;
     flex-direction: column;

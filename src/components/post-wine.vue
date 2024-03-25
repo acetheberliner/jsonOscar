@@ -32,7 +32,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler text-white hovering"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
             <img v-if="wine.colore == 'Dolce'" class="wine-icon" src="/dolce.svg" alt="">
             <img v-if="wine.colore == 'Bollicine'" class="wine-icon" src="/bollicine.svg" alt="">
@@ -61,7 +61,15 @@ export default defineComponent({
     </button>
 </template>
 
-<style scoped>  
+<style scoped> 
+.hovering {
+    transition: all 0.05s ease-in-out;
+}
+
+.hovering:hover {
+    transform: scale(1.04);
+}
+
 .nome-prod {
     display: flex;
     flex-direction: column;

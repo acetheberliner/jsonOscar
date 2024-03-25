@@ -32,7 +32,7 @@ export default defineComponent({
 </script>
 
 <template>
-    <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler text-white hovering"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
             <img src="/cocktail-svg.svg" class="drink-icon" alt="cocktail">
             <h4 class="nome"> {{ drink.nome }}</h4>
@@ -91,16 +91,20 @@ button.navbar-toggler {
     vertical-align: middle;
 }
 
+.hovering {
+    transition: all 0.05s ease-in-out;
+}
+
+.hovering:hover {
+    box-shadow: #ffffff33 0px 0px 0px 1px inset, #2c57a3 0px 0px 0px 2px;
+}
+
 h6.prezzo {
     margin: 0;
     margin-top: 4px;
     width: 20%;
     display: flex;
     flex-direction: row-reverse;
-}
-
-button.navbar-toggler:hover {
-    box-shadow: #ffffff33 0px 0px 0px 1px inset, #2c57a3 0px 0px 0px 2px;
 }
 
 button.navbar-toggler:focus,

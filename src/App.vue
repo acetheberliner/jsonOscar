@@ -23,7 +23,7 @@
               <div class="col-2 col-md-1"></div>
             </div>
           </nav>
-          <hr>
+          <!-- <hr> -->
           <div class="container d-flex justify-content-center text-center">
             <div class="col-12 col-md-12">
               <div class="collapse text-center m-2" id="navbarToggleExternalContent">
@@ -37,6 +37,7 @@
               </div>
             </div>
           </div>
+          <hr>
         </div>
       </div>
       <RouterView />
@@ -212,9 +213,9 @@ export default defineComponent({
     padding-top: 5px;
     font-size: bolder;
     font-size: 35px;
-    background-color: rgba(255, 255, 255, 0.219);
-    color: rgba(255, 255, 255, 0.63);
-    text-shadow: #ffffff 1px 0 6px;
+    background-color: rgba(61, 60, 60, 0.123);
+    color: rgba(255, 255, 255, 0.781);
+    text-shadow: #204075 1px 0 6px;
     z-index: 3;
     transition: all 0.1s ease-in-out;
     font-weight: 500;
@@ -263,7 +264,6 @@ export default defineComponent({
 
 /*----------------------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: 999px) {
-  
   html {
     scroll-behavior: touch;
   }
