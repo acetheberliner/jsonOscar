@@ -43,7 +43,11 @@ export default defineComponent({
     </button>
 </template>
 
-<style scoped>  
+<style scoped>
+* {
+    font-family: 'Comfortaa', sans-serif;
+}
+
 hr{
     background: linear-gradient(to right, transparent, #4fa1ca, transparent);
     height: 1px;

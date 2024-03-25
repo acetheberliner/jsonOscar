@@ -9,18 +9,20 @@
               <div class="col-2 col-md-1">
                 <router-link to="/" class="rlink"><img src="/vect-white.svg" alt="Logo" class="nav-logo"></router-link>
               </div>
-              <div class="col-6 col-md-4">
+              <div class="col-6 col-md-5">
                 <h1>
-                  <router-link to="/" class="rlink osc">Oscar Spiaggia 298</router-link>
+                  <router-link to="/" class="rlink osc">Oscar Spiaggia <span class="extra">· </span><span class="text298">298<span class="placeholder-298"> sss</span></span></router-link>
                 </h1>
               </div>
-              <div class="col-1 col-md-6"></div>
-              <div class="col-2 col-md-1">
-                <button class="btn navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <i class="menu bi bi-list"></i>
+              <div class="col-1 col-md-3"></div>
+              <div class="col-2 col-md-3">
+                <button class="btn navbar-toggler menu-button" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <h3 class="menu-text">Scopri i nostri servizi <i class="bi bi-caret-right"></i></h3>
+                  <img src="/menusvg.svg" class="menu bi bi-list logo-menu" alt="">
+                  <h6 class="extra-in-desk">Menù</h6>
                 </button>
               </div>
-              <div class="col-2 col-md-1"></div>
+              <div class="col-2 col-md-1 posta"></div>
             </div>
           </nav>
           <div class="container d-flex justify-content-center text-center">
@@ -72,8 +74,39 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+@font-face {
+  font-family: font298;
+  src: url(/alex-brush.regular.ttf);
+}
+
+
 /*----------------------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
+  .text298 {
+    background: -webkit-linear-gradient(#0364ff, #061c41);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: font298;
+    font-weight: bold;
+    font-size: 70px;
+    text-shadow: #ffffff00 2px 0 8px;
+    text-shadow: #ffffff 1px 0 50px;
+    width: 10%;
+  }
+  
+  .placeholder-298 {
+    background: red;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: font298;
+    font-weight: bold;
+    font-size: 70px;
+    text-shadow: #ffffff00 2px 0 8px;
+    text-shadow: #ffffff 1px 0 50px;
+    width: 10%;
+    opacity: 0;
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -83,6 +116,10 @@ export default defineComponent({
     flex-direction: row;
     justify-content: space-around;
     padding: 0;
+  }
+
+  .extra-in-desk {
+    display: none;
   }
 
   .col-md-1 {
@@ -115,9 +152,15 @@ export default defineComponent({
     filter: grayscale(0%);
   }
 
+  .logo-menu {
+    width: 0.8em;
+    filter: grayscale(0%);
+  }
+
   .rlink {
     text-decoration: none;
     color: white;
+    width: 100%;
   }
 
   h1 {
@@ -149,6 +192,36 @@ export default defineComponent({
     position: relative;
     right: 0;
     /* transition: transform 0.5s ease; */
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-text {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    color: #fff;
+    width: 100%;
+    animation: blink 4s infinite alternate;
+  }
+
+  @keyframes blink {
+    from {
+      color: transparent; /* inizia con il testo trasparente */
+    }
+    to {
+      color: #fff; /* transizione al bianco */
+      text-shadow: #fff 2px 0 8px;
+    }
+  }
+
+  .bi-list {
+    text-shadow: #fff 2px 0 8px;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .bi-list:hover {
+    transform: scaleX(-1) scale(1.1);
+    outline-color: transparent;
   }
 
   .menu {
@@ -270,8 +343,56 @@ export default defineComponent({
 
 /*----------------------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (max-width: 999px) {
+  .menu-button {
+    outline: none;
+  }
+
+  .text298 {
+  color: white;
+  font-family: font298;
+  font-weight: bold;
+  font-size: 38px;
+  text-shadow: #ffffff00 2px 0 8px;
+  text-shadow: #ffffff 1px 0 10px;
+  width: 10%;
+  max-height: 10px;
+}
+
+.posta {
+  max-height: 0;
+}
+
+.placeholder-298 {
+  display: none;
+}
+
+  .menu-text {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    color: #fff;
+    width: 100%;
+    font-size: 16px;
+    animation: blink 7s infinite alternate;
+    display: none;
+  }
+
+  .logo-menu {
+    width: 2em;
+    filter: grayscale(0%);
+    margin-bottom: 5px;
+  }
+
+  .extra {
+    display: none;
+  }
+
   html {
     scroll-behavior: touch;
+  }
+
+  .extra-in-desk {
+    margin: 0;
+    font-family: 'Comfortaa', sans-serif;
   }
 
   .col-2 {
@@ -296,6 +417,7 @@ export default defineComponent({
   hr {
     border: 1px solid white;
     border-radius: 20px;
+    margin-top: 0;
     box-shadow: rgb(29, 44, 59) 0px 10px 20px -10px;
     width: 90%;
   }
@@ -314,7 +436,8 @@ export default defineComponent({
   
   .navbar {
     padding-left: 20px;
-    padding-top: 40px;
+    padding-top: 30px;
+    padding-bottom: 0;
     min-width: 100%;
     justify-content: center;
     align-items: center;
@@ -323,7 +446,7 @@ export default defineComponent({
   
   h1 {
     margin: 0;
-    padding: 8px;
+    padding: 1px;
     padding-left: 0;
     font-size: 22px;
     text-shadow: #ffffff 1px 0 10px;
