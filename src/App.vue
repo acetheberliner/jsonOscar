@@ -7,7 +7,7 @@
           <nav class="navbar">
             <div class="logo col-12 col-md-12">
               <div class="col-2 col-md-1">
-                <router-link to="/" class="rlink"><img src="/vect-white.svg" alt="Logo" class="nav-logo"></router-link>
+                <router-link to="/" class="rlink"><img src="/svg/vect-white.svg" alt="Logo" class="nav-logo"></router-link>
               </div>
               <div class="col-6 col-md-5">
                 <h1>
@@ -18,7 +18,7 @@
               <div class="col-2 col-md-2 menu-ss">
                 <h3 class="menu-text">Menù <i class="bi bi-caret-right"></i></h3>
                 <button class="btn navbar-toggler menu-button" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <img src="/menusvg.svg" class="menu bi bi-list logo-menu" alt="">
+                  <img src="/svg/menusvg.svg" class="menu bi bi-list logo-menu" alt="">
                   <h6 class="extra-in-desk">Menù</h6>
                 </button>
               </div>
@@ -76,7 +76,7 @@ export default defineComponent({
 
 @font-face {
   font-family: font298;
-  src: url(/alex-brush.regular.ttf);
+  src: url(/fonts/alex-brush.regular.ttf);
 }
 
 
@@ -145,7 +145,7 @@ export default defineComponent({
     position: relative; /* Posiziona l'overlay in modo relativo rispetto a questo elemento */
     height: 100vh;
     overflow-y: auto;
-    background: linear-gradient(to bottom, rgba(14, 14, 14, 0.295), rgba(22, 22, 22, 0.219)), url(/backumbr.jpg);
+    background: linear-gradient(to bottom, rgba(14, 14, 14, 0.295), rgba(22, 22, 22, 0.219)), url(/img/backumbr.jpg);
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -442,7 +442,7 @@ export default defineComponent({
     position: relative; /* Posiziona l'overlay in modo relativo rispetto a questo elemento */
     height: 100vh;
     overflow-y: auto;
-    background: linear-gradient(to bottom, rgba(14, 14, 14, 0.295), rgba(22, 22, 22, 0.311)), url(/oscar2.jpg);
+    background: linear-gradient(to bottom, rgba(14, 14, 14, 0.295), rgba(22, 22, 22, 0.311)), url(/img/oscar2.jpg);
     background-size: cover;
     background-repeat: repeat;
     background-attachment: fixed;

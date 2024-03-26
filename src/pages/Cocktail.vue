@@ -60,11 +60,11 @@ export default defineComponent({
       <h2>Cocktail</h2>
     </div>
     <div class="image">
-      <img class="odd" src="/red.jpg" alt="cocktail">
-      <img class="tumb even" src="/tumblr.jpg" alt="cocktail">
-      <img class="gin odd extra" src="/drink3.jpg" alt="cocktail">
-      <img class="gin even" src="/gin-tonic.jpg" alt="cocktail">
-      <img class="gin odd extra" src="/spritz.jpg" alt="cocktail">
+      <img class="odd" src="/img/red.jpg" alt="cocktail">
+      <img class="tumb even" src="/img/tumblr.jpg" alt="cocktail">
+      <img class="gin odd extra" src="/img/drink3.jpg" alt="cocktail">
+      <img class="gin even" src="/img/gin-tonic.jpg" alt="cocktail">
+      <img class="gin odd extra" src="/img/spritz.jpg" alt="cocktail">
     </div>
     <!-- <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
       <p class="attention">importante<br><span class="click-here">clicca qui</span></p>

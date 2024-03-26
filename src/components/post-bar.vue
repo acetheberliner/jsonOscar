@@ -31,12 +31,12 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
-            <img v-if="bar.categoria.toLocaleLowerCase() == 'birra'" class="wine-icon" src="/beer.svg" alt="">
-            <img v-if="bar.categoria.toLocaleLowerCase() == 'caffetteria'" class="caffe-icon" src="/coffee.svg" alt="">
-            <img v-if="bar.categoria.toLocaleLowerCase() == 'tè e tisane'" class="wine-icon" src="/tea.svg" alt="">
-            <img v-if="bar.categoria.toLocaleLowerCase() == 'spremuta'" class="wine-icon" src="/spremuta.svg" alt="">
-            <img v-if="bar.categoria.toLocaleLowerCase() == 'brioche'" class="wine-icon" src="/croissant.svg" alt="">
-            <img v-if="bar.categoria.toLocaleLowerCase() == 'dolce'" class="wine-icon" src="/cake.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'birra'" class="wine-icon" src="/svg/beer.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'caffetteria'" class="caffe-icon" src="/svg/coffee.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'tè e tisane'" class="wine-icon" src="/svg/tea.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'spremuta'" class="wine-icon" src="/svg/spremuta.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'brioche'" class="wine-icon" src="/svg/croissant.svg" alt="">
+            <img v-if="bar.categoria.toLocaleLowerCase() == 'dolce'" class="wine-icon" src="/svg/cake.svg" alt="">
             <div class="nome-prod">
                 <h4 class="nome">{{ bar.nome }}</h4>
             </div>

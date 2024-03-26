@@ -32,7 +32,7 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
-            <h4 class="nome"><span class="drink-icon"><img class="icon" src="/fork.png" alt="" /></span> {{ food.nome }}</h4>
+            <h4 class="nome"><span class="drink-icon"><img class="icon" src="/img/fork.png" alt="" /></span> {{ food.nome }}</h4>
             <h6 class="prezzo">{{ food.prezzo }} €</h6>
         </div>
         <div class="" :id="'toggle-' + food.idfood" :class="{ 'collapse': !isOpen, 'show': isOpen }">

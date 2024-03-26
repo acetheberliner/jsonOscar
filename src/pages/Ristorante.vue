@@ -59,17 +59,17 @@ export default defineComponent({
       <img class="fing" src="/insalata.jpg" alt="">
     </div> -->
     <div class="gallery">
-      <img class="odd gallery__img gallery__item--1" src="/pesce.jpg" alt="cocktail">
-      <img class="tumb even gallery__img gallery__item--2" src="/pasta.jpg" alt="cocktail">
-      <img class="fing gin odd gallery__img gallery__item--3" src="/insalata.jpg" alt="cocktail">
-      <img class="gin even extra gallery__img gallery__item--4" src="/cozze.jpg" alt="cocktail">
-      <img class="gin odd extra gallery__img gallery__item--5" src="/pane.jpg" alt="cocktail">
-      <img class="gin even extra gallery__img gallery__item--6" src="/tagliolini.jpg" alt="cocktail">
-      <img class="gin odd extra gallery__img gallery__item--7" src="/piadina.jpg" alt="cocktail">
-      <img class="gin even extra gallery__img gallery__item--8" src="/marinara.jpg" alt="cocktail">
-      <img class="gin odd extra gallery__img gallery__item--9" src="/cocomero.jpg" alt="cocktail">
-      <img class="gin even extra gallery__img gallery__item--10" src="/mais.png" alt="cocktail">
-      <img class="gin odd extra gallery__img gallery__item--11" src="/malfor.jpg" alt="cocktail">
+      <img class="odd gallery__img gallery__item--1" src="/img/pesce.jpg" alt="cocktail">
+      <img class="tumb even gallery__img gallery__item--2" src="/img/pasta.jpg" alt="cocktail">
+      <img class="fing gin odd gallery__img gallery__item--3" src="/img/insalata.jpg" alt="cocktail">
+      <img class="gin even extra gallery__img gallery__item--4" src="/img/cozze.jpg" alt="cocktail">
+      <img class="gin odd extra gallery__img gallery__item--5" src="/img/pane.jpg" alt="cocktail">
+      <img class="gin even extra gallery__img gallery__item--6" src="/img/tagliolini.jpg" alt="cocktail">
+      <img class="gin odd extra gallery__img gallery__item--7" src="/img/piadina.jpg" alt="cocktail">
+      <img class="gin even extra gallery__img gallery__item--8" src="/img/marinara.jpg" alt="cocktail">
+      <img class="gin odd extra gallery__img gallery__item--9" src="/img/cocomero.jpg" alt="cocktail">
+      <img class="gin even extra gallery__img gallery__item--10" src="/img/mais.png" alt="cocktail">
+      <img class="gin odd extra gallery__img gallery__item--11" src="/img/malfor.jpg" alt="cocktail">
     </div>
     <div class="meal-list page animate slide delay-1">
       <!-- <div class="radio-container">

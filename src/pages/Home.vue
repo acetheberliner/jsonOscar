@@ -11,7 +11,7 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/oscar-panoramic.jpg" alt="panoramica" class="discover">
+          <img src="/img/oscar-panoramic.jpg" alt="panoramica" class="discover">
           <div class="content">
             <p>Oscar spiaggia 298 è uno stabilimento balneare a misura di famiglie e ideale per giovani che vengono in riviera per divertirsi e per l'ottima cucina a base di prodotti freschi e di stagione.</p>
           </div>
@@ -26,17 +26,17 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/beach-volley.jpg" alt="" class="info-img-volley">
+          <img src="/img/beach-volley.jpg" alt="" class="info-img-volley">
           <div class="info">
             <ul>
               <li>Area gioco per <em class="text-danger">bambini</em></li>
               <li>Campi:</li>
-              <ul>
-                <li class="inner"><img class="list-icon" src="/racchettoni.svg" alt="">Racchettoni</li>
-                <li class="inner"><img class="list-icon" src="/volley.svg" alt="">Beach Volley</li>
-                <li class="inner"><img class="list-icon" src="/basket.svg" alt="">Basket</li>
-                <li class="inner"><img class="list-icon" src="/ping.svg" alt="">Ping Pong</li>
-                <li class="inner"><img class="list-icon" src="/bocce.svg" alt="">Bocce</li>
+              <ul class="inner-ul">
+                <li class="inner"><img class="list-icon" src="/svg/racchettoni.svg" alt="">Racchettoni</li>
+                <li class="inner"><img class="list-icon" src="/svg/volley.svg" alt="">Beach Volley</li>
+                <li class="inner"><img class="list-icon" src="/svg/basket.svg" alt="">Basket</li>
+                <li class="inner"><img class="list-icon" src="/svg/ping.svg" alt="">Ping Pong</li>
+                <li class="inner"><img class="list-icon" src="/svg/bocce.svg" alt="">Bocce</li>
               </ul>
               <li><em class="text-success">Wi-Fi</em> Gratuito</li>
             </ul>
@@ -52,12 +52,12 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/cann.jpg" alt="panoramica" class="info-img">
+          <img src="/img/cann.jpg" alt="panoramica" class="info-img">
           <div class="info">
             <p>Rimani aggiornato riguardo occasioni ed eventi!</p>
             <div class="social-links">
-              <a class="social" href="https://www.instagram.com/oscar_spiaggia298?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img class="social-img" src="/instagram.svg" alt="Instagram"> oscar_spiaggia298</a>
-              <a class="social" href="https://www.facebook.com/OscarSpiaggia298/?locale=it_IT" target="_blank"><img class="social-img" src="/facebook.svg" alt="Facebook"> OscarSpiaggia298</a>
+              <a class="social" href="https://www.instagram.com/oscar_spiaggia298?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img class="social-img" src="/svg/instagram.svg" alt="Instagram"> oscar_spiaggia298</a>
+              <a class="social" href="https://www.facebook.com/OscarSpiaggia298/?locale=it_IT" target="_blank"><img class="social-img" src="/svg/facebook.svg" alt="Facebook"> OscarSpiaggia298</a>
             </div>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/asciuga.jpg" alt="panoramica" class="info-img">
+          <img src="/img/asciuga.jpg" alt="panoramica" class="info-img">
           <div class="info">
             <div class="place">
               <p><i class="bi bi-geo-alt"></i> Via VIII Traversa<br><span class="location">(Milano Marittima)</span></p>
@@ -80,6 +80,20 @@ export default defineComponent({});
             <hr class="sep-info">
             <p><i class="bi bi-star"></i> Valutazione · <span class="val">4,7</span></p>
             <p><i class="bi bi-wallet2"></i> Fascia di prezzo · <span class="eur">€€</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="separate extra">
+    <!------------------------------------------------------------------------------------------------------->
+    <div class="centered-flex">
+      <div class="title">
+        <h2 class="informazioni mb-3">Staff</h2>
+      </div>
+      <div class="page animate slide">
+        <div class="bubble-staff">
+          <div class="info">
+
           </div>
         </div>
       </div>
@@ -146,6 +160,10 @@ export default defineComponent({});
 
   li.inner {
     line-height: 1.8;
+  }
+
+  ul.inner-ul {
+    text-align: start;
   }
 
   .list-icon {
@@ -251,6 +269,11 @@ export default defineComponent({});
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  
+  .bubble-staff {
+    min-height: 100%;
+    min-width: 100%;
   }
 
   .content {
