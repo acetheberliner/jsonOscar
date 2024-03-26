@@ -34,11 +34,11 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white hovering"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
-            <img v-if="wine.colore == 'Dolce'" class="wine-icon" src="/svg/dolce.svg" alt="">
-            <img v-if="wine.colore == 'Bollicine'" class="wine-icon" src="/svg/bollicine.svg" alt="">
-            <img v-if="wine.colore == 'Bianco'" class="wine-icon" src="/svg/wine.svg" alt="">
-            <img v-if="wine.colore == 'Rosso'" class="wine-icon" src="/svg/wine-red.svg" alt="">
-            <img v-if="wine.colore == 'Rosè'" class="wine-icon" src="/svg/wine-rose.svg" alt="">
+            <img v-if="wine.colore == 'Dolce'" class="wine-icon" src="/svg/dolce.svg" alt="Vino Dolce" loading="lazy">
+            <img v-if="wine.colore == 'Bollicine'" class="wine-icon" src="/svg/bollicine.svg" alt="Bollicine" loading="lazy">
+            <img v-if="wine.colore == 'Bianco'" class="wine-icon" src="/svg/wine.svg" alt="Vino Bianco" loading="lazy">
+            <img v-if="wine.colore == 'Rosso'" class="wine-icon" src="/svg/wine-red.svg" alt="Vino Rosso" loading="lazy">
+            <img v-if="wine.colore == 'Rosè'" class="wine-icon" src="/svg/wine-rose.svg" alt="Vino Rosè" loading="lazy">
             <div class="nome-prod">
                 <!-- <span class="drink-icon"></span> -->
                 <h4 class="nome"> {{ wine.nome }}</h4>

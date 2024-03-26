@@ -1,7 +1,6 @@
 <script lang="ts">
 import { defineComponent } from "vue";
-import tuttiCocktail from "../assets/drink.json"
-import { Toast } from 'bootstrap';
+import tuttiCocktail from "../assets/drink.json";
 
 import PostDrink from "../components/post-drink.vue";
 
@@ -43,12 +42,6 @@ export default defineComponent({
     clearSearch() {
       // Reimposta il valore del modello searchTerm a una stringa vuota
       this.searchTerm = '';
-    },
-
-    showToast() {
-      const toastLiveExample = document.getElementById('liveToast');
-      const toastBootstrap = new Toast(toastLiveExample as HTMLElement)
-      toastBootstrap.show();
     }
   }
 })
@@ -60,15 +53,12 @@ export default defineComponent({
       <h2>Cocktail</h2>
     </div>
     <div class="image">
-      <img class="odd" src="/img/red.jpg" alt="cocktail">
-      <img class="tumb even" src="/img/tumblr.jpg" alt="cocktail">
-      <img class="gin odd extra" src="/img/drink3.jpg" alt="cocktail">
-      <img class="gin even" src="/img/gin-tonic.jpg" alt="cocktail">
-      <img class="gin odd extra" src="/img/spritz.jpg" alt="cocktail">
+      <img class="odd" src="/img/red.jpg" alt="Cocktail Rosso" loading="lazy">
+      <img class="tumb even" src="/img/tumblr.jpg" alt="Cocktail Giallo" loading="lazy">
+      <img class="gin odd extra" src="/img/drink3.jpg" alt="Cocktail e Patatine" loading="lazy">
+      <img class="gin even" src="/img/gin-tonic.jpg" alt="Gin Tonic" loading="lazy">
+      <img class="gin odd extra" src="/img/spritz.jpg" alt="Spritz" loading="lazy">
     </div>
-    <!-- <button class="navbar-toggler animate slide delay-1" type="button" data-toggle="collapse" data-target="#info" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
-      <p class="attention">importante<br><span class="click-here">clicca qui</span></p>
-    </button> -->
     <div id="info" class="">
       <p>Si informa la gentile clientela che in occasione di eventi speciali, i prezzi dei cocktail vengono calcolati differentemente. <br><br>Si ringrazia per la comprensione </p>
     </div>
@@ -93,7 +83,7 @@ export default defineComponent({
       </div>
       <hr class="splitter">
       <div class="postdrink-cass">
-        <PostDrink v-for="drink in filteredCocktail()" :key="drink.iddrink" :drink="drink" @click="showToast()" />
+        <PostDrink v-for="drink in filteredCocktail()" :key="drink.iddrink" :drink="drink" />
       </div>
     </div>
   </div>

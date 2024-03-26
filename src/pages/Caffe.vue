@@ -58,22 +58,6 @@ export default defineComponent({
       <img class="beer" src="/img/beer.png" alt="">
     </div>
     <div class="drink-list page animate slide delay-1">
-      <!-- <div class="radio-container">
-        <div class="filter selectdiv">
-          <form class="form-group filter-tab" id="radio" action="#">
-            <select class="form-control form" name="Categoria" v-model="selectedCategory">
-              <option selected id="tutti" value="">Filtra</option>
-              <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
-            </select>
-          </form>
-        </div>
-      </div>
-      <div class="searchbar-container">
-        <form class="form-inline mb-2">
-          <input class="form-control search" type="search" placeholder="Cerca..." aria-label="Search"
-            v-model="searchTerm">
-        </form>
-      </div> -->
       <div class="portata">
         <h2>Esplora</h2>
       </div>

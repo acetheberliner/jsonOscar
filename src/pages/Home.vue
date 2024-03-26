@@ -11,7 +11,7 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/img/oscar-panoramic.jpg" alt="panoramica" class="discover">
+          <img src="/img/oscar-panoramic.jpg" alt="Oscar Spiaggia" class="discover" loading="lazy">
           <div class="content">
             <p>Oscar spiaggia 298 è uno stabilimento balneare a misura di famiglie e ideale per giovani che vengono in
               riviera per divertirsi e per l'ottima cucina a base di prodotti freschi e di stagione.</p>
@@ -27,17 +27,17 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/img/beach-volley.jpg" alt="" class="info-img-volley">
+          <img src="/img/beach-volley.jpg" alt="" class="info-img-volley" loading="lazy">
           <div class="info">
             <ul>
               <li>Area gioco per <em class="text-danger">bambini</em></li>
               <li>Campi:</li>
               <ul class="inner-ul">
-                <li class="inner"><img class="list-icon" src="/svg/racchettoni.svg" alt="">Racchettoni</li>
-                <li class="inner"><img class="list-icon" src="/svg/volley.svg" alt="">Beach Volley</li>
-                <li class="inner"><img class="list-icon" src="/svg/basket.svg" alt="">Basket</li>
-                <li class="inner"><img class="list-icon" src="/svg/ping.svg" alt="">Ping Pong</li>
-                <li class="inner"><img class="list-icon" src="/svg/bocce.svg" alt="">Bocce</li>
+                <li class="inner"><img class="list-icon" src="/svg/racchettoni.svg" alt="Racchettoni" loading="lazy">Racchettoni</li>
+                <li class="inner"><img class="list-icon" src="/svg/volley.svg" alt="Volley" loading="lazy">Beach Volley</li>
+                <li class="inner"><img class="list-icon" src="/svg/basket.svg" alt="Basket" loading="lazy">Basket</li>
+                <li class="inner"><img class="list-icon" src="/svg/ping.svg" alt="Ping Pong" loading="lazy">Ping Pong</li>
+                <li class="inner"><img class="list-icon" src="/svg/bocce.svg" alt="Bocce" loading="lazy">Bocce</li>
               </ul>
               <li><em class="text-success">Wi-Fi</em> Gratuito</li>
             </ul>
@@ -53,15 +53,15 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/img/cann.jpg" alt="panoramica" class="info-img">
+          <img src="/img/cann.jpg" alt="Cannocchiale" class="info-img" loading="lazy">
           <div class="info">
             <p>Rimani aggiornato riguardo occasioni ed eventi!</p>
             <div class="social-links">
               <a class="social"
                 href="https://www.instagram.com/oscar_spiaggia298?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                target="_blank"><img class="social-img" src="/svg/instagram.svg" alt="Instagram"> oscar_spiaggia298</a>
+                target="_blank"><img class="social-img" src="/svg/instagram.svg" alt="Instagram" loading="lazy"> oscar_spiaggia298</a>
               <a class="social" href="https://www.facebook.com/OscarSpiaggia298/?locale=it_IT" target="_blank"><img
-                  class="social-img" src="/svg/facebook.svg" alt="Facebook"> OscarSpiaggia298</a>
+                  class="social-img" src="/svg/facebook.svg" alt="Facebook" loading="lazy"> OscarSpiaggia298</a>
             </div>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/img/asciuga.jpg" alt="panoramica" class="info-img">
+          <img src="/img/asciuga.jpg" alt="Asciugamano" class="info-img" loading="lazy">
           <div class="info">
             <div class="place">
               <p><i class="bi bi-geo-alt"></i> Via VIII Traversa<br><span class="location">(Milano Marittima)</span></p>
@@ -106,7 +106,7 @@ export default defineComponent({});
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img class="d-block staff-image" src="/img/lollo.jpg" alt="First slide">
+                  <img class="d-block staff-image" src="/img/lollo.jpg" alt="First slide" loading="lazy">
                   <hr class="splitter">
                   <div class="staff-desc">
                     <h3 class="m-0">Lollo</h3>
@@ -114,7 +114,7 @@ export default defineComponent({});
                 </div>
                 <!----------------------------------------------------------------------------->
                 <div class="carousel-item">
-                  <img class="d-block staff-image" src="/img/gery.jpg" alt="Second slide">
+                  <img class="d-block staff-image" src="/img/gery.jpg" alt="Second slide" loading="lazy">
                   <hr class="splitter">
                   <div class="staff-desc">
                     <h3>Gery</h3>
@@ -122,7 +122,7 @@ export default defineComponent({});
                 </div>
                 <!----------------------------------------------------------------------------->
                 <div class="carousel-item">
-                  <img class="d-block staff-image" src="/img/pippo.jpg" alt="Third slide">
+                  <img class="d-block staff-image" src="/img/pippo.jpg" alt="Third slide" loading="lazy">
                   <hr class="splitter">
                   <div class="staff-desc">
                     <h3>Pippo</h3>
@@ -130,7 +130,7 @@ export default defineComponent({});
                 </div>
                 <!----------------------------------------------------------------------------->
                 <div class="carousel-item">
-                  <img class="d-block staff-image" src="/img/io.jpg" alt="Fourth slide">
+                  <img class="d-block staff-image" src="/img/io.jpg" alt="Fourth slide" loading="lazy">
                   <hr class="splitter">
                   <div class="staff-desc">
                     <h3>Tommy</h3>

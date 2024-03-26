@@ -34,7 +34,7 @@ export default defineComponent({
 <template>
     <button class="navbar-toggler text-white hovering"  type="button" :class="{ collapsed: !isOpen }" @click="toggleCollapse()" aria-controls="toggle" aria-expanded="false" aria-label="Toggle navigation">
         <div class="present">
-            <img src="/svg/cocktail-svg.svg" class="drink-icon" alt="cocktail">
+            <img src="/svg/cocktail-svg.svg" class="drink-icon" alt="Cocktail Icon" loading="lazy">
             <h4 class="nome"> {{ drink.nome }}</h4>
             <h6 class="prezzo"><span class="precise"> * </span> {{ drink.prezzo }} € </h6>
         </div>

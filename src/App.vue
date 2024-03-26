@@ -7,7 +7,7 @@
           <nav class="navbar">
             <div class="logo col-12 col-md-12">
               <div class="col-2 col-md-1">
-                <router-link to="/" class="rlink"><img src="/svg/vect-white.svg" alt="Logo" class="nav-logo"></router-link>
+                <router-link to="/" class="rlink"><img src="/svg/vect-white.svg" alt="Logo" class="nav-logo" loading="lazy"></router-link>
               </div>
               <div class="col-6 col-md-5">
                 <h1>
@@ -18,7 +18,7 @@
               <div class="col-2 col-md-2 menu-ss">
                 <h3 class="menu-text">Menù <i class="bi bi-caret-right"></i></h3>
                 <button class="btn navbar-toggler menu-button" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <img src="/svg/menusvg.svg" class="menu bi bi-list logo-menu" alt="">
+                  <img src="/svg/menusvg.svg" class="menu bi bi-list logo-menu" alt="Menu icon" loading="lazy">
                   <h6 class="extra-in-desk">Menù</h6>
                 </button>
               </div>
@@ -78,7 +78,6 @@ export default defineComponent({
   font-family: font298;
   src: url(/fonts/alex-brush.regular.ttf);
 }
-
 
 /*----------------------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1000px) {

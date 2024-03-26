@@ -53,41 +53,20 @@ export default defineComponent({
     <div class="title">
       <h2>Ristorante</h2>
     </div>
-    <!-- <div class="image">
-      <img src="/pesce.jpg" alt="">
-      <img class="tumb" src="/pasta.jpg" alt="">
-      <img class="fing" src="/insalata.jpg" alt="">
-    </div> -->
     <div class="gallery">
-      <img class="odd gallery__img gallery__item--1" src="/img/pesce.jpg" alt="cocktail">
-      <img class="tumb even gallery__img gallery__item--2" src="/img/pasta.jpg" alt="cocktail">
-      <img class="fing gin odd gallery__img gallery__item--3" src="/img/insalata.jpg" alt="cocktail">
-      <img class="gin even extra gallery__img gallery__item--4" src="/img/cozze.jpg" alt="cocktail">
-      <img class="gin odd extra gallery__img gallery__item--5" src="/img/pane.jpg" alt="cocktail">
-      <img class="gin even extra gallery__img gallery__item--6" src="/img/tagliolini.jpg" alt="cocktail">
-      <img class="gin odd extra gallery__img gallery__item--7" src="/img/piadina.jpg" alt="cocktail">
-      <img class="gin even extra gallery__img gallery__item--8" src="/img/marinara.jpg" alt="cocktail">
-      <img class="gin odd extra gallery__img gallery__item--9" src="/img/cocomero.jpg" alt="cocktail">
-      <img class="gin even extra gallery__img gallery__item--10" src="/img/mais.png" alt="cocktail">
-      <img class="gin odd extra gallery__img gallery__item--11" src="/img/malfor.jpg" alt="cocktail">
+      <img class="odd gallery__img gallery__item--1" src="/img/pesce.jpg" alt="Pesce" loading="lazy">
+      <img class="tumb even gallery__img gallery__item--2" src="/img/pasta.jpg" alt="Pasta" loading="lazy">
+      <img class="fing gin odd gallery__img gallery__item--3" src="/img/insalata.jpg" alt="Insalata" loading="lazy">
+      <img class="gin even extra gallery__img gallery__item--4" src="/img/cozze.jpg" alt="Cozze" loading="lazy">
+      <img class="gin odd extra gallery__img gallery__item--5" src="/img/pane.jpg" alt="Panino" loading="lazy">
+      <img class="gin even extra gallery__img gallery__item--6" src="/img/tagliolini.jpg" alt="Tagliolini" loading="lazy">
+      <img class="gin odd extra gallery__img gallery__item--7" src="/img/piadina.jpg" alt="Piadina" loading="lazy">
+      <img class="gin even extra gallery__img gallery__item--8" src="/img/marinara.jpg" alt="Marinara" loading="lazy">
+      <img class="gin odd extra gallery__img gallery__item--9" src="/img/cocomero.jpg" alt="Cocomero" loading="lazy">
+      <img class="gin even extra gallery__img gallery__item--10" src="/img/mais.png" alt="Mais" loading="lazy">
+      <img class="gin odd extra gallery__img gallery__item--11" src="/img/malfor.jpg" alt="Malformati" loading="lazy">
     </div>
     <div class="meal-list page animate slide delay-1">
-      <!-- <div class="radio-container">
-        <div class="filter selectdiv">
-          <form class="form-group filter-tab" id="radio" action="#">
-            <select class="form-control form" name="Categoria" v-model="selectedCategory">
-              <option selected id="tutti" value="">Filtra</option>
-              <option v-for="categoria in categories" :value="categoria">{{ categoria }}</option>
-            </select>
-          </form>
-        </div>
-      </div> -->
-      <!-- <div class="searchbar-container">
-        <form class="form-inline mb-2">
-          <input class="form-control search" type="search" placeholder="Cerca..." aria-label="Search"
-            v-model="searchTerm">
-        </form>
-      </div> -->
       <div class="portata">
         <h2>Portate</h2>
       </div>
