@@ -75,7 +75,7 @@ export default defineComponent({
         </form>
       </div> -->
       <div class="portata">
-        <h2>Servizi</h2>
+        <h2>Esplora</h2>
       </div>
       <hr class="splitter">
       <!-------------------------------------------------------------------------------------------------------------------------------------------->

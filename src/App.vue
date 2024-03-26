@@ -14,10 +14,10 @@
                   <router-link to="/" class="rlink osc">Oscar Spiaggia <span class="extra">· </span><span class="text298">298<span class="placeholder-298"> sss</span></span></router-link>
                 </h1>
               </div>
-              <div class="col-1 col-md-3"></div>
-              <div class="col-2 col-md-3">
+              <div class="col-1 col-md-4"></div>
+              <div class="col-2 col-md-2 menu-ss">
+                <h3 class="menu-text">Menù <i class="bi bi-caret-right"></i></h3>
                 <button class="btn navbar-toggler menu-button" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <h3 class="menu-text">Scopri i nostri servizi <i class="bi bi-caret-right"></i></h3>
                   <img src="/menusvg.svg" class="menu bi bi-list logo-menu" alt="">
                   <h6 class="extra-in-desk">Menù</h6>
                 </button>
@@ -82,6 +82,12 @@ export default defineComponent({
 
 /*----------------------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
+  .menu-ss {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
   .text298 {
     background: -webkit-linear-gradient(#0364ff, #061c41);
     background-clip: text;
@@ -200,7 +206,7 @@ export default defineComponent({
     font-family: 'Comfortaa', sans-serif;
     margin: 0;
     color: #fff;
-    width: 100%;
+    width: fit-content;
     animation: blink 4s infinite alternate;
   }
 
@@ -216,12 +222,22 @@ export default defineComponent({
 
   .bi-list {
     text-shadow: #fff 2px 0 8px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.1s ease-in-out;
   }
 
   .bi-list:hover {
-    transform: scaleX(-1) scale(1.1);
+    /* transform: rotate(20deg) rotate(-40deg) scale(1.1); */
+    animation: bouncers 0.3s infinite alternate;
     outline-color: transparent;
+  }
+
+  @keyframes bouncers {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-20deg);
+    }
   }
 
   .menu {

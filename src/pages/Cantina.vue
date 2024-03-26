@@ -46,7 +46,7 @@ export default defineComponent({
       <h2>Cantina</h2>
     </div>
     <div class="image">
-      <img class="odd" src="/sample.png" alt="cocktail">
+      <img class="odd" src="/calice.jpg" alt="cocktail">
       <img class="tumb even" src="/sample.png" alt="cocktail">
       <img class="gin odd extra" src="/calice.jpg" alt="cocktail">
       <img class="gin even extra" src="/sample.png" alt="cocktail">
@@ -76,9 +76,9 @@ export default defineComponent({
           <PostWine v-for="wine in filteredCantina()" :key="wine.idwine" :wine="wine" />
         </div>
       </div>
-      <div class="aside extra">
+      <!-- <div class="aside extra">
         <h2>Legenda</h2>
-        <!-- <hr class="splitter-right"> -->
+        <hr class="splitter-right">
         <div class="legend-group">
           <div class="legend-item hovering">
             <img class="img-legend" src="/wine.svg" alt="Vino bianco">
@@ -101,7 +101,7 @@ export default defineComponent({
             <h4 class="legend-text"> Bollicine</h4>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -122,178 +122,7 @@ export default defineComponent({
     animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
     animation-fill-mode: backwards;
   }
-  
-  /* Fade In */
-  .animate.fade {
-    animation-name: animate-fade;
-    animation-timing-function: ease;
-  }
-  
-  @keyframes animate-fade {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Pop In */
-  .animate.pop {
-    animation-name: animate-pop;
-  }
-  
-  @keyframes animate-pop {
-    0% {
-      opacity: 0;
-      transform: scale(0.5, 0.5);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1, 1);
-    }
-  }
-  
-  /* Blur In */
-  .animate.blur {
-    animation-name: animate-blur;
-    animation-timing-function: ease;
-  }
-  
-  @keyframes animate-blur {
-    0% {
-      opacity: 0;
-      filter: blur(15px);
-    }
-  
-    100% {
-      opacity: 1;
-      filter: blur(0px);
-    }
-  }
-  
-  /* Glow In */
-  .animate.glow {
-    animation-name: animate-glow;
-    animation-timing-function: ease;
-  }
-  
-  @keyframes animate-glow {
-    0% {
-      opacity: 0;
-      filter: brightness(3) saturate(3);
-      transform: scale(0.8, 0.8);
-    }
-  
-    100% {
-      opacity: 1;
-      filter: brightness(1) saturate(1);
-      transform: scale(1, 1);
-    }
-  }
-  
-  /* Grow In */
-  .animate.grow {
-    animation-name: animate-grow;
-  }
-  
-  @keyframes animate-grow {
-    0% {
-      opacity: 0;
-      transform: scale(1, 0);
-      visibility: hidden;
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1, 1);
-    }
-  }
-  
-  /* Splat In */
-  .animate.splat {
-    animation-name: animate-splat;
-  }
-  
-  @keyframes animate-splat {
-    0% {
-      opacity: 0;
-      transform: scale(0, 0) rotate(20deg) translate(0, -30px);
-    }
-  
-    70% {
-      opacity: 1;
-      transform: scale(1.1, 1.1) rotate(15deg);
-    }
-  
-    85% {
-      opacity: 1;
-      transform: scale(1.1, 1.1) rotate(15deg) translate(0, -10px);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1, 1) rotate(0) translate(0, 0);
-    }
-  }
-  
-  /* Roll In */
-  .animate.roll {
-    animation-name: animate-roll;
-  }
-  
-  @keyframes animate-roll {
-    0% {
-      opacity: 0;
-      transform: scale(0, 0) rotate(360deg);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1, 1) rotate(0deg);
-    }
-  }
-  
-  /* Flip In */
-  .animate.flip {
-    animation-name: animate-flip;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-  
-  @keyframes animate-flip {
-    0% {
-      opacity: 0;
-      transform: rotateX(-120deg) scale(0.9, 0.9);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: rotateX(0deg) scale(1, 1);
-    }
-  }
-  
-  /* Spin In */
-  .animate.spin {
-    animation-name: animate-spin;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-  
-  @keyframes animate-spin {
-    0% {
-      opacity: 0;
-      transform: rotateY(-120deg) scale(0.9, 0.9);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: rotateY(0deg) scale(1, 1);
-    }
-  }
-  
+
   /* Slide In */
   .animate.slide {
     animation-name: animate-slide;
@@ -311,49 +140,6 @@ export default defineComponent({
     }
   }
   
-  /* Drop In */
-  .animate.drop {
-    animation-name: animate-drop;
-    animation-timing-function: cubic-bezier(.77, .14, .91, 1.25);
-  }
-  
-  @keyframes animate-drop {
-    0% {
-      opacity: 0;
-      transform: translate(0, -300px) scale(0.9, 1.1);
-    }
-  
-    95% {
-      opacity: 1;
-      transform: translate(0, 0) scale(0.9, 1.1);
-    }
-  
-    96% {
-      opacity: 1;
-      transform: translate(10px, 0) scale(1.2, 0.9);
-    }
-  
-    97% {
-      opacity: 1;
-      transform: translate(-10px, 0) scale(1.2, 0.9);
-    }
-  
-    98% {
-      opacity: 1;
-      transform: translate(5px, 0) scale(1.1, 0.9);
-    }
-  
-    99% {
-      opacity: 1;
-      transform: translate(-5px, 0) scale(1.1, 0.9);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translate(0, 0) scale(1, 1);
-    }
-  }
-  
   /* Animation Delays */
   .delay-1 {
     animation-delay: 0.6s;
@@ -367,60 +153,13 @@ export default defineComponent({
     animation-delay: 0.8s;
   }
   
-  .delay-4 {
-    animation-delay: 0.9s;
-  }
-  
-  .delay-5 {
-    animation-delay: 1s;
-  }
-  
-  .delay-6 {
-    animation-delay: 1.1s;
-  }
-  
-  .delay-7 {
-    animation-delay: 1.2s;
-  }
-  
-  .delay-8 {
-    animation-delay: 1.3s;
-  }
-  
-  .delay-9 {
-    animation-delay: 1.4s;
-  }
-  
-  .delay-10 {
-    animation-delay: 1.5s;
-  }
-  
-  .delay-11 {
-    animation-delay: 1.6s;
-  }
-  
-  .delay-12 {
-    animation-delay: 1.7s;
-  }
-  
-  .delay-13 {
-    animation-delay: 1.8s;
-  }
-  
-  .delay-14 {
-    animation-delay: 1.9s;
-  }
-  
-  .delay-15 {
-    animation-delay: 2s;
-  }
-  
   @media screen and (prefers-reduced-motion: reduce) {
     .animate {
       animation: none !important;
     }
   }
 
+/*-------------------------------------------------------------------------------------------------------------------------------------------- */
 @media only screen and (min-width: 1000px) {
   html {
     scroll-behavior: smooth;
@@ -482,13 +221,22 @@ export default defineComponent({
   }
 
   img.odd {
-    animation: moveUpDownOdd 10.2s ease-in-out infinite alternate; /* Modifica la durata (4s) e l'accelerazione se necessario */
+    animation: moveUpDownOdd 10.2s ease-in-out infinite alternate;
   }
 
   img.even {
-    animation: moveUpDownEven 10s ease-in-out infinite alternate; /* Modifica la durata (4s) e l'accelerazione se necessario */
+    animation: moveUpDownEven 10s ease-in-out infinite alternate;
   }
-  
+
+  @keyframes moveImages {
+  0% {
+    transform: translateX(0); /* Nessuno spostamento iniziale */
+  }
+  100% {
+    transform: translateX(-100%); /* Spostamento completo verso sinistra */
+  }
+}
+
   @keyframes moveUpDownEven {
     0% {
       transform: translateY(120px);
@@ -543,14 +291,6 @@ export default defineComponent({
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
 
-  img.odd {
-    transform: translateY(-80px);
-  }
-
-  img.even {
-    transform: translateY(80px);
-  }
-
   .image {
     margin-bottom: 30px;
     display: flex;
@@ -569,7 +309,10 @@ export default defineComponent({
     flex-direction: column;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.548);
-    width: 71%;
+    width: fit-content;
+    max-width: 96%;
+    margin-left: auto;
+    margin-right: auto;
     border: 1px solid rgba(255, 255, 255, 0.452);
     border-radius: 20px;
     padding: 6px;
@@ -644,6 +387,7 @@ export default defineComponent({
   .postdrink-cass {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    max-width: fit-content;
     justify-content: center;
     justify-items: center;
     align-content: center;
@@ -758,7 +502,6 @@ export default defineComponent({
     margin-bottom: 140px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
   
   .drink-list {

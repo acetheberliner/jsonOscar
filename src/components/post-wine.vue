@@ -113,7 +113,7 @@ h4 {
 .vertical {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    /* margin-left: 20px; */
 }
 
 .produttore{

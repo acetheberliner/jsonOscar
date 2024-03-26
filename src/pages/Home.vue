@@ -13,7 +13,52 @@ export default defineComponent({});
         <div class="bubble">
           <img src="/oscar-panoramic.jpg" alt="panoramica" class="discover">
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet diam eget arcu molestie vulputate.</p>
+            <p>Oscar spiaggia 298 è uno stabilimento balneare a misura di famiglie e ideale per giovani che vengono in riviera per divertirsi e per l'ottima cucina a base di prodotti freschi e di stagione.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="separate extra">
+    <!------------------------------------------------------------------------------------------------------->
+    <div class="centered-flex">
+      <div class="title">
+        <h2 class="informazioni mb-3">Servizi</h2>
+      </div>
+      <div class="page animate slide">
+        <div class="bubble">
+          <img src="/beach-volley.jpg" alt="" class="info-img-volley">
+          <div class="info">
+            <ul>
+              <li>Area gioco per <em class="text-danger">bambini</em></li>
+              <li>Campi:</li>
+              <ul>
+                <li class="inner"><img class="list-icon" src="/racchettoni.svg" alt="">Racchettoni</li>
+                <li class="inner"><img class="list-icon" src="/volley.svg" alt="">Beach Volley</li>
+                <li class="inner"><img class="list-icon" src="/basket.svg" alt="">Basket</li>
+                <li class="inner"><img class="list-icon" src="/ping.svg" alt="">Ping Pong</li>
+                <li class="inner"><img class="list-icon" src="/bocce.svg" alt="">Bocce</li>
+              </ul>
+              <li><em class="text-success">Wi-Fi</em> Gratuito</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="separate extra">
+    <!------------------------------------------------------------------------------------------------------->
+    <div class="centered-flex">
+      <div class="title">
+        <h2 class="informazioni mb-3">Social</h2>
+      </div>
+      <div class="page animate slide">
+        <div class="bubble">
+          <img src="/cann.jpg" alt="panoramica" class="info-img">
+          <div class="info">
+            <p>Rimani aggiornato riguardo occasioni ed eventi!</p>
+            <div class="social-links">
+              <a class="social" href="https://www.instagram.com/oscar_spiaggia298?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img class="social-img" src="/instagram.svg" alt="Instagram"> oscar_spiaggia298</a>
+              <a class="social" href="https://www.facebook.com/OscarSpiaggia298/?locale=it_IT" target="_blank"><img class="social-img" src="/facebook.svg" alt="Facebook"> OscarSpiaggia298</a>
+            </div>
           </div>
         </div>
       </div>
@@ -39,31 +84,75 @@ export default defineComponent({});
         </div>
       </div>
     </div>
-    <hr class="separate extra">
-    <!------------------------------------------------------------------------------------------------------->
-    <div class="centered-flex">
-      <div class="title">
-        <h2 class="informazioni mb-3">Social</h2>
-      </div>
-      <div class="page animate slide">
-        <div class="bubble">
-          <img src="/cann.jpg" alt="panoramica" class="info-img">
-          <div class="info">
-            <p>Rimani aggiornato riguardo occasioni ed eventi!</p>
-            <div class="social-links">
-              <a class="social" href="https://www.instagram.com/oscar_spiaggia298?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"><img class="social-img" src="/instagram.svg" alt="Instagram"> oscar_spiaggia298</a>
-              <a class="social" href="https://www.facebook.com/OscarSpiaggia298/?locale=it_IT" target="_blank"><img class="social-img" src="/facebook.svg" alt="Facebook"> OscarSpiaggia298</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <hr class="separate extra">
   </div>
 </template>
 
 <style scoped>
+.animate {
+    animation-duration: 0.45s;
+    animation-duration: 0.7s;
+    /*running slower to show effect*/
+    animation-delay: 0.1s;
+    animation-name: animate-fade;
+    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+    animation-fill-mode: backwards;
+  }
+
+  /* Slide In */
+  .animate.slide {
+    animation-name: animate-slide;
+  }
+  
+  @keyframes animate-slide {
+    0% {
+      opacity: 0;
+      transform: translate(0, 20px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+  
+  /* Animation Delays */
+  .delay-1 {
+    animation-delay: 0.6s;
+  }
+  
+  .delay-2 {
+    animation-delay: 0.7s;
+  }
+  
+  .delay-3 {
+    animation-delay: 0.8s;
+  }
+  
+  @media screen and (prefers-reduced-motion: reduce) {
+    .animate {
+      animation: none !important;
+    }
+  }
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------- */
+
 @media only screen and (min-width: 1000px) {
+  li {
+    text-align: start;
+    font-family: 'Comfortaa', sans-serif;
+    color: #23417a;
+    font-weight: 900;
+  }
+
+  li.inner {
+    line-height: 1.8;
+  }
+
+  .list-icon {
+    width: 27px;
+    margin-right: 8px
+  }
+
   html {
     scroll-behavior: smooth;
   }
@@ -95,6 +184,14 @@ export default defineComponent({});
     margin-bottom: 15px;
   }
 
+  img.info-img-volley {
+    width: 45%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.425) 0px 2px 50px 4px;
+    margin-bottom: 8px;
+  }
+
   .social-img {
     width: 25px;
     border: 1px solid transparent;
@@ -119,9 +216,9 @@ export default defineComponent({});
     border-radius: 20px;
     background-color: rgba(255, 255, 255, 0.521);
     /* Sfondo semi-trasparente */
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 8px 35px 4px;
     width: 95%;
-    min-height: 85%;
+    min-height: 88%;
     margin: 0px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -140,6 +237,7 @@ export default defineComponent({});
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 60px
   }
 
   .centered-flex {
@@ -169,7 +267,7 @@ export default defineComponent({});
   }
 
   p {
-    color: #2f59a6;
+    color: #23417a;
     font-weight: 800;
     font-family: "Comfortaa", sans-serif;
     margin-bottom: 5px;
@@ -211,7 +309,7 @@ export default defineComponent({});
   }
   
   span.location {
-    color: #2f59a6;
+    color: #23417a;
     font-size: 13px;
   }
 
@@ -233,6 +331,30 @@ export default defineComponent({});
 /*--------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 999px) {
+  li {
+    text-align: start;
+    font-family: 'Comfortaa', sans-serif;
+    color: #23417a;
+    font-weight: 900;
+  }
+
+  li.inner {
+    line-height: 1.8;
+  }
+
+  .list-icon {
+    width: 27px;
+    margin-right: 8px
+  }
+
+  img.info-img-volley {
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.425) 0px 2px 50px 4px;
+    margin-bottom: 15px;
+  }
+
   .separate {
     background-color: transparent;
     border: 1px solid transparent;
@@ -400,315 +522,6 @@ export default defineComponent({});
   span.location {
     color: #2f59a6;
     font-size: 13px;
-  }
-  
-  /*-.-----------------------------------------------------------------------------------------------------*/
-  .animate {
-    animation-duration: 0.45s;
-    animation-duration: 0.7s;
-    /*running slower to show effect*/
-    animation-delay: 0.1s;
-    animation-name: animate-fade;
-    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
-    animation-fill-mode: backwards;
-  }
-  
-  /* Fade In */
-  .animate.fade {
-    animation-name: animate-fade;
-    animation-timing-function: ease;
-  }
-  
-  @keyframes animate-fade {
-    0% {
-      opacity: 0;
-    }
-  
-    100% {
-      opacity: 1;
-    }
-  }
-  
-  /* Pop In */
-  .animate.pop {
-    animation-name: animate-pop;
-  }
-  
-  @keyframes animate-pop {
-    0% {
-      opacity: 0;
-      transform: scale(0.5, 0.5);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1, 1);
-    }
-  }
-  
-  /* Blur In */
-  .animate.blur {
-    animation-name: animate-blur;
-    animation-timing-function: ease;
-  }
-  
-  @keyframes animate-blur {
-    0% {
-      opacity: 0;
-      filter: blur(15px);
-    }
-  
-    100% {
-      opacity: 1;
-      filter: blur(0px);
-    }
-  }
-  
-  /* Glow In */
-  .animate.glow {
-    animation-name: animate-glow;
-    animation-timing-function: ease;
-  }
-  
-  @keyframes animate-glow {
-    0% {
-      opacity: 0;
-      filter: brightness(3) saturate(3);
-      transform: scale(0.8, 0.8);
-    }
-  
-    100% {
-      opacity: 1;
-      filter: brightness(1) saturate(1);
-      transform: scale(1, 1);
-    }
-  }
-  
-  /* Grow In */
-  .animate.grow {
-    animation-name: animate-grow;
-  }
-  
-  @keyframes animate-grow {
-    0% {
-      opacity: 0;
-      transform: scale(1, 0);
-      visibility: hidden;
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1, 1);
-    }
-  }
-  
-  /* Splat In */
-  .animate.splat {
-    animation-name: animate-splat;
-  }
-  
-  @keyframes animate-splat {
-    0% {
-      opacity: 0;
-      transform: scale(0, 0) rotate(20deg) translate(0, -30px);
-    }
-  
-    70% {
-      opacity: 1;
-      transform: scale(1.1, 1.1) rotate(15deg);
-    }
-  
-    85% {
-      opacity: 1;
-      transform: scale(1.1, 1.1) rotate(15deg) translate(0, -10px);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1, 1) rotate(0) translate(0, 0);
-    }
-  }
-  
-  /* Roll In */
-  .animate.roll {
-    animation-name: animate-roll;
-  }
-  
-  @keyframes animate-roll {
-    0% {
-      opacity: 0;
-      transform: scale(0, 0) rotate(360deg);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1, 1) rotate(0deg);
-    }
-  }
-  
-  /* Flip In */
-  .animate.flip {
-    animation-name: animate-flip;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-  
-  @keyframes animate-flip {
-    0% {
-      opacity: 0;
-      transform: rotateX(-120deg) scale(0.9, 0.9);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: rotateX(0deg) scale(1, 1);
-    }
-  }
-  
-  /* Spin In */
-  .animate.spin {
-    animation-name: animate-spin;
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-  
-  @keyframes animate-spin {
-    0% {
-      opacity: 0;
-      transform: rotateY(-120deg) scale(0.9, 0.9);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: rotateY(0deg) scale(1, 1);
-    }
-  }
-  
-  /* Slide In */
-  .animate.slide {
-    animation-name: animate-slide;
-  }
-  
-  @keyframes animate-slide {
-    0% {
-      opacity: 0;
-      transform: translate(0, 20px);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translate(0, 0);
-    }
-  }
-  
-  /* Drop In */
-  .animate.drop {
-    animation-name: animate-drop;
-    animation-timing-function: cubic-bezier(.77, .14, .91, 1.25);
-  }
-  
-  @keyframes animate-drop {
-    0% {
-      opacity: 0;
-      transform: translate(0, -300px) scale(0.9, 1.1);
-    }
-  
-    95% {
-      opacity: 1;
-      transform: translate(0, 0) scale(0.9, 1.1);
-    }
-  
-    96% {
-      opacity: 1;
-      transform: translate(10px, 0) scale(1.2, 0.9);
-    }
-  
-    97% {
-      opacity: 1;
-      transform: translate(-10px, 0) scale(1.2, 0.9);
-    }
-  
-    98% {
-      opacity: 1;
-      transform: translate(5px, 0) scale(1.1, 0.9);
-    }
-  
-    99% {
-      opacity: 1;
-      transform: translate(-5px, 0) scale(1.1, 0.9);
-    }
-  
-    100% {
-      opacity: 1;
-      transform: translate(0, 0) scale(1, 1);
-    }
-  }
-  
-  /* Animation Delays */
-  .delay-1 {
-    animation-delay: 0.6s;
-  }
-  
-  .delay-2 {
-    animation-delay: 0.7s;
-  }
-  
-  .delay-3 {
-    animation-delay: 0.8s;
-  }
-  
-  .delay-4 {
-    animation-delay: 0.9s;
-  }
-  
-  .delay-5 {
-    animation-delay: 1s;
-  }
-  
-  .delay-6 {
-    animation-delay: 1.1s;
-  }
-  
-  .delay-7 {
-    animation-delay: 1.2s;
-  }
-  
-  .delay-8 {
-    animation-delay: 1.3s;
-  }
-  
-  .delay-9 {
-    animation-delay: 1.4s;
-  }
-  
-  .delay-10 {
-    animation-delay: 1.5s;
-  }
-  
-  .delay-11 {
-    animation-delay: 1.6s;
-  }
-  
-  .delay-12 {
-    animation-delay: 1.7s;
-  }
-  
-  .delay-13 {
-    animation-delay: 1.8s;
-  }
-  
-  .delay-14 {
-    animation-delay: 1.9s;
-  }
-  
-  .delay-15 {
-    animation-delay: 2s;
-  }
-  
-  @media screen and (prefers-reduced-motion: reduce) {
-    .animate {
-      animation: none !important;
-    }
   }
 }
 
