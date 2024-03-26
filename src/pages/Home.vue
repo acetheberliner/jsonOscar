@@ -142,6 +142,7 @@ export default defineComponent({});
         </div>
       </div>
     </div>
+    <hr class="separate extra">
   </div>
 </template>
 
@@ -255,7 +256,8 @@ export default defineComponent({});
 
   .list-icon {
     width: 27px;
-    margin-right: 8px
+    margin-right: 8px;
+    box-shadow: none;
   }
 
   html {
@@ -459,6 +461,54 @@ export default defineComponent({});
 /*--------------------------------------------------------------------------------------------------------------------------------------- */
 
 @media only screen and (max-width: 999px) {
+  #carouselExampleIndicators .carousel-control-prev-icon,
+  #carouselExampleIndicators .carousel-control-next-icon {
+    filter: invert(45%) sepia(92%) saturate(1698%) hue-rotate(201deg) brightness(97%) contrast(104%);
+  }
+  #carouselExampleIndicators {
+    margin-top: 0px;
+  }
+
+  ul.inner-ul {
+    padding-left: 40px;
+  }
+
+  li.banner {
+    margin-bottom: 80px;
+    background-color: #00a2ff;
+  }
+
+  .staff-desc {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #00a2ff63;
+    text-shadow: #033670 3px 2px 2px;
+  }
+
+  .staff-desc>h3 {
+    font-size: 36px;
+    text-align: center
+  }
+
+  .splitter {
+    background: linear-gradient(to right, #0e3b88, #4bb9f0);
+    height: 2px;
+    border-radius: 20px;
+    width: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .staff-image {
+    width: 340px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    opacity: 90%;
+  }
+
   li {
     text-align: start;
     font-family: 'Comfortaa', sans-serif;
@@ -472,7 +522,8 @@ export default defineComponent({});
 
   .list-icon {
     width: 27px;
-    margin-right: 8px
+    margin-right: 8px;
+    box-shadow: none;
   }
 
   img.info-img-volley {
@@ -595,7 +646,7 @@ export default defineComponent({});
     z-index: 3;
     border-radius: 20px;
     padding: 8px;
-    width: 90%;
+    width: 95%;
     border: 1px solid rgba(68, 67, 67, 0.075);
     background-color: rgba(255, 255, 255, 0.76);
     /* Sfondo semi-trasparente */
@@ -609,6 +660,7 @@ export default defineComponent({});
     font-weight: 100;
     color: #2f59a6;
     font-weight: bold;
+    font-size: 18px;
   }
 
   hr {
@@ -623,7 +675,7 @@ export default defineComponent({});
     text-align: center;
     border-radius: 20px;
     padding: 8px;
-    width: 80%;
+    width: 95%;
     border: 1px solid rgba(68, 67, 67, 0.075);
     background-color: rgba(255, 255, 255, 0.76);
     /* Sfondo semi-trasparente */
