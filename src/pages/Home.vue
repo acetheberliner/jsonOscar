@@ -102,6 +102,7 @@ export default defineComponent({});
                 <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active banner"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="1" class="banner"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="2" class="banner"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3" class="banner"></li>
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -125,6 +126,14 @@ export default defineComponent({});
                   <hr class="splitter">
                   <div class="staff-desc">
                     <h3>Pippo</h3>
+                  </div>
+                </div>
+                <!----------------------------------------------------------------------------->
+                <div class="carousel-item">
+                  <img class="d-block staff-image" src="/img/io.jpg" alt="Fourth slide">
+                  <hr class="splitter">
+                  <div class="staff-desc">
+                    <h3>Tommy</h3>
                   </div>
                 </div>
                 <!----------------------------------------------------------------------------->
@@ -236,7 +245,6 @@ export default defineComponent({});
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 90%;
   }
 
   li {
@@ -506,7 +514,6 @@ export default defineComponent({});
     border-radius: 20px;
     margin-left: auto;
     margin-right: auto;
-    opacity: 90%;
   }
 
   li {
