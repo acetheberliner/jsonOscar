@@ -53,11 +53,11 @@ export default defineComponent({
       <h2>Cocktail</h2>
     </div>
     <div class="image">
-      <img class="odd" src="/img/red.jpg" alt="Cocktail Rosso" loading="lazy">
-      <img class="tumb even" src="/img/tumblr.jpg" alt="Cocktail Giallo" loading="lazy">
-      <img class="gin odd extra" src="/img/drink3.jpg" alt="Cocktail e Patatine" loading="lazy">
-      <img class="gin even" src="/img/gin-tonic.jpg" alt="Gin Tonic" loading="lazy">
-      <img class="gin odd extra" src="/img/spritz.jpg" alt="Spritz" loading="lazy">
+      <img class="odd" src="/img/red.webp" alt="Cocktail Rosso" loading="lazy">
+      <img class="tumb even" src="/img/tumblr.webp" alt="Cocktail Giallo" loading="lazy">
+      <img class="gin odd extra" src="/img/drink3.webp" alt="Cocktail e Patatine" loading="lazy">
+      <img class="gin even" src="/img/gin-tonic.webp" alt="Gin Tonic" loading="lazy">
+      <img class="gin odd extra" src="/img/spritz.webp" alt="Spritz" loading="lazy">
     </div>
     <div id="info" class="">
       <p>Si informa la gentile clientela che in occasione di eventi speciali, i prezzi dei cocktail vengono calcolati differentemente. <br><br>Si ringrazia per la comprensione </p>

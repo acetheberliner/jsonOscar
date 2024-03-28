@@ -54,17 +54,17 @@ export default defineComponent({
       <h2>Ristorante</h2>
     </div>
     <div class="gallery">
-      <img class="odd gallery__img gallery__item--1" src="/img/pesce.jpg" alt="Pesce" loading="lazy">
-      <img class="tumb even gallery__img gallery__item--2" src="/img/pasta.jpg" alt="Pasta" loading="lazy">
-      <img class="fing gin odd gallery__img gallery__item--3" src="/img/insalata.jpg" alt="Insalata" loading="lazy">
-      <img class="gin even extra gallery__img gallery__item--4" src="/img/cozze.jpg" alt="Cozze" loading="lazy">
-      <img class="gin odd extra gallery__img gallery__item--5" src="/img/pane.jpg" alt="Panino" loading="lazy">
-      <img class="gin even extra gallery__img gallery__item--6" src="/img/tagliolini.jpg" alt="Tagliolini" loading="lazy">
-      <img class="gin odd extra gallery__img gallery__item--7" src="/img/piadina.jpg" alt="Piadina" loading="lazy">
-      <img class="gin even extra gallery__img gallery__item--8" src="/img/marinara.jpg" alt="Marinara" loading="lazy">
-      <img class="gin odd extra gallery__img gallery__item--9" src="/img/cocomero.jpg" alt="Cocomero" loading="lazy">
-      <img class="gin even extra gallery__img gallery__item--10" src="/img/mais.png" alt="Mais" loading="lazy">
-      <img class="gin odd extra gallery__img gallery__item--11" src="/img/malfor.jpg" alt="Malformati" loading="lazy">
+      <img class="odd gallery__img gallery__item--1" src="/img/pesce.webp" alt="Pesce" loading="lazy">
+      <img class="tumb even gallery__img gallery__item--2" src="/img/pasta.webp" alt="Pasta" loading="lazy">
+      <img class="fing gin odd gallery__img gallery__item--3" src="/img/insalata.webp" alt="Insalata" loading="lazy">
+      <img class="gin even extra gallery__img gallery__item--4" src="/img/cozze.webp" alt="Cozze" loading="lazy">
+      <img class="gin odd extra gallery__img gallery__item--5" src="/img/pane.webp" alt="Panino" loading="lazy">
+      <img class="gin even extra gallery__img gallery__item--6" src="/img/tagliolini.webp" alt="Tagliolini" loading="lazy">
+      <img class="gin odd extra gallery__img gallery__item--7" src="/img/piadina.webp" alt="Piadina" loading="lazy">
+      <img class="gin even extra gallery__img gallery__item--8" src="/img/marinara.webp" alt="Marinara" loading="lazy">
+      <img class="gin odd extra gallery__img gallery__item--9" src="/img/cocomero.webp" alt="Cocomero" loading="lazy">
+      <img class="gin even extra gallery__img gallery__item--10" src="/img/mais.webp" alt="Mais" loading="lazy">
+      <img class="gin odd extra gallery__img gallery__item--11" src="/img/malfor.webp" alt="Malformati" loading="lazy">
     </div>
     <div class="meal-list page animate slide delay-1">
       <div class="portata">

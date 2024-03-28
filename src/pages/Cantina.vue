@@ -46,11 +46,11 @@ export default defineComponent({
       <h2>Cantina</h2>
     </div>
     <div class="image">
-      <img class="odd" src="/img/calice.jpg" alt="calice" loading="lazy">
-      <img class="tumb even" src="/img/sample.png" alt="sample" loading="lazy">
-      <img class="gin odd extra" src="/img/sample.jpg" alt="sample" loading="lazy">
-      <img class="gin even extra" src="/img/sample.png" alt="sample" loading="lazy">
-      <img class="gin odd extra" src="/img/sample.png" alt="sample" loading="lazy">
+      <img class="odd" src="/img/calice.webp" alt="calice" loading="lazy">
+      <img class="tumb even" src="/img/sample.webp" alt="sample" loading="lazy">
+      <img class="gin odd extra" src="/img/sample.webp" alt="sample" loading="lazy">
+      <img class="gin even extra" src="/img/sample.webp" alt="sample" loading="lazy">
+      <img class="gin odd extra" src="/img/sample.webp" alt="sample" loading="lazy">
     </div>
     <div class="group">
       <div class="drink-list page animate slide delay-1">

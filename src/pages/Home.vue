@@ -11,7 +11,7 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/img/oscar-panoramic.jpg" alt="Oscar Spiaggia" class="discover" loading="lazy">
+          <img src="/img/oscar-panoramic.webp" alt="Oscar Spiaggia" class="discover" loading="lazy">
           <div class="content">
             <p>Oscar spiaggia 298 è uno stabilimento balneare a misura di famiglie e ideale per giovani che vengono in
               riviera per divertirsi e per l'ottima cucina a base di prodotti freschi e di stagione.</p>
@@ -27,7 +27,7 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/img/beach-volley.jpg" alt="" class="info-img-volley" loading="lazy">
+          <img src="/img/beach-volley.webp" alt="" class="info-img-volley" loading="lazy">
           <div class="info">
             <ul>
               <li>Area gioco per <em class="text-danger">bambini</em></li>
@@ -53,7 +53,7 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/img/cann.jpg" alt="Cannocchiale" class="info-img" loading="lazy">
+          <img src="/img/cann.webp" alt="Cannocchiale" class="info-img" loading="lazy">
           <div class="info">
             <p>Rimani aggiornato riguardo occasioni ed eventi!</p>
             <div class="social-links">
@@ -75,7 +75,7 @@ export default defineComponent({});
       </div>
       <div class="page animate slide">
         <div class="bubble">
-          <img src="/img/asciuga.jpg" alt="Asciugamano" class="info-img" loading="lazy">
+          <img src="/img/asciuga.webp" alt="Asciugamano" class="info-img" loading="lazy">
           <div class="info">
             <div class="place">
               <p><i class="bi bi-geo-alt"></i> Via VIII Traversa<br><span class="location">(Milano Marittima)</span></p>
@@ -106,7 +106,7 @@ export default defineComponent({});
               </ol>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img class="d-block staff-image" src="/img/lollo.jpg" alt="First slide" loading="lazy">
+                  <img class="d-block staff-image" src="/img/lollo.webp" alt="First slide" loading="lazy">
                   <hr class="splitter">
                   <div class="staff-desc">
                     <h3 class="m-0">Lollo</h3>
@@ -114,7 +114,7 @@ export default defineComponent({});
                 </div>
                 <!----------------------------------------------------------------------------->
                 <div class="carousel-item">
-                  <img class="d-block staff-image" src="/img/gery.jpg" alt="Second slide" loading="lazy">
+                  <img class="d-block staff-image" src="/img/gery.webp" alt="Second slide" loading="lazy">
                   <hr class="splitter">
                   <div class="staff-desc">
                     <h3>Gery</h3>
@@ -122,7 +122,7 @@ export default defineComponent({});
                 </div>
                 <!----------------------------------------------------------------------------->
                 <div class="carousel-item">
-                  <img class="d-block staff-image" src="/img/pippo.jpg" alt="Third slide" loading="lazy">
+                  <img class="d-block staff-image" src="/img/pippo.webp" alt="Third slide" loading="lazy">
                   <hr class="splitter">
                   <div class="staff-desc">
                     <h3>Pippo</h3>
@@ -130,7 +130,7 @@ export default defineComponent({});
                 </div>
                 <!----------------------------------------------------------------------------->
                 <div class="carousel-item">
-                  <img class="d-block staff-image" src="/img/io.jpg" alt="Fourth slide" loading="lazy">
+                  <img class="d-block staff-image" src="/img/io.webp" alt="Fourth slide" loading="lazy">
                   <hr class="splitter">
                   <div class="staff-desc">
                     <h3>Tommy</h3>

@@ -53,9 +53,9 @@ export default defineComponent({
       <h2>Bar</h2>
     </div>
     <div class="image">
-      <img src="/img/brioche.jpg" alt="">
-      <img class="tumb" src="/img/yogurt.jpg" alt="">
-      <img class="beer" src="/img/beer.png" alt="">
+      <img src="/img/brioche.webp" alt="">
+      <img class="tumb" src="/img/yogurt.webp" alt="">
+      <img class="beer" src="/img/beer.webp" alt="">
     </div>
     <div class="drink-list page animate slide delay-1">
       <div class="portata">
